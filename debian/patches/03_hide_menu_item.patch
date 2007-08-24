@@ -1,0 +1,11 @@
+diff -Nur eog-2.19.1/data/eog.desktop.in.in eog-2.19.1.new/data/eog.desktop.in.in
+--- eog-2.19.1/data/eog.desktop.in.in	2007-03-18 00:52:08.000000000 +0100
++++ eog-2.19.1.new/data/eog.desktop.in.in	2007-05-02 10:23:57.000000000 +0200
+@@ -5,6 +5,7 @@
+ TryExec=eog
+ Exec=eog %U
+ Icon=eog
++NoDisplay=true
+ StartupNotify=true
+ Terminal=false
+ Type=Application

@@ -1,0 +1,45 @@
+diff -Nur eog-2.19.1/configure.ac eog-2.19.1.new/configure.ac
+--- eog-2.19.1/configure.ac	2007-04-30 22:50:06.000000000 +0200
++++ eog-2.19.1.new/configure.ac	2007-05-02 10:29:26.000000000 +0200
+@@ -69,6 +69,7 @@
+              libgnomeui-2.0 >= $LIBGNOMEUI_REQUIRED \
+              libglade-2.0 >= $LIBGLADE_REQUIRED \
+              gdk-pixbuf-2.0 >= $GDKPIXBUF_REQUIRED \
++	     launchpad-integration \
+              gconf-2.0 >= $GCONF_REQUIRED \
+              libart-2.0 >= $LIBART_REQUIRED \
+              gnome-desktop-2.0 >= $GNOME_DESKTOP_REQUIRED \
+diff -Nur eog-2.19.1/data/eog-ui.xml eog-2.19.1.new/data/eog-ui.xml
+--- eog-2.19.1/data/eog-ui.xml	2007-04-29 22:00:40.000000000 +0200
++++ eog-2.19.1.new/data/eog-ui.xml	2007-05-02 10:29:26.000000000 +0200
+@@ -57,6 +57,9 @@
+     </menu>
+     <menu action="Help">
+       <menuitem action="HelpManual"/>
++      <separator/>
++      <placeholder name="LaunchpadItems"/>
++      <separator/>
+       <menuitem action="HelpAbout"/>
+     </menu>
+   </menubar>
+diff -Nur eog-2.19.1/src/eog-window.c eog-2.19.1.new/src/eog-window.c
+--- eog-2.19.1/src/eog-window.c	2007-04-30 00:23:43.000000000 +0200
++++ eog-2.19.1.new/src/eog-window.c	2007-05-02 10:29:50.000000000 +0200
+@@ -68,6 +68,7 @@
+ #include <libgnomevfs/gnome-vfs-mime.h>
+ #include <libgnomevfs/gnome-vfs-mime-handlers.h>
+ #include <gconf/gconf-client.h>
++#include <launchpad-integration.h>
+ 
+ #if HAVE_LCMS
+ #include <X11/Xlib.h>
+@@ -3500,6 +3501,9 @@
+                 g_error_free (error);
+         }
+ 
++	launchpad_integration_add_ui (priv->ui_mgr,
++				      "/MainMenu/Help/LaunchpadItems");
++
+ 	g_signal_connect (priv->ui_mgr, "connect_proxy",
+ 			  G_CALLBACK (connect_proxy_cb), window);
+ 	g_signal_connect (priv->ui_mgr, "disconnect_proxy",

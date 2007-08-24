@@ -1,0 +1,678 @@
+eog (2.19.5-0ubuntu1) gutsy; urgency=low
+
+  * New upstream version:
+    New features:
+    - XMP Support 
+    - Side Pane to be extended by plugins
+    - Inhibit screensaver when running slideshow/fullscreen
+    - Improved selection visual feedback in image collection pane 
+    Misc improvements/fixes:
+    - Several code cleanup and fixes 
+    Bug fixes:
+    - crash in EOG: Saving rotated image (LP: #125146)
+    - Add wbmp to supported image types
+    - Crash: when specifying an invalid extension in save as dialog 
+      (LP: #126175, #131639)
+    - Support Adobe XMP metadata
+    - Changing scale of image in print dialog is slow 
+    - Use "document-page-setup" named icon for File->Setup Page 
+    - tooltips in collection don't update
+    - Inhibit screensaver when running slideshow
+    - Weird preferences window 
+    - Application specific icons are installed in the wrong directory       
+    - Fail to build with undefined reference to 
+      `eog_application_register_service'
+    -Thumbnails of modified images wrongly loaded from thumbnail factory 
+    - thumbnails not updated after applying a transformation  
+    - [patch] make thumbnail of modified and saved images actually appear
+    - [patch] get rid of compilation warnings
+    - configure doesn't check for libexif/exif-data.h
+
+ -- Sebastien Bacher <seb128@canonical.com>  Tue, 14 Aug 2007 10:01:54 +0200
+
+eog (2.19.4-0ubuntu2) gutsy; urgency=low
+
+  * debian/rules:
+    - Added DEB_CONFIGURE_EXTRA_FLAGS += --enable-python
+    - Added DEB_PYTHON_SYSTEM=pycentral
+    - Added dh_pycentral to binary-arch
+    - Added 'rm -vf config.status.lineno' to clean
+  * debian/control.in:
+    - Added python-gnome2-dev to Build-Depends 
+    - Added libdbus-glib-1-dev to Build-Depends
+    - Added debhelper to Build-Depends
+    - Added python-central to Build-Depends
+    - Added ${python:Depends} to Depends
+    - Added XS-Python-Version: current
+
+
+ -- Fernando Ribeiro <fernando@staff.nerdgroup.org>  Mon, 23 Jul 2007 14:48:37 -0300
+
+eog (2.19.4-0ubuntu1) gutsy; urgency=low
+
+  * New upstream release.
+  * debian/control.in:
+    - bump libexif-dev Build-Depends.
+
+ -- Adilson Oliveira <adilson@ubuntu.com>  Tue, 10 Jul 2007 16:19:54 +0000
+
+eog (2.19.3-0ubuntu1) gutsy; urgency=low
+
+  * New Upstream Release
+
+ -- Fernando Ribeiro <fernando@staff.nerdgroup.org>  Mon, 04 Jun 2007 20:13:03 -0300
+
+eog (2.19.2-0ubuntu1) gutsy; urgency=low
+
+  * New upstream version:
+    New features:
+    - New plugin system which allows developers to extend EOG's UI
+      and behavior
+    Misc improvements/fixes:
+    - Several code cleanups
+    - Correctly set slideshow delay when being entered with the keyboard
+    Bug fixes:
+    - #435614, When DnD rotate left/right icons to "Toolbar Editor" the 
+               icon not appear
+    - #437691, README files needs an update
+
+ -- Sebastien Bacher <seb128@canonical.com>  Tue, 15 May 2007 10:59:35 +0200
+
+eog (2.19.1-0ubuntu1) gutsy; urgency=low
+
+  * New upstream version:
+    - Complete rewrite of application core which means more stable, 
+      maintanable, faster image viewer for GNOME
+    - Editable application toolbar
+    - New image collection pane with on-demand thumbnail loading
+      (Ubuntu: #37429)
+    - Support for setting image collection position (left, right, top, 
+      bottom) and wether it's resizable or not. No preference UI yet
+    - New image properties dialog which replaces the image info sidepane 
+    - Single instance D-Bus-based activation support
+    - Revamped error/warning UI
+    - "Open with" support to quickly open images on other applications
+    - Mouse scrollwheel improvements: HIG compliancy and zoom factor setting
+    - Migration to GtkRecent
+    - UI polishing on multiple images save as dialog
+    - Command line options for fullscreen, slideshow and image collection
+      disabling
+    - Rotate work in fullscreen (Ubuntu: #31783)
+    - Don't crash when cancelling a slideshow load (Ubuntu: #43322)
+    - Trash work on different volume (Ubuntu: #42571)
+    - Display the correct window icon (Ubuntu: #43609)
+    - Don't write wrong rotation information (Ubuntu: #88248)
+    - Enhanced shortcuts work (Ubuntu: #44343)
+    Bug fixes:
+    - #377123, [eog-ng] implement EogJobSave
+    - #319859, "open image with" function
+    - #334321, Should be possible move the collection in EOG
+    - #316175, EOG gives no error upon opening non image files
+    - #432439, Run gtk-update-icon-cache in uninstall-hook
+    - #429156, [patch] "Save As" dialog for multiple files is way too ugly
+    - #427154, Some strings are not translated in save-as-multiple dialog. 
+    - #419756, Slideshow background should be black.
+    - #404708, eog crashed with SIGSEGV in g_closure_invoke()
+    - #404126, Convert debug messages to eog_debug_message
+    - #401939, [eog-ng] Remove leaftag support.
+    - #399333, EOG-NG crash while opening Print dialog
+    - #398250, build bug: missing symbols from libpangoft2
+    - #389314, eog should use stock_print-setup from g-i-t for the 
+               "Page setup..." action
+    - #376513, TRACKER: command-line options
+    - #355858, switching image forward and back quickly can display wrong image
+    - #351040, [eog-ng] use GtkRecent
+    - #344140, [eog-ng] remove duplicate code in fullscreen-code
+    - #342817, crash trying to view profile image
+    - #342103, [patch] [eog-ng] update about dialog
+    - #341935, Should not zoom with mouse wheel
+    - #341831, [eog-ng] memory usage increases when switching fastly between 
+               images
+    - #341600, [eog-ng] EOG eats a lot o CPU when inactive
+    - #340957, Filenames containing numbers are not properly sorted (as how 
+               nautilus does)
+    - #335689, Middle mouse drag should also scroll
+    - #327424, progress bar changes view size which forces re-zooming of image
+    - #322057, eog print output is corrupt
+    - #305823, The rotate buttons on the toolbar are blurred
+    - #404907, [eog-ng] Crash when opening properties dialog (broken EXIF). 
+    - #372820, First call to PKG_CHECK_MODULES is conditional without a prior 
+               call to PKG_PROG_PKG_CONFIG 
+    - #381867, mouse cursor disappear after exit fullscreen mode 
+    - #383090, Slideshow / Slide Show
+    - #336973, [eog-ng] Migration of the collection pane to GtkIconView and 
+               GtkListStore
+    - #356947, [eog-ng] GtkPrint support
+    - #393586, [eog-ng] Editable toolbar for EOG
+    - #401946, [eog-ng] [patch] D-Bus based activation
+    - #416321, [eog-ng] Use tooltips to show image information in the thumbview
+    - #89512,  Setting for how much the mouse wheel should affect zoom
+    - #321400, mouse side-buttons for navigation
+  * debian/control.in:
+    - the maintainer is Ubuntu Desktop Team
+  * debian/patches/01_lpi.patch, debian/patches/02_autoconf.patch,
+    debian/patches/03_hide_menu_item.patch:
+    - updated
+
+ -- Sebastien Bacher <seb128@canonical.com>  Wed, 02 May 2007 10:05:47 +0200
+
+eog (2.18.1-1ubuntu1) gutsy; urgency=low
+
+  * Merge with Debian.
+  * debian/control.in:
+    - Build-Depends on liblaunchpad-integration-dev
+  * debian/patches/01_lpi.patch:
+    - launchpad integration
+  * debian/patches/02_autoconf.patch:
+    - configure update
+  * debian/patches/03_hide_menu_item.patch:
+    - menu simplication (MenuRevisited spec)
+
+ -- Christian Bjälevik <nafallo@ubuntu.com>  Fri, 27 Apr 2007 00:32:54 +0200
+
+eog (2.18.1-1) unstable; urgency=low
+
+  * Include the new check-dist Makefile to prevent accidental uploads to
+    unstable; bump build-dep on gnome-pkg-tools to >= 0.10.
+  * Set LDFLAGS directly instead of via DEB_CONFIGURE_SCRIPT_ENV; build-dep on
+    cdbs >= 0.4.41.
+  * Preprend -Wl,-z,defs before -Wl,--as-needed in LDFLAGS.
+  * Upload to unstable; drop check-dist include.
+  * Wrap build-deps and deps.
+  * Bump up Debhelper compatibility level to 5.
+  * Fix watch file to track all stable releases and use HTTP.
+  * Verbose the rm calls.
+  * Drop obsolete debian/NEWS which concerns pre-sarge versions.
+  * New upstream stable release.
+
+ -- Loic Minier <lool@dooz.org>  Wed, 25 Apr 2007 15:32:14 +0200
+
+eog (2.18.0.1-1) experimental; urgency=low
+
+  * New upstream release:
+    - debian/control.in:
+      + Updated build-depends to new requirements
+      + Added new dependency on gnome-icon-theme, as eog now uses icons from
+        there.
+    - debian/patches/01_error-loading.patch:
+       Dropped, included upstream.
+    - Changed scroll wheel behaviour to not switch images, but actually
+      scroll. (Closes: #414128)
+    - Fixed handling of external file removal. (Closes: #370452)
+    - Fixed segfaults when exiting the collection view. (Closes: #404325)
+
+ -- Marc 'HE' Brockschmidt <he@debian.org>  Sun, 25 Mar 2007 13:17:10 +0200
+
+eog (2.16.3-3) unstable; urgency=medium
+
+  [ Sven Arvidsson ]
+  * New patch, 01_error-loading, show an error message instead of 
+    closing the program if the image loading has failed; thanks
+    Claudio Saavedra. GNOME #399988 (Closes: #391582)
+
+ -- Sven Arvidsson <sa@whiz.se>  Tue, 27 Feb 2007 15:07:47 +0100
+
+eog (2.16.3-2) unstable; urgency=low
+
+  * Upload to unstable.
+
+ -- Loic Minier <lool@dooz.org>  Sat,  3 Feb 2007 11:45:07 +0100
+
+eog (2.16.3-1) experimental; urgency=low
+
+  * Add a get-orig-source target to retrieve the upstream tarball.
+  * New upstream stable release; bug fixes and translation updates.
+
+ -- Loic Minier <lool@dooz.org>  Mon, 29 Jan 2007 22:07:49 +0100
+
+eog (2.16.2-1) unstable; urgency=low
+
+  * New upstream stable release with code cleanups and translations.
+
+ -- Loic Minier <lool@dooz.org>  Sat, 18 Nov 2006 09:41:07 +0100
+
+eog (2.16.1.1-1) unstable; urgency=low
+
+  * Upload to unstable.
+  * Add CDBS' utils.
+  * New upstream release.
+  * Don't trust the upstream configure to honor its advertized
+    --disable-scrollkeper and remove generated /var/scrollkeeper for
+    additional safety.
+
+ -- Loic Minier <lool@dooz.org>  Fri, 20 Oct 2006 10:59:06 +0200
+
+eog (2.16.1-1) experimental; urgency=low
+
+  * New upstream release.
+    - build in a non-broken environment (Closes: #389242).
+
+  * debian/watch: updated.
+
+ -- Guilherme de S. Pastore <gpastore@debian.org>  Fri, 29 Sep 2006 19:42:52 -0300
+
+eog (2.16.0.1-1) experimental; urgency=low
+
+  * New upstream release
+    - Fixed printing of GIF images (Closes: #343496)
+
+  * debian/control.in:
+    - updated my e-mail address
+    - added build-dependency on gnome-doc-utils
+
+  * debian/patches/10_no_scrollkeeper_update.patch:
+    - dropped; not needed anymore
+
+  * debian/rules:
+    - use --disable-scrollkeeper
+
+ -- Guilherme de S. Pastore <gpastore@debian.org>  Mon,  4 Sep 2006 16:25:06 -0300
+
+eog (2.14.3-1) unstable; urgency=low
+
+  * New upstream release.
+  * Bump up Standards-Version to 3.7.2.
+
+ -- Loic Minier <lool@dooz.org>  Tue,  8 Aug 2006 13:05:41 +0200
+
+eog (2.14.2-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Loic Minier <lool@dooz.org>  Tue, 30 May 2006 17:06:44 +0200
+
+eog (2.14.1-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Guilherme de S. Pastore <gpastore@debian.org>  Fri, 21 Apr 2006 11:37:34 -0300
+
+eog (2.14.0-1) unstable; urgency=low
+
+  Oystein Gisnas <oystein@gisnas.net>:
+  * New upstream release
+    - Print preview bugs fixed (Closes: #247544)
+    - Can display on multiple displays (Closes: #275693)
+    - Can display SVG images (Closes: #280922)
+    - Hides information sidebar as default (Closes: #292447)
+    - Fixes crash opening some SVGs (Closes: #322879)
+  * Update libgtk2.0-dev build depenency to (>= 2.7.1)
+  * Add build dependencies liblcms-dev, libart-2.0-dev (>= 2.3.16),
+    libgnome-desktop-dev (>= 2.10.0)
+  * Update watch file
+
+  * Segfaults when opening two jpeg files are no longer reproducible.
+    (Closes: #358372)
+  * Full-screen can be left by pressing F11 again. (Closes: #307716)
+
+ -- J.H.M. Dassen (Ray) <jdassen@debian.org>  Sat,  1 Apr 2006 21:08:21 +0200
+
+eog (2.12.3-1) unstable; urgency=low
+
+  * New upstream release (bug fixes and translation updates).
+  * [debian/rules] Have the linker work harder to produce a faster loading
+    binary and to trim down unneeded direct dependencies.
+
+  Josselin Mouette <joss@debian.org>:
+  * Recommend librsvg2-common.
+
+ -- J.H.M. Dassen (Ray) <jdassen@debian.org>  Wed,  8 Feb 2006 20:54:57 +0100
+
+eog (2.12.2-2) unstable; urgency=low
+
+  * Upload to unstable.
+
+ -- Josselin Mouette <joss@debian.org>  Sun,  8 Jan 2006 14:24:29 +0100
+
+eog (2.12.2-1) experimental; urgency=low
+
+  [ Guilherme de S. Pastore ]
+  * New upstream release
+    - Fixes some crashes (Closes: #322879)
+  * debian/patches/02_svg.diff: dropped; applied upstream
+
+  [ Loic Minier ]
+  * Comment out scrollkeeper-update calls.
+    [debian/patches/10_no_scrollkeeper_update.patch]
+
+ -- Loic Minier <lool@dooz.org>  Sun,  4 Dec 2005 22:02:02 +0100
+
+eog (2.12.1-1) experimental; urgency=low
+
+  * New upstream release
+  * debian/watch:
+  - added to help tracking upstream
+  * debian/patches/00_overwrite_error.diff:
+  - removed, the relevant code has been rewritten, the patch no
+    longer applies (in both senses)
+  * debian/patches/02_svg.diff:
+  - updated to the new upstream version
+  * debian/patches/01_threads.diff:
+  - removed; issue fixed upstream with a different patch
+  * debian/control.in:
+  - added Build-Depends to libglade2-dev, libgnomeprint{,ui}2.2-dev
+    based on pkg-config requirements
+
+ -- Gustavo Noronha Silva <kov@debian.org>  Fri, 14 Oct 2005 12:13:19 -0300
+
+eog (2.10.2-3) unstable; urgency=medium
+
+  [ Guilherme de S. Pastore ]
+  * debian/control.in:
+    - added ${misc:Depends} dependency (higher urgency)
+    - bumped standards-version to 3.6.2.1 with no changes
+
+  [ Sebastien Bacher ]
+  * debian/patches/02_svg.diff
+    - open svg files (Closes: #306188)
+  
+ -- Guilherme de S. Pastore <guilherme.pastore@terra.com.br>  Thu, 13 Oct 2005 14:25:20 -0300
+
+eog (2.10.2-2) unstable; urgency=low
+
+  * debian/patches/00_overwrite_error.diff:
+  - apply patch from Gustavo Noronha Silva <kov@debian.org>
+    to fix the error message displayed when overwriting a file.
+    Thanks! (Closes: #287980)
+  * debian/patches/01_threads.diff:
+  - don't create threads as joinable if we're not going to join
+    them, otherwise we end up with huge memory usage and even
+    crashes (Closes: #288163)
+  * debian/eog-collection-view.1:
+  - removed, there's only one binary that handles this on the UI now
+  * debian/control.in:
+  - updated my e-mail address
+
+ -- Guilherme de S. Pastore <guilherme.pastore@terra.com.br>  Wed, 10 Aug 2005 19:46:22 -0300
+
+eog (2.10.2-1) unstable; urgency=low
+
+  * New maintainer (Closes: #322092)
+  * Acknowledge NMUs (Closes: #223366, #237201, #253005, #289293, #321312)
+  * debian/control.in:
+    - Added, to auto-generate debian/control
+    - Added the Debian GNOME Team to Uploaders:
+      + Added Build-Dependency on gnome-pkg-tools
+    - Updated to Standards-Version 3.6.2 with no changes
+  * debian/copyright:
+    - Updated list of Upstream Authors
+    - Fixed Copyright and License notices
+    - Updated the URL from which tarball was downloaded
+  * debian/dirs:
+    - Removed
+  * debian/eog.1:
+    - Escaped all hyphens
+  * debian/eog.install:
+    - Install gnome-eog.xpm, the Debian menu icon
+  * debian/rules:
+    - Include uploaders.mk from gnome-pkg-tools
+    - Clean the clean:: target up, as most of the removals are already
+      handled by CDBS itself
+
+ -- Guilherme de S. Pastore <gpastore@colband.com.br>  Mon,  8 Aug 2005 22:14:55 -0300
+
+eog (2.10.2-0.2) unstable; urgency=low
+
+  * Non-maintainer upload by the GNOME team.
+  * Build-depend on libexif-dev 0.6.12 (closes: #321312)
+
+ -- Ross Burton <ross@debian.org>  Mon,  8 Aug 2005 09:14:04 +0100
+
+eog (2.10.2-0.1) unstable; urgency=low
+
+  * Non-maintainer upload by the GNOME team.
+  * New upstream release.
+
+ -- Jordi Mallach <jordi@debian.org>  Thu,  7 Jul 2005 19:38:12 +0200
+
+eog (2.10.0-0.2) unstable; urgency=low
+
+  * Non-maintainer upload by the GNOME team.
+  * Upload to unstable.
+  * debian/control: drop gettext, add cdbs and bump debhelper for
+    build-depends.
+  * debian/rules: rewrite to use cdbs.
+    - cdbs doesn't use dh_installmanpages (closes: #289293).
+
+ -- Jordi Mallach <jordi@debian.org>  Fri, 10 Jun 2005 17:12:43 +0200
+
+eog (2.10.0-0.1) experimental; urgency=low
+
+  * GNOME team upload for GNOME 2.10.
+  * New upstream release.
+  * debian/control: updated Build-Depends.
+
+ -- Jordi Mallach <jordi@debian.org>  Mon,  9 May 2005 16:45:11 +0200
+
+eog (2.8.2-0.1) unstable; urgency=low
+
+  * Non-Maintainer upload.
+  * New upstream release.
+  * po/ca.po: fix a bad translation.
+
+ -- Jordi Mallach <jordi@debian.org>  Wed, 29 Dec 2004 21:02:36 +0100
+
+eog (2.8.1-1.1) unstable; urgency=low
+
+  * NMU for GNOME 2.8 in unstable.
+  * Upload to unstable.
+  * debian/control:
+    - Build-Depends on libxml-parser-perl.
+
+ -- Sebastien Bacher <seb128@debian.org>  Wed, 24 Nov 2004 16:39:09 +0100
+
+eog (2.8.1-1) experimental; urgency=low
+
+  * NMU with maintainer approval.
+  * New upstream release:
+    - the Nautilus "View as Collection" component isn't available anymore.
+      (Closes: #223366).
+    - fix the image collection mode (Closes: #253005).
+    - fix the problem with fix/normal buttons (Closes: #237201).
+  * debian/compat:
+    - added.
+  * debian/control:
+    - updated Standards-Version to 3.6.1.0.
+    - updated the Build-Depends.
+  * debian/postinst, debian/postrm:
+    - removed, dh_gconf handles this.
+  * debian/NEWS:
+    - added a note about the removal of the nautilus view.
+  * debian/rules:
+    - added a call to dh_gconf and dh_desktop.
+
+ -- Sebastien Bacher <seb128@debian.org>  Mon, 25 Oct 2004 22:03:56 +0200
+
+eog (2.6.1-2) unstable; urgency=high
+
+  * Rebuilt without libexif support to let collection view mode work
+    properly, it'll be readded in the future, thanks Paul Brossier.
+    closes: #253005, #267869.
+
+ -- Davide Puricelli (evo) <evo@debian.org>  Sat,  4 Sep 2004 18:05:26 +0200
+
+eog (2.6.1-1) unstable; urgency=low
+
+  * Acknowledge NMUs, thanks Sebastien.
+    closes: #245329, #255186, #228639.
+  * Fixed wrong manpage header; closes: #261034.  
+  * debian/menu: used a xpm file; closes: #265940.  
+
+ -- Davide Puricelli (evo) <evo@debian.org>  Sun, 22 Aug 2004 17:31:59 +0200
+
+eog (2.6.1-0.4) unstable; urgency=high
+
+  * NMU
+  * Fixed the FTBFS with the new libexif (Closes: #255186).
+  * debian/control:
+    - updated the Build-Depends on libexif-dev.
+
+ -- Sebastien Bacher <seb128@debian.org>  Sat, 26 Jun 2004 14:24:01 +0200
+
+eog (2.6.1-0.3) unstable; urgency=low
+
+  * NMU
+  * Updated build depends.
+
+ -- Sebastien Bacher <seb128@debian.org>  Fri, 28 May 2004 22:55:17 +0200
+
+eog (2.6.1-0.2) unstable; urgency=low
+
+  * Non-Maintainer Upload.
+  * Upload to unstable.
+
+ -- Jordi Mallach <jordi@debian.org>  Fri, 28 May 2004 12:36:04 +0200
+
+eog (2.6.1-0.1) experimental; urgency=low
+
+  * NMU.
+  * New upstream release.
+  * debian/control.in
+    + updated Build-Depends (Closes: #245329).
+  * debian/menu:
+    + updated menu entry with Luca Capello <luca@pca.it> suggestions
+     (Closes: #228639).
+
+ -- Sebastien Bacher <seb128@debian.org>  Sun, 16 May 2004 14:28:53 +0200
+
+eog (2.6.0-1) experimental; urgency=low
+
+  * New upstream release; closes: #242060.
+
+ -- Davide Puricelli (evo) <evo@debian.org>  Sun, 18 Apr 2004 11:55:33 +0200 
+
+eog (2.4.1-2) unstable; urgency=high
+
+  * Added a missing Build-Depends on libgnomeprintui2.2-dev. 
+
+ -- Davide Puricelli (evo) <evo@debian.org>  Sat, 25 Oct 2003 15:22:48 +0200
+
+eog (2.4.1-1) unstable; urgency=low
+
+  * New upstream version.
+  * Fixed an issue on viewing some pictures twice, closes: #190889.
+  * "Load image" file selector is no longer case sensitive, closes: #199431.
+  * Added .jpeg support, closes: #208359.
+  * Removed useless Build-Depends on liblinc-dev, closes: #214819.
+
+ -- Davide Puricelli (evo) <evo@debian.org>  Fri, 24 Oct 2003 18:41:44 +0200
+
+eog (2.2.2-2) unstable; urgency=high
+
+  * Added a missing Build-Depends on libeel2-dev. 
+
+ -- Davide Puricelli (evo) <evo@debian.org>  Sat,  7 Jun 2003 10:22:39 +0200
+
+eog (2.2.2-1) unstable; urgency=high
+
+  * New upstream version:
+   - fixed "GNOME's Eye Of Gnome incorrect file name handling"
+   (http://marc.theaimsgroup.com/?l=bugtraq&m=104887189724146&w=2)
+   closes: #189002.
+  * Added support for "image/svg+xml" too, closes: #192421.
+  * Fixed a typo into xmldocs.make (now it's a tab and not eight spaces).
+    closes: #195668.
+
+ -- Davide Puricelli (evo) <evo@debian.org>  Fri,  6 Jun 2003 22:22:19 +0200
+
+eog (2.2.0-1) unstable; urgency=low
+
+  * New upstream version.
+
+ -- Davide Puricelli (evo) <evo@debian.org>  Mon, 10 Feb 2003 19:46:06 +0100
+
+eog (1.1.4-1) unstable; urgency=low
+
+  * New upstream version.
+  * Segfault on Edit/Preferences is not reproducible, please try this
+    version; closes: #166689.
+  * Removed an old Depends on libgnomeprint2-0; closes: #177328.
+  * eog is not a core app, I think that 1.1 branch is really better than
+    Gnome 2.0.x version, so I'll continue to package it; closes: #170404.
+
+ -- Davide Puricelli (evo) <evo@debian.org>  Sat, 18 Jan 2003 23:36:32 +0100
+
+eog (1.1.0-2) unstable; urgency=low
+
+  * First upload to unstable!
+
+ -- Davide Puricelli (evo) <evo@debian.org>  Sat, 26 Oct 2002 23:31:04 +0200
+
+eog2 (1.1.0-1) experimental; urgency=low
+
+  * New upstream version.
+
+ -- Davide Puricelli (evo) <evo@debian.org>  Fri, 18 Oct 2002 15:25:12 +0200
+
+eog2 (1.0.3-3) experimental; urgency=low
+
+  * Removed the 2 suffix from the binary package name.
+
+ -- Davide Puricelli (evo) <evo@debian.org>  Sat,  5 Oct 2002 12:55:32 +0200
+
+eog2 (1.0.3-2) experimental; urgency=low
+
+  * Removed any external DTD call in xml files; closes: #161883. 
+
+ -- Davide Puricelli (evo) <evo@debian.org>  Sat, 28 Sep 2002 12:09:32 +0200
+
+eog2 (1.0.3-1) experimental; urgency=low
+
+  * New upstream version.
+
+ -- Davide Puricelli (evo) <evo@debian.org>  Fri, 13 Sep 2002 14:23:12 +0200
+
+eog2 (1.0.1-5) experimental; urgency=low
+
+  * Recompiled against gnome-vfs2 2.0.2-4.
+
+ -- Davide Puricelli (evo) <evo@debian.org>  Wed, 14 Aug 2002 17:41:06 +0200
+
+eog2 (1.0.1-4) experimental; urgency=low
+
+  * Recompiled against libpng3 and libgtk2.0-0png3.
+
+ -- Davide Puricelli (evo) <evo@debian.org>  Tue, 13 Aug 2002 11:46:01 +0200
+
+eog2 (1.0.1-3) experimental; urgency=low
+
+  * Now we don't ship /etc/gconf/gconf.xml.defaults, it's generated by
+    gconftool; closes: #151856.
+
+ -- Davide Puricelli (evo) <evo@debian.org>  Fri, 12 Jul 2002 19:01:13 +0200
+
+eog2 (1.0.1-2) experimental; urgency=low
+
+  * Recompiled against librsvg2-2.
+
+ -- Davide Puricelli (evo) <evo@debian.org>  Mon,  1 Jul 2002 11:01:47 +0200
+
+eog2 (1.0.1-1) experimental; urgency=low
+
+  * New upstream version.
+
+ -- Davide Puricelli (evo) <evo@debian.org>  Sat, 22 Jun 2002 11:49:19 +0200
+
+eog2 (0.118.0-1) experimental; urgency=low
+
+  * New upstream version.
+
+ -- Davide Puricelli (evo) <evo@debian.org>  Sat, 25 May 2002 15:03:53 +0200
+
+eog2 (0.116.1-1) experimental; urgency=low
+
+  * New upstream version.
+
+ -- Davide Puricelli (evo) <evo@debian.org>  Thu, 25 Apr 2002 15:32:27 +0200
+
+eog2 (0.115.0-1) experimental; urgency=low
+
+  * New upstream version.
+
+ -- Davide Puricelli (evo) <evo@debian.org>  Sun, 31 Mar 2002 21:40:36 +0200
+
+eog2 (0.114.0-1) experimental; urgency=low
+
+  * Initial Release, closes: #130119.
+
+ -- Davide Puricelli (evo) <evo@debian.org>  Sun, 17 Mar 2002 12:49:05 +0100  
