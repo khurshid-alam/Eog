@@ -1,3 +1,22 @@
+eog (2.19.91-0ubuntu1) gutsy; urgency=low
+
+  * New upstram version:
+    Misc improvements/fixes:
+    - Small improvements on thumbnails appearance
+    Bug fixes:
+    - #470297, eog doesn't display images from an empty window (LP: #134934)
+    - #311308, Drag and Dropping the same image twice in EOG will 
+               open 2 windows
+    - #467835, Patch to HIGify plugin list
+    - #470416, Icon install location
+    - #470686, zooming documentation is confusing (LP: #134914)
+    - #466681, Page Setup/Properties/Trash items not accessible
+    New and updated translations
+  * debian/control.in:
+    - set XS-Vcs-Bzr location
+
+ -- Sebastien Bacher <seb128@canonical.com>  Tue, 28 Aug 2007 10:25:57 +0200
+
 eog (2.19.5-0ubuntu1) gutsy; urgency=low
 
   * New upstream version:
