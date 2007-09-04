@@ -1,3 +1,17 @@
+eog (2.19.92-0ubuntu1) gutsy; urgency=low
+
+  * New upstream version:
+    New features:
+    - New image collection pane layout with continuous scrolling side buttons
+    Misc improvements/fixes:
+    - Several code cleanups and improvements
+    Bug fixes:
+    - #427046, Scrollwheel on image list doesn't work
+    - #458663, Kill the scrollbar!
+    New and updated translations
+
+ -- Sebastien Bacher <seb128@canonical.com>  Tue, 04 Sep 2007 09:53:15 +0200
+
 eog (2.19.91-0ubuntu1) gutsy; urgency=low
 
   * New upstram version:
