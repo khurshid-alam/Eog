@@ -26,15 +26,16 @@ eog (2.20.0-0ubuntu1) gutsy; urgency=low
     - #354352, Show incomplete images
     - #394803, Fails to load .svgz 
     - #440254, Eog crashes when opening an image with invalid unicode 
-      as filename
+      as filename (LP: #126974)
     - #447063, eog hangs when opening SVG files that include external images
+      (LP: #119603)
     - #459665, opened images should take as much screen space as possible
     - #465583, thumbnails badly rotated (autorotation enabled)
     - #470521, some image is rendered with a wrong rotation
     - #471530, Confusing PyGtk configure failure message
     - #474642, ./configure is semi-broken
     - #474710, eog crashes when you try to open this .jpg file 
-      (it works fine on Vista/XP)
+      (it works fine on Vista/XP) (LP: #138730)
     - #474931, factore out some code in the metadata consumer
     New and updated translation
     New and updated manual translations
