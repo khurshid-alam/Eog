@@ -1,3 +1,46 @@
+eog (2.20.0-0ubuntu1) gutsy; urgency=low
+
+  * New upstream version
+    New features:
+    - Complete rewrite of application core which means more stable, 
+      maintanable, faster image viewer for GNOME 
+    - New plugin system which allows developers to extend EOG's UI
+      and behavior. Python support is available.
+    - Editable application toolbar
+    - New image collection pane with on-demand thumbnail loading, 
+      polished look, and continuous scrolling side buttons.
+    - Side Pane to be extended by plugins
+    - New image properties dialog which replaces the image info sidepane
+    - Single instance D-Bus-based activation support
+    - Revamped error/warning UI 
+    - "Open with" support to quickly open images on other applications
+    - Mouse scrollwheel improvements: HIG compliancy and zoom factor setting
+    - General UI polishing 
+    - Command line options for fullscreen, slideshow and image collection
+      disabling
+    - Display EXIF MakerNotes
+    - XMP Support 
+    Misc improvements/fixes:
+    - Small refactorings in metadata readers
+    Bug fixes:
+    - #354352, Show incomplete images
+    - #394803, Fails to load .svgz 
+    - #440254, Eog crashes when opening an image with invalid unicode 
+      as filename
+    - #447063, eog hangs when opening SVG files that include external images
+    - #459665, opened images should take as much screen space as possible
+    - #465583, thumbnails badly rotated (autorotation enabled)
+    - #470521, some image is rendered with a wrong rotation
+    - #471530, Confusing PyGtk configure failure message
+    - #474642, ./configure is semi-broken
+    - #474710, eog crashes when you try to open this .jpg file 
+      (it works fine on Vista/XP)
+    - #474931, factore out some code in the metadata consumer
+    New and updated translation
+    New and updated manual translations
+
+ -- Sebastien Bacher <seb128@canonical.com>  Tue, 18 Sep 2007 10:45:35 +0200
+
 eog (2.19.92-0ubuntu1) gutsy; urgency=low
 
   * New upstream version:
