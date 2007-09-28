@@ -1,3 +1,14 @@
+eog (2.20.0-0ubuntu2) gutsy; urgency=low
+
+  * debian/patches/90_from_svn_fix_duplicate_widget.patch:
+    - patch from SVN, fix duplicate widget declaration breaking combobox
+  * debian/patches/91_from_svn_fix_mimetype_crasher.patch:
+    - patch from SVN, fix crasher when the mimetype is not correct (LP: #140729)
+  * debian/patches/92_from_svn_update_images_collection.patch:
+    - patch from SVN, update the images collection correctly (LP: #146135)
+
+ -- Sebastien Bacher <seb128@canonical.com>  Fri, 28 Sep 2007 11:21:40 +0200
+
 eog (2.20.0-0ubuntu1) gutsy; urgency=low
 
   * New upstream version
