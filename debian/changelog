@@ -1,3 +1,11 @@
+eog (2.20.0-0ubuntu3) gutsy; urgency=low
+
+  * debian/control.in:
+    - Build-Depends on intltool so the translations template is updated
+      (LP: #147638)
+
+ -- Sebastien Bacher <seb128@canonical.com>  Mon, 01 Oct 2007 15:42:52 +0200
+
 eog (2.20.0-0ubuntu2) gutsy; urgency=low
 
   * debian/patches/90_from_svn_fix_duplicate_widget.patch:
