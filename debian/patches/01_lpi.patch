@@ -1,7 +1,10 @@
-diff -Nur eog-2.19.1/configure.ac eog-2.19.1.new/configure.ac
---- eog-2.19.1/configure.ac	2007-04-30 22:50:06.000000000 +0200
-+++ eog-2.19.1.new/configure.ac	2007-05-02 10:29:26.000000000 +0200
-@@ -69,6 +69,7 @@
+# Description: add launchpad menu items to the application
+# UbuntuSpecific: launchpad
+#
+diff -Nur -x '*.orig' -x '*~' eog-2.22.1/configure.ac eog-2.22.1.new/configure.ac
+--- eog-2.22.1/configure.ac	2008-04-07 21:04:28.000000000 +0200
++++ eog-2.22.1.new/configure.ac	2008-04-09 11:11:24.000000000 +0200
+@@ -99,6 +99,7 @@
               libgnomeui-2.0 >= $LIBGNOMEUI_REQUIRED \
               libglade-2.0 >= $LIBGLADE_REQUIRED \
               gdk-pixbuf-2.0 >= $GDKPIXBUF_REQUIRED \
@@ -9,23 +12,21 @@ diff -Nur eog-2.19.1/configure.ac eog-2.19.1.new/configure.ac
               gconf-2.0 >= $GCONF_REQUIRED \
               libart-2.0 >= $LIBART_REQUIRED \
               gnome-desktop-2.0 >= $GNOME_DESKTOP_REQUIRED \
-diff -Nur eog-2.19.1/data/eog-ui.xml eog-2.19.1.new/data/eog-ui.xml
---- eog-2.19.1/data/eog-ui.xml	2007-04-29 22:00:40.000000000 +0200
-+++ eog-2.19.1.new/data/eog-ui.xml	2007-05-02 10:29:26.000000000 +0200
-@@ -57,6 +57,9 @@
+diff -Nur -x '*.orig' -x '*~' eog-2.22.1/data/eog-ui.xml eog-2.22.1.new/data/eog-ui.xml
+--- eog-2.22.1/data/eog-ui.xml	2008-04-07 21:04:12.000000000 +0200
++++ eog-2.22.1.new/data/eog-ui.xml	2008-04-09 11:11:34.000000000 +0200
+@@ -69,6 +69,7 @@
      </menu>
      <menu action="Help">
        <menuitem action="HelpManual"/>
-+      <separator/>
 +      <placeholder name="LaunchpadItems"/>
-+      <separator/>
        <menuitem action="HelpAbout"/>
      </menu>
    </menubar>
-diff -Nur eog-2.19.1/src/eog-window.c eog-2.19.1.new/src/eog-window.c
---- eog-2.19.1/src/eog-window.c	2007-04-30 00:23:43.000000000 +0200
-+++ eog-2.19.1.new/src/eog-window.c	2007-05-02 10:29:50.000000000 +0200
-@@ -68,6 +68,7 @@
+diff -Nur -x '*.orig' -x '*~' eog-2.22.1/src/eog-window.c eog-2.22.1.new/src/eog-window.c
+--- eog-2.22.1/src/eog-window.c	2008-04-07 21:03:38.000000000 +0200
++++ eog-2.22.1.new/src/eog-window.c	2008-04-09 11:11:24.000000000 +0200
+@@ -67,6 +67,7 @@
  #include <libgnomevfs/gnome-vfs-mime.h>
  #include <libgnomevfs/gnome-vfs-mime-handlers.h>
  #include <gconf/gconf-client.h>
@@ -33,7 +34,7 @@ diff -Nur eog-2.19.1/src/eog-window.c eog-2.19.1.new/src/eog-window.c
  
  #if HAVE_LCMS
  #include <X11/Xlib.h>
-@@ -3500,6 +3501,9 @@
+@@ -3904,6 +3905,9 @@
                  g_error_free (error);
          }
  

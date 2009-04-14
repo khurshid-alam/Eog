@@ -1,0 +1,10 @@
+--- data/eog.desktop.in.in.orig	2008-06-30 22:58:50.419591876 +0200
++++ data/eog.desktop.in.in	2008-06-30 22:59:10.943587104 +0200
+@@ -5,6 +5,7 @@
+ Exec=eog %U
+ Icon=eog
+ StartupNotify=true
++NoDisplay=true
+ Terminal=false
+ Type=Application
+ Categories=GNOME;GTK;Graphics;RasterGraphics;Viewer;

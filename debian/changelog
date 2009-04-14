@@ -1,295 +1,275 @@
-eog (2.20.1-0ubuntu1) gutsy-proposed; urgency=low
-
-  * New upstream version:
-    - Correctly set message area style
-    - Bug fixes:
-      - #482752, crash when opening a tiff image (eog_image_load)
-      -   #475645, When an image is saved, the selection is lost (LP: #152785)
-      -   #476313, plugins about dialog is not gtk+-2.11/2.12 ready
-      -   #477550, fileformat combobox in save-as-many dialog is empty
-      -   #479029, eog crashes when showing Image Collection
-      -   #479400, Renamed files vanish from the collection 
-      -   #479884, Mouse dragging UI broken.
-      -   #482128, Hangs on XPM file
-      -   #486057, "SetAsWallpaper" functionality doesn't launch background 
-           properties (Felix Riemann)
-    - New and updated translations: it, ko, be@latin, sl
-  * debian/patches/90_from_svn_fix_duplicate_widget.patch:
-    - dropped as got fixed upstream
-  * debian/patches/91_from_svn_fix_mimetype_crasher.patch:
-    - dropped as got fixed upstream
-  * debian/patches/92_from_svn_update_images_collection.patch:
-    - dropped as got fixed upstream
-
- -- Aron Sisak <aron@ubuntu.hu>  Wed, 17 Oct 2007 15:23:32 +0200
-
-eog (2.20.0-0ubuntu3) gutsy; urgency=low
-
-  * debian/control.in:
-    - Build-Depends on intltool so the translations template is updated
-      (LP: #147638)
-
- -- Sebastien Bacher <seb128@canonical.com>  Mon, 01 Oct 2007 15:42:52 +0200
-
-eog (2.20.0-0ubuntu2) gutsy; urgency=low
-
-  * debian/patches/90_from_svn_fix_duplicate_widget.patch:
-    - patch from SVN, fix duplicate widget declaration breaking combobox
-  * debian/patches/91_from_svn_fix_mimetype_crasher.patch:
-    - patch from SVN, fix crasher when the mimetype is not correct (LP: #140729)
-  * debian/patches/92_from_svn_update_images_collection.patch:
-    - patch from SVN, update the images collection correctly (LP: #146135)
-
- -- Sebastien Bacher <seb128@canonical.com>  Fri, 28 Sep 2007 11:21:40 +0200
-
-eog (2.20.0-0ubuntu1) gutsy; urgency=low
+eog (2.26.0-0ubuntu1) jaunty; urgency=low
 
   * New upstream version
-    New features:
-    - Complete rewrite of application core which means more stable, 
-      maintanable, faster image viewer for GNOME 
-    - New plugin system which allows developers to extend EOG's UI
-      and behavior. Python support is available.
-    - Editable application toolbar
-    - New image collection pane with on-demand thumbnail loading, 
-      polished look, and continuous scrolling side buttons.
-    - Side Pane to be extended by plugins
-    - New image properties dialog which replaces the image info sidepane
-    - Single instance D-Bus-based activation support
-    - Revamped error/warning UI 
-    - "Open with" support to quickly open images on other applications
-    - Mouse scrollwheel improvements: HIG compliancy and zoom factor setting
-    - General UI polishing 
-    - Command line options for fullscreen, slideshow and image collection
-      disabling
-    - Display EXIF MakerNotes
-    - XMP Support 
-    Misc improvements/fixes:
-    - Small refactorings in metadata readers
-    Bug fixes:
-    - #354352, Show incomplete images
-    - #394803, Fails to load .svgz 
-    - #440254, Eog crashes when opening an image with invalid unicode 
-      as filename (LP: #126974)
-    - #447063, eog hangs when opening SVG files that include external images
-      (LP: #119603)
-    - #459665, opened images should take as much screen space as possible
-    - #465583, thumbnails badly rotated (autorotation enabled)
-    - #470521, some image is rendered with a wrong rotation
-    - #471530, Confusing PyGtk configure failure message
-    - #474642, ./configure is semi-broken
-    - #474710, eog crashes when you try to open this .jpg file 
-      (it works fine on Vista/XP) (LP: #138730)
-    - #474931, factore out some code in the metadata consumer
-    New and updated translation
-    New and updated manual translations
+  * debian/control.in:
+    - set vcs url
 
- -- Sebastien Bacher <seb128@canonical.com>  Tue, 18 Sep 2007 10:45:35 +0200
+ -- Sebastien Bacher <seb128@ubuntu.com>  Mon, 16 Mar 2009 23:28:47 +0100
 
-eog (2.19.92-0ubuntu1) gutsy; urgency=low
+eog (2.25.92-0ubuntu1) jaunty; urgency=low
 
   * New upstream version:
-    New features:
-    - New image collection pane layout with continuous scrolling side buttons
-    Misc improvements/fixes:
-    - Several code cleanups and improvements
     Bug fixes:
-    - #427046, Scrollwheel on image list doesn't work
-    - #458663, Kill the scrollbar!
-    New and updated translations
+    - #550086, Rotate image counterclockwise shortcut 
+    - #558086, simplify drag targets handling 
+    - #572410, eog crashed with SIGSEGV in g_closure_invoke
+    - #572723, Misspelled word in a window 
+    - #572889, Possible typo 
 
- -- Sebastien Bacher <seb128@canonical.com>  Tue, 04 Sep 2007 09:53:15 +0200
+ -- Sebastien Bacher <seb128@ubuntu.com>  Tue, 03 Mar 2009 14:30:22 +0100
 
-eog (2.19.91-0ubuntu1) gutsy; urgency=low
+eog (2.25.91-0ubuntu2) jaunty; urgency=low
 
-  * New upstram version:
-    Misc improvements/fixes:
-    - Small improvements on thumbnails appearance
-    Bug fixes:
-    - #470297, eog doesn't display images from an empty window (LP: #134934)
-    - #311308, Drag and Dropping the same image twice in EOG will 
-               open 2 windows
-    - #467835, Patch to HIGify plugin list
-    - #470416, Icon install location
-    - #470686, zooming documentation is confusing (LP: #134914)
-    - #466681, Page Setup/Properties/Trash items not accessible
-    New and updated translations
-  * debian/control.in:
-    - set XS-Vcs-Bzr location
+  * No change rebuild for python2.6.
 
- -- Sebastien Bacher <seb128@canonical.com>  Tue, 28 Aug 2007 10:25:57 +0200
+ -- Matthias Klose <doko@ubuntu.com>  Wed, 25 Feb 2009 10:53:35 +0000
 
-eog (2.19.5-0ubuntu1) gutsy; urgency=low
+eog (2.25.91-0ubuntu1) jaunty; urgency=low
+
+  * New upstream version (LP: #330555).
+    - Security Workaround for CVE-2008-5987 (Morten Welinder).
+  * Bug fix: 
+    - #569228: untrusted python modules search path (Morten Welinder).
+  * New or updated translations.
+  * New or updated manual translations.
+
+ -- Christophe Sauthier <christophe.sauthier@gmail.com>  Tue, 17 Feb 2009 09:56:40 +0100
+
+eog (2.25.90-0ubuntu1) jaunty; urgency=low
 
   * New upstream version:
-    New features:
-    - XMP Support 
-    - Side Pane to be extended by plugins
-    - Inhibit screensaver when running slideshow/fullscreen
-    - Improved selection visual feedback in image collection pane 
-    Misc improvements/fixes:
-    - Several code cleanup and fixes 
+    - Support for deleting files that can't be trashed 
+    - Build system improvements / fixes 
+    - Code improvements / fixes 
     Bug fixes:
-    - crash in EOG: Saving rotated image (LP: #125146)
-    - Add wbmp to supported image types
-    - Crash: when specifying an invalid extension in save as dialog 
-      (LP: #126175, #131639)
-    - Support Adobe XMP metadata
-    - Changing scale of image in print dialog is slow 
-    - Use "document-page-setup" named icon for File->Setup Page 
-    - tooltips in collection don't update
-    - Inhibit screensaver when running slideshow
-    - Weird preferences window 
-    - Application specific icons are installed in the wrong directory       
-    - Fail to build with undefined reference to 
-      `eog_application_register_service'
-    -Thumbnails of modified images wrongly loaded from thumbnail factory 
-    - thumbnails not updated after applying a transformation  
-    - [patch] make thumbnail of modified and saved images actually appear
-    - [patch] get rid of compilation warnings
-    - configure doesn't check for libexif/exif-data.h
+    - #441637, Patch to delete file when Trash isn't found 
+    - #568410, eog 2.25.5 build fails 
+    - #568882, don't rely on gtk implementation details 
+    - #569657, Eog needs update on data/eog.pc.in 
+    - #569855, Unref on thumbnail manipulator functions 
+  * debian/patches/02_sanitize_sys.path.patch:
+    - the change is in the new version
+  * debian/patches/03_workaround_build_issue.patch:
+    - the change is in the new version
 
- -- Sebastien Bacher <seb128@canonical.com>  Tue, 14 Aug 2007 10:01:54 +0200
+ -- Sebastien Bacher <seb128@ubuntu.com>  Fri, 06 Feb 2009 10:56:20 +0100
 
-eog (2.19.4-0ubuntu2) gutsy; urgency=low
+eog (2.25.5-0ubuntu3) jaunty; urgency=low
 
-  * debian/rules:
-    - Added DEB_CONFIGURE_EXTRA_FLAGS += --enable-python
-    - Added DEB_PYTHON_SYSTEM=pycentral
-    - Added dh_pycentral to binary-arch
-    - Added 'rm -vf config.status.lineno' to clean
   * debian/control.in:
-    - Added python-gnome2-dev to Build-Depends 
-    - Added libdbus-glib-1-dev to Build-Depends
-    - Added debhelper to Build-Depends
-    - Added python-central to Build-Depends
-    - Added ${python:Depends} to Depends
-    - Added XS-Python-Version: current
+    - build-depends on libxml2-dev
 
+ -- Sebastien Bacher <seb128@ubuntu.com>  Wed, 21 Jan 2009 00:26:16 +0100
 
- -- Fernando Ribeiro <fernando@staff.nerdgroup.org>  Mon, 23 Jul 2007 14:48:37 -0300
+eog (2.25.5-0ubuntu2) jaunty; urgency=low
 
-eog (2.19.4-0ubuntu1) gutsy; urgency=low
-
-  * New upstream release.
   * debian/control.in:
-    - bump libexif-dev Build-Depends.
+    - updated build depends
 
- -- Adilson Oliveira <adilson@ubuntu.com>  Tue, 10 Jul 2007 16:19:54 +0000
+ -- Sebastien Bacher <seb128@ubuntu.com>  Tue, 20 Jan 2009 23:15:11 +0100
 
-eog (2.19.3-0ubuntu1) gutsy; urgency=low
-
-  * New Upstream Release
-
- -- Fernando Ribeiro <fernando@staff.nerdgroup.org>  Mon, 04 Jun 2007 20:13:03 -0300
-
-eog (2.19.2-0ubuntu1) gutsy; urgency=low
+eog (2.25.5-0ubuntu1) jaunty; urgency=low
 
   * New upstream version:
-    New features:
-    - New plugin system which allows developers to extend EOG's UI
-      and behavior
-    Misc improvements/fixes:
-    - Several code cleanups
-    - Correctly set slideshow delay when being entered with the keyboard
+    - Code improvements / fixes 
+    - Drop libgnome dependency 
     Bug fixes:
-    - #435614, When DnD rotate left/right icons to "Toolbar Editor" the 
-               icon not appear
-    - #437691, README files needs an update
+    - #559500, drop libgnome dependency 
+    - #557662, Cannot build doc without exif enabled. 
+    - #566104, Reverse Left/Right arrows action in RTL mode 
+    - #566190, scroll buttons of the icons navigation window are reversed for
+      RTL locales 
+  * debian/patches/03_workaround_build_issue.patch:
+    - workaround build issue
 
- -- Sebastien Bacher <seb128@canonical.com>  Tue, 15 May 2007 10:59:35 +0200
+ -- Sebastien Bacher <seb128@ubuntu.com>  Tue, 20 Jan 2009 11:45:15 +0100
 
-eog (2.19.1-0ubuntu1) gutsy; urgency=low
+eog (2.25.4-0ubuntu1) jaunty; urgency=low
 
   * New upstream version:
-    - Complete rewrite of application core which means more stable, 
-      maintanable, faster image viewer for GNOME
-    - Editable application toolbar
-    - New image collection pane with on-demand thumbnail loading
-      (Ubuntu: #37429)
-    - Support for setting image collection position (left, right, top, 
-      bottom) and wether it's resizable or not. No preference UI yet
-    - New image properties dialog which replaces the image info sidepane 
-    - Single instance D-Bus-based activation support
-    - Revamped error/warning UI
-    - "Open with" support to quickly open images on other applications
-    - Mouse scrollwheel improvements: HIG compliancy and zoom factor setting
-    - Migration to GtkRecent
-    - UI polishing on multiple images save as dialog
-    - Command line options for fullscreen, slideshow and image collection
-      disabling
-    - Rotate work in fullscreen (Ubuntu: #31783)
-    - Don't crash when cancelling a slideshow load (Ubuntu: #43322)
-    - Trash work on different volume (Ubuntu: #42571)
-    - Display the correct window icon (Ubuntu: #43609)
-    - Don't write wrong rotation information (Ubuntu: #88248)
-    - Enhanced shortcuts work (Ubuntu: #44343)
+    - Code improvements / fixes 
+    - Python bindings improvements 
     Bug fixes:
-    - #377123, [eog-ng] implement EogJobSave
-    - #319859, "open image with" function
-    - #334321, Should be possible move the collection in EOG
-    - #316175, EOG gives no error upon opening non image files
-    - #432439, Run gtk-update-icon-cache in uninstall-hook
-    - #429156, [patch] "Save As" dialog for multiple files is way too ugly
-    - #427154, Some strings are not translated in save-as-multiple dialog. 
-    - #419756, Slideshow background should be black.
-    - #404708, eog crashed with SIGSEGV in g_closure_invoke()
-    - #404126, Convert debug messages to eog_debug_message
-    - #401939, [eog-ng] Remove leaftag support.
-    - #399333, EOG-NG crash while opening Print dialog
-    - #398250, build bug: missing symbols from libpangoft2
-    - #389314, eog should use stock_print-setup from g-i-t for the 
-               "Page setup..." action
-    - #376513, TRACKER: command-line options
-    - #355858, switching image forward and back quickly can display wrong image
-    - #351040, [eog-ng] use GtkRecent
-    - #344140, [eog-ng] remove duplicate code in fullscreen-code
-    - #342817, crash trying to view profile image
-    - #342103, [patch] [eog-ng] update about dialog
-    - #341935, Should not zoom with mouse wheel
-    - #341831, [eog-ng] memory usage increases when switching fastly between 
-               images
-    - #341600, [eog-ng] EOG eats a lot o CPU when inactive
-    - #340957, Filenames containing numbers are not properly sorted (as how 
-               nautilus does)
-    - #335689, Middle mouse drag should also scroll
-    - #327424, progress bar changes view size which forces re-zooming of image
-    - #322057, eog print output is corrupt
-    - #305823, The rotate buttons on the toolbar are blurred
-    - #404907, [eog-ng] Crash when opening properties dialog (broken EXIF). 
-    - #372820, First call to PKG_CHECK_MODULES is conditional without a prior 
-               call to PKG_PROG_PKG_CONFIG 
-    - #381867, mouse cursor disappear after exit fullscreen mode 
-    - #383090, Slideshow / Slide Show
-    - #336973, [eog-ng] Migration of the collection pane to GtkIconView and 
-               GtkListStore
-    - #356947, [eog-ng] GtkPrint support
-    - #393586, [eog-ng] Editable toolbar for EOG
-    - #401946, [eog-ng] [patch] D-Bus based activation
-    - #416321, [eog-ng] Use tooltips to show image information in the thumbview
-    - #89512,  Setting for how much the mouse wheel should affect zoom
-    - #321400, mouse side-buttons for navigation
+    - #566367, no weekday calculation in exif date display 
+
+ -- Sebastien Bacher <seb128@ubuntu.com>  Tue, 06 Jan 2009 16:22:00 +0100
+
+eog (2.25.3-0ubuntu1) jaunty; urgency=low
+
+  * New upstream version
   * debian/control.in:
-    - the maintainer is Ubuntu Desktop Team
-  * debian/patches/01_lpi.patch, debian/patches/02_autoconf.patch,
-    debian/patches/03_hide_menu_item.patch:
-    - updated
+    - updated the requirements
 
- -- Sebastien Bacher <seb128@canonical.com>  Wed, 02 May 2007 10:05:47 +0200
+ -- Sebastien Bacher <seb128@ubuntu.com>  Tue, 16 Dec 2008 16:07:12 +0100
 
-eog (2.18.1-1ubuntu1) gutsy; urgency=low
+eog (2.24.1-1ubuntu1) jaunty; urgency=low
 
-  * Merge with Debian.
+  * Sync on Debian
   * debian/control.in:
-    - Build-Depends on liblaunchpad-integration-dev
+    - build-depends on liblaunchpad-integration-dev
+    - update for the python build
   * debian/patches/01_lpi.patch:
     - launchpad integration
   * debian/patches/02_autoconf.patch:
     - configure update
-  * debian/patches/03_hide_menu_item.patch:
-    - menu simplication (MenuRevisited spec)
+  * debian/rules:
+    - update clean target
+    - use --enable-python option and call dh_pycentral
 
- -- Christian Bjälevik <nafallo@ubuntu.com>  Fri, 27 Apr 2007 00:32:54 +0200
+ -- Sebastien Bacher <seb128@ubuntu.com>  Mon, 17 Nov 2008 10:24:53 +0100
+
+eog (2.24.1-1) experimental; urgency=low
+
+  * New upstream release.
+  * Update build-dependencies, add missing dependencies for eog-dev.
+  * Remove broken changelog entry at the end.
+  * Don’t build with -z defs, it fails for the plugins.
+  * eog.install: install the plugins.
+  * eog-dev.install: install the documentation.
+  * Pass --no-act to dh_makeshlibs.
+
+ -- Josselin Mouette <joss@debian.org>  Thu, 13 Nov 2008 18:06:45 +0100
+
+eog (2.22.3-2) unstable; urgency=high
+
+  [ Deng Xiyue ]
+  * 02_sanitize_sys.path.patch: fix possible security problem caused by
+    empty sys.path which allows the possibility to run arbitrary code by a
+    file matches the name of a python module in user's working directory.
+    Thanks James Vega <jamessan@debian.org> for the patch.
+    (Closes: #504352)
+
+ -- Josselin Mouette <joss@debian.org>  Thu, 06 Nov 2008 09:04:21 +0100
+
+eog (2.22.3-1) unstable; urgency=low
+
+  [ Josselin Mouette ]
+  * 01_nodisplay.patch: do not display the menu entry by default; an 
+    image viewer is mostly useless except when launched from the file 
+    browser.
+
+  [ Sebastian Dröge ]
+  * New upstream bugfix release.
+  * debian/control.in:
+    + Updated Standards-Version to 3.8.0, no additional changes needed.
+    + Build depend on intltool as it's required now.
+
+ -- Sebastian Dröge <slomo@debian.org>  Tue, 01 Jul 2008 11:49:13 +0200
+
+eog (2.22.2-1) unstable; urgency=low
+
+  * New upstream release.
+    - adds "image/svg+xml-compressed" to the list of supported file types
+      (Closes: #477436).
+
+ -- Guilherme de S. Pastore <gpastore@debian.org>  Fri, 30 May 2008 23:07:01 -0300
+
+eog (2.22.1-1) unstable; urgency=low
+
+  [ Romain Francoise ]
+  * debian/control.in: Bump build-depends on libglib2.0-dev to (>= 2.15.3).
+
+  [ Sebastian Dröge ]
+  * New upstream bugfix release.
+
+ -- Sebastian Dröge <slomo@debian.org>  Tue, 08 Apr 2008 05:44:49 +0200
+
+eog (2.22.0-1) unstable; urgency=low
+
+  [ Josselin Mouette ]
+  * Fix capitalization of GNOME.
+  * Rework description to make it a bit more up to date.
+    Closes: #463221.
+
+  [ Romain Francoise ]
+  * New upstream release:
+    + Handles XPM files properly again (closes: #444742).
+    + Includes performance improvements (closes: #463112).
+    + No longer crashes if ~/.gnome2/eog is not a directory (closes: #445544).
+  * debian/control: Bump build-depends on libglib2.0-dev to (>= 2.15.3).
+
+ -- Romain Francoise <rfrancoise@debian.org>  Fri, 14 Mar 2008 23:38:03 +0100
+
+eog (2.20.4-1) unstable; urgency=low
+
+  * New upstream bugfix release.
+  * debian/control.in:
+    + Update Standards-Version to 3.7.3, no additional changes needed.
+
+ -- Sebastian Dröge <slomo@debian.org>  Mon, 07 Jan 2008 21:21:09 +0100
+
+eog (2.20.3-1) unstable; urgency=low
+
+  * New upstream bugfix release:
+    + debian/patches/01_eog_xmp.patch:
+      - Dropped, merged upstream.
+
+ -- Sebastian Dröge <slomo@debian.org>  Tue, 27 Nov 2007 05:40:17 +0100
+
+eog (2.20.2-2) unstable; urgency=low
+
+  * debian/patches/01_eog_xmp.patch,
+    debian/control.in:
+    + Build against exempi 1.99.5, patch by Michael Biebl.
+      (Closes: #450485, #451726)
+  * debian/menu:
+    + Fix section.
+
+ -- Sebastian Dröge <slomo@debian.org>  Mon, 19 Nov 2007 16:44:43 +0100
+
+eog (2.20.2-1) unstable; urgency=low
+
+  * New upstream bugfix release.
+
+ -- Sebastian Dröge <slomo@debian.org>  Wed, 31 Oct 2007 06:51:09 +0100
+
+eog (2.20.1-1) unstable; urgency=low
+
+  * New upstream bugfix release.
+  * debian/menu:
+    + Fix section in the menu file.
+
+ -- Sebastian Dröge <slomo@debian.org>  Thu, 25 Oct 2007 11:07:36 +0200
+
+eog (2.20.0-2) unstable; urgency=low
+
+  * Remove obsolete manual pages.
+  * rules: cleanup.
+  * Add a new package: eog-dev, containing the headers and pkg-config 
+    files.
+
+ -- Josselin Mouette <joss@debian.org>  Sat, 22 Sep 2007 00:07:47 +0200
+
+eog (2.20.0-1) unstable; urgency=low
+
+  * New upstream release.
+    + Fix crash when switching between normal and fullscreen modes.
+      Closes: #382164.
+    + Add WBMP to supported file types. Closes: #270595.
+    + Shows file type in properties dialog. Closes: #439798.
+    + Features a command line option to start in fullscreen mode.
+      Closes: #134684.
+  * Massive build-depends update.
+  * Fix section for the menu file.
+  * Don't ship the headers and pkg-config files for now.
+
+ -- Josselin Mouette <joss@debian.org>  Fri, 21 Sep 2007 22:39:07 +0200
+
+eog (2.18.2-2) experimental; urgency=low
+
+  [ Sven Arvidsson ]
+  * Add a -dbg package. (Closes: #427410)
+
+  [ Loic Minier ]
+  * Target at experimental for binary package addition.
+
+ -- Loic Minier <lool@dooz.org>  Mon, 11 Jun 2007 10:13:57 +0200
+
+eog (2.18.2-1) unstable; urgency=low
+
+  * New upstream translation and bugfix release.
+
+ -- Josselin Mouette <joss@debian.org>  Sat, 02 Jun 2007 09:26:11 +0200
 
 eog (2.18.1-1) unstable; urgency=low
 

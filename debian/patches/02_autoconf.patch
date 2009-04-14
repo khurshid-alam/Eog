@@ -1,3 +1,6 @@
+# Description: the lpi changes require a configure update
+# UbuntuSpecific: launchpad
+#
 diff -Nur eog-2.19.1/configure eog-2.19.1.new/configure
 --- eog-2.19.1/configure	2007-04-30 23:54:27.000000000 +0200
 +++ eog-2.19.1.new/configure	2007-05-02 10:21:52.000000000 +0200
