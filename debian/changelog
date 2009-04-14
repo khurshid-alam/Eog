@@ -1,4 +1,4 @@
-eog (2.26.1) jaunty; urgency=low
+eog (2.26.1-0ubuntu1) jaunty; urgency=low
 
   * New upstream version: (LP: #360736)
     - UI improvements (Gabor Kelemen)
