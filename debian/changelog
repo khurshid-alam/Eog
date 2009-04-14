@@ -1,3 +1,18 @@
+eog (2.26.1) jaunty; urgency=low
+
+  * New upstream version: (LP: #360736)
+    - UI improvements (Gabor Kelemen)
+    - Code improvements / fixes (Josselin Mouette, Felix Riemann)
+    - Bug fixes:
+      #575772, Move to Trash button has no accelerator (Gabor Kelemen)
+      #576558, Crashes when trying to save write protected file (Josselin Mouette)
+    - New and updated translations
+  * debian/patches
+    - updated 01_lpi.patch to apply cleanly
+    - updated 02_autoconf.patch to apply to new version
+
+ -- Andreas Moog <andreas.moog@warperbbs.de>  Tue, 14 Apr 2009 00:30:29 +0200
+
 eog (2.26.0-0ubuntu1) jaunty; urgency=low
 
   * New upstream version
