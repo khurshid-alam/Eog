@@ -25,13 +25,25 @@ eog (2.27.1-0ubuntu1) karmic; urgency=low
       - #580600, eog crashes on drag&drop a directory from places menu (Felix Riemann)
       - #581180, Set as background on Right click (Cyriac Thomas)
    * Rebase on debian/unstable, remaining changes:
-     - debian/control.in
+     - debian/control{.in}
        - don't build-dep on scrollkeeper, not needed on buildd
        - don't build-dep on libart, it's no longer used
-       - bump build-dep for gtk to 2.15.1
+       - bump build-dep for gtk
+       - bump build-dep for gnome-desktop 
+       - add build-dep for libxml2-dev
+       - add build-dep for liblaunchpad-integration
+       - add build-dep on python-central
        - let Vcs-Bzr point to desktop-team's location
      - debian/patches
        - add 01_lpi.patch to have launchpad integration
+       - drop 02_sanitize_sys.path.patch, merged upstream
+       - add 03_hide_menu_item.patch to hide the eog item
+       - add 99_autoconf.patch to update configure
+     - debian/rules:
+       - update clean target
+       - use --enable-python option and call dh_pycentral
+     - debian/watch:
+       - also look for unstable versions
 
  -- Andreas Moog <amoog@ubuntu.com>  Mon, 11 May 2009 23:51:13 +0200
 
