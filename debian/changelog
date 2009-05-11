@@ -23,6 +23,7 @@ eog (2.27.1-0ubuntu1) karmic; urgency=low
                  (Josselin Mouette, Felix Riemann)
       - #579212, JPEG file causes memory corruption (Claudio Saavedra)
       - #580600, eog crashes on drag&drop a directory from places menu (Felix Riemann)
+        (LP: #368299)
       - #581180, Set as background on Right click (Cyriac Thomas)
    * Rebase on debian/unstable, remaining changes:
      - debian/control{.in}
