@@ -1,137 +1,47 @@
-eog (2.26.1-0ubuntu1) jaunty; urgency=low
+eog (2.27.1-0ubuntu1) karmic; urgency=low
 
-  * New upstream version: (LP: #360736)
-    - UI improvements (Gabor Kelemen)
-    - Code improvements / fixes (Josselin Mouette, Felix Riemann)
+  * New upstream release: (LP: #375133)
+    - Drop libart_lgpl dependency (Felix Riemann)
+    - Allow disabling trash confirmation dialog (Felix Riemann)
+    - Shortcut improvements (Gabor Kelemen, Felix Riemann, Claudio Saavedra,
+      Cyriac Thomas)
+    - Reduce number of exported symbols (Felix Riemann)
+    - UI improvements (Claudio Saavedra, Robin Stocker)
+    - Code improvements / fixes (Josselin Mouette, Felix Riemann,
+      Claudio Saavedra)
     - Bug fixes:
-      #575772, Move to Trash button has no accelerator (Gabor Kelemen)
-      #576558, Crashes when trying to save write protected file (Josselin Mouette)
-    - New and updated translations
-  * debian/patches
-    - updated 01_lpi.patch to apply cleanly
-    - updated 02_autoconf.patch to apply to new version
+      - #541967, Make possible to remove image with 'Delete' without being asked
+                 for confirmation (Felix Riemann)
+      - #543158, Make deletion confirmation dialog optional during session
+                 (Felix Riemann)
+      - #556378, "Best Fit" zoom setting should have a shortcut (Felix Riemann)
+      - #557317, image collection's scroll bar doesn't have a proportional slider
+                 (Robin Stocker)
+      - #571732, Get rid of deprecated libart_lgpl (Felix Riemann)
+      - #575772, Move to Trash button has no accelerator (Gabor Kelemen)
+      - #576558, Crashes when trying to save write protected file
+                 (Josselin Mouette, Felix Riemann)
+      - #579212, JPEG file causes memory corruption (Claudio Saavedra)
+      - #580600, eog crashes on drag&drop a directory from places menu (Felix Riemann)
+      - #581180, Set as background on Right click (Cyriac Thomas)
+   * Rebase on debian/unstable, remaining changes:
 
- -- Andreas Moog <andreas.moog@warperbbs.de>  Tue, 14 Apr 2009 00:30:29 +0200
+ -- Andreas Moog <amoog@ubuntu.com>  Mon, 11 May 2009 23:51:13 +0200
 
-eog (2.26.0-0ubuntu1) jaunty; urgency=low
+eog (2.24.3.1-1) unstable; urgency=low
 
-  * New upstream version
-  * debian/control.in:
-    - set vcs url
+  * New upstream bugfix release.
+  * Upload to unstable.
 
- -- Sebastien Bacher <seb128@ubuntu.com>  Mon, 16 Mar 2009 23:28:47 +0100
+ -- Sebastian Dröge <slomo@debian.org>  Fri, 06 Mar 2009 19:29:03 +0100
 
-eog (2.25.92-0ubuntu1) jaunty; urgency=low
+eog (2.24.2-1) experimental; urgency=low
 
-  * New upstream version:
-    Bug fixes:
-    - #550086, Rotate image counterclockwise shortcut 
-    - #558086, simplify drag targets handling 
-    - #572410, eog crashed with SIGSEGV in g_closure_invoke
-    - #572723, Misspelled word in a window 
-    - #572889, Possible typo 
+  * 99_ltmain_as-needed.patch: introduce patch to make --as-needed work 
+    on shared objects.
+  * New upstream release.
 
- -- Sebastien Bacher <seb128@ubuntu.com>  Tue, 03 Mar 2009 14:30:22 +0100
-
-eog (2.25.91-0ubuntu2) jaunty; urgency=low
-
-  * No change rebuild for python2.6.
-
- -- Matthias Klose <doko@ubuntu.com>  Wed, 25 Feb 2009 10:53:35 +0000
-
-eog (2.25.91-0ubuntu1) jaunty; urgency=low
-
-  * New upstream version (LP: #330555).
-    - Security Workaround for CVE-2008-5987 (Morten Welinder).
-  * Bug fix: 
-    - #569228: untrusted python modules search path (Morten Welinder).
-  * New or updated translations.
-  * New or updated manual translations.
-
- -- Christophe Sauthier <christophe.sauthier@gmail.com>  Tue, 17 Feb 2009 09:56:40 +0100
-
-eog (2.25.90-0ubuntu1) jaunty; urgency=low
-
-  * New upstream version:
-    - Support for deleting files that can't be trashed 
-    - Build system improvements / fixes 
-    - Code improvements / fixes 
-    Bug fixes:
-    - #441637, Patch to delete file when Trash isn't found 
-    - #568410, eog 2.25.5 build fails 
-    - #568882, don't rely on gtk implementation details 
-    - #569657, Eog needs update on data/eog.pc.in 
-    - #569855, Unref on thumbnail manipulator functions 
-  * debian/patches/02_sanitize_sys.path.patch:
-    - the change is in the new version
-  * debian/patches/03_workaround_build_issue.patch:
-    - the change is in the new version
-
- -- Sebastien Bacher <seb128@ubuntu.com>  Fri, 06 Feb 2009 10:56:20 +0100
-
-eog (2.25.5-0ubuntu3) jaunty; urgency=low
-
-  * debian/control.in:
-    - build-depends on libxml2-dev
-
- -- Sebastien Bacher <seb128@ubuntu.com>  Wed, 21 Jan 2009 00:26:16 +0100
-
-eog (2.25.5-0ubuntu2) jaunty; urgency=low
-
-  * debian/control.in:
-    - updated build depends
-
- -- Sebastien Bacher <seb128@ubuntu.com>  Tue, 20 Jan 2009 23:15:11 +0100
-
-eog (2.25.5-0ubuntu1) jaunty; urgency=low
-
-  * New upstream version:
-    - Code improvements / fixes 
-    - Drop libgnome dependency 
-    Bug fixes:
-    - #559500, drop libgnome dependency 
-    - #557662, Cannot build doc without exif enabled. 
-    - #566104, Reverse Left/Right arrows action in RTL mode 
-    - #566190, scroll buttons of the icons navigation window are reversed for
-      RTL locales 
-  * debian/patches/03_workaround_build_issue.patch:
-    - workaround build issue
-
- -- Sebastien Bacher <seb128@ubuntu.com>  Tue, 20 Jan 2009 11:45:15 +0100
-
-eog (2.25.4-0ubuntu1) jaunty; urgency=low
-
-  * New upstream version:
-    - Code improvements / fixes 
-    - Python bindings improvements 
-    Bug fixes:
-    - #566367, no weekday calculation in exif date display 
-
- -- Sebastien Bacher <seb128@ubuntu.com>  Tue, 06 Jan 2009 16:22:00 +0100
-
-eog (2.25.3-0ubuntu1) jaunty; urgency=low
-
-  * New upstream version
-  * debian/control.in:
-    - updated the requirements
-
- -- Sebastien Bacher <seb128@ubuntu.com>  Tue, 16 Dec 2008 16:07:12 +0100
-
-eog (2.24.1-1ubuntu1) jaunty; urgency=low
-
-  * Sync on Debian
-  * debian/control.in:
-    - build-depends on liblaunchpad-integration-dev
-    - update for the python build
-  * debian/patches/01_lpi.patch:
-    - launchpad integration
-  * debian/patches/02_autoconf.patch:
-    - configure update
-  * debian/rules:
-    - update clean target
-    - use --enable-python option and call dh_pycentral
-
- -- Sebastien Bacher <seb128@ubuntu.com>  Mon, 17 Nov 2008 10:24:53 +0100
+ -- Josselin Mouette <joss@debian.org>  Wed, 31 Dec 2008 16:24:42 +0100
 
 eog (2.24.1-1) experimental; urgency=low
 

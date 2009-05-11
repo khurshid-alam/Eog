@@ -1,9 +1,8 @@
 Source: eog
 Section: gnome
 Priority: optional
-Maintainer: Ubuntu Desktop Team <ubuntu-desktop@lists.ubuntu.com>
-XSBC-Original-Maintainer: Guilherme de S. Pastore <gpastore@debian.org>
-Uploaders: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Maintainer: Guilherme de S. Pastore <gpastore@debian.org>
+Uploaders: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>, Josselin Mouette <joss@debian.org>, Romain Francoise <rfrancoise@debian.org>, Sebastian Dröge <slomo@debian.org>
 Standards-Version: 3.8.0
 Build-Depends: cdbs (>= 0.4.41),
                debhelper (>= 5),
@@ -11,12 +10,13 @@ Build-Depends: cdbs (>= 0.4.41),
                gtk-doc-tools (>= 1.9),
                intltool (>= 0.40.0),
                gnome-doc-utils,
-               libgtk2.0-dev (>= 2.13),
+               libgtk2.0-dev (>= 2.11.6),
                libglib2.0-dev (>= 2.15.3),
-               libgnome-desktop-dev (>1:2.25.1),
-               libxml2-dev,
+               libgnomeui-dev (>= 2.6.1.1-2),
+               libglade2-dev (>= 2.3.6),
                libgconf2-dev (>= 2.6.1-2),
                libart-2.0-dev (>= 2.3.16),
+               libgnome-desktop-dev (>= 2.10.0),
                gnome-icon-theme (>= 2.19.1),
                shared-mime-info (>= 0.20),
                libexempi-dev (>= 1.99.5),
@@ -29,22 +29,16 @@ Build-Depends: cdbs (>= 0.4.41),
                python-gobject-dev (>= 2.11.5),
                python-gtk2-dev (>= 2.9.7),
                python-gnome2-dev (>= 2.18.2),
-               scrollkeeper,
-               liblaunchpad-integration-dev (>= 0.1.17),
-               python-central (>= 0.5.6)
-XS-Python-Version: current
-Vcs-Bzr: https://code.launchpad.net/~ubuntu-desktop/eog/ubuntu
+               scrollkeeper
 
 Package: eog
 Architecture: any
 Depends: ${shlibs:Depends},
          ${misc:Depends},
          gnome-icon-theme (>= 2.19.1),
-         shared-mime-info (>= 0.20),
-         ${python:Depends}
+         shared-mime-info (>= 0.20)
 Recommends: librsvg2-common
 Conflicts: eog2
-XB-Python-Version: ${python:Versions}
 Description: Eye of GNOME graphics viewer program
  eog or the Eye of GNOME is a simple graphics viewer for the GNOME 
  desktop which uses the gdk-pixbuf library.  It can deal with large 
@@ -67,6 +61,7 @@ Package: eog-dev
 Architecture: all
 Depends: eog (>= ${source:Version}),
          libgnomeui-dev (>= 2.6.1.1-2),
+         libglade2-dev (>= 2.3.6),
          libgconf2-dev (>= 2.6.1-2)
 Description: Development files for the Eye of GNOME
  eog or the Eye of GNOME is a graphics viewer for the GNOME desktop 
