@@ -1,9 +1,8 @@
-Index: bug-buddy-2.24.1/ltmain.sh
-===================================================================
---- bug-buddy-2.24.1.orig/ltmain.sh	2008-11-13 16:38:58.930987388 +0100
-+++ bug-buddy-2.24.1/ltmain.sh	2008-11-13 16:39:01.278988042 +0100
-@@ -1807,6 +1807,11 @@ EOF
- 	arg=`$echo "X$arg" | $Xsed -e "s/^ //"`
+diff -Nur -x '*.orig' -x '*~' eog-2.27.2/ltmain.sh eog-2.27.2.new/ltmain.sh
+--- eog-2.27.2/ltmain.sh	2009-05-26 13:55:19.000000000 +0200
++++ eog-2.27.2.new/ltmain.sh	2009-05-26 13:57:10.000000000 +0200
+@@ -4723,6 +4723,11 @@
+ 	arg=$func_stripname_result
  	;;
  
 +      -Wl,--as-needed)
@@ -12,9 +11,9 @@ Index: bug-buddy-2.24.1/ltmain.sh
 +	;;      
 +
        -Wl,*)
- 	args=`$echo "X$arg" | $Xsed -e "$sed_quote_subst" -e 's/^-Wl,//'`
- 	arg=
-@@ -2150,6 +2155,15 @@ EOF
+ 	func_stripname '-Wl,' '' "$arg"
+ 	args=$func_stripname_result
+@@ -5074,6 +5079,15 @@
  	lib=
  	found=no
  	case $deplib in

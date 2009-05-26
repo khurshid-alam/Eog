@@ -1,3 +1,10 @@
+eog (2.27.2-0ubuntu1) karmic; urgency=low
+
+  * debian/patches
+    - update patches to apply cleanly to new version
+
+ -- Andreas Moog <amoog@ubuntu.com>  Tue, 26 May 2009 13:59:52 +0200
+
 eog (2.27.1-0ubuntu1) karmic; urgency=low
 
   * New upstream release: (LP: #375133)
