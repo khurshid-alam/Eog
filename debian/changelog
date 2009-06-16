@@ -1,3 +1,12 @@
+eog (2.27.3-0ubuntu1) karmic; urgency=low
+
+  * New upstream release: (LP: #387880)
+    - Bug fixes:
+      #585357, Undefined entity in .de helpfile (Felix Riemann)
+   - New and updated translations
+
+ -- Andreas Moog <amoog@ubuntu.com>  Tue, 16 Jun 2009 15:10:44 +0200
+
 eog (2.27.2-0ubuntu1) karmic; urgency=low
 
   * New upstream release: (LP: #380578)
