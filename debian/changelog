@@ -1,4 +1,4 @@
-eog (2.27.4-0ubuntu1) UNRELEASED; urgency=low
+eog (2.27.4-0ubuntu1) karmic; urgency=low
 
   * New upstream release: (LP: #399541)
     - Allow having a "Save" button on the toolbar (Felix Riemann)
