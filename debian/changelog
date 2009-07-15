@@ -1,3 +1,13 @@
+eog (2.27.4-0ubuntu1) karmic; urgency=low
+
+  * New upstream release: (LP: #399541)
+    - Allow having a "Save" button on the toolbar (Felix Riemann)
+    - Try to realise the main window from the main loop to reduce the risk
+      of crashes when clutter-using plugins use the sidebar. (Felix Riemann)
+    - New and updated translations
+
+ -- Andreas Moog <amoog@ubuntu.com>  Wed, 15 Jul 2009 02:29:20 +0200
+
 eog (2.27.3-0ubuntu1) karmic; urgency=low
 
   * New upstream release: (LP: #387880)
