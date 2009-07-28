@@ -1,3 +1,11 @@
+eog (2.27.5-0ubuntu1) karmic; urgency=low
+
+  * New upstream version
+  * debian/control.in:
+    - updated gtk requirement 
+
+ -- Sebastien Bacher <seb128@ubuntu.com>  Tue, 28 Jul 2009 22:23:07 +0200
+
 eog (2.27.4-0ubuntu1) karmic; urgency=low
 
   * New upstream release: (LP: #399541)
