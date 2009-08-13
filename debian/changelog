@@ -8,6 +8,8 @@ eog (2.27.90-0ubuntu1) karmic; urgency=low
     - Build system fixes 
     Bug fixes:
     - #590124, Eog fails to compile if exempi/exif are not available 
+  * debian/control.in:
+    - don't require libgnomeui
   * debian/patches/99_ltmain_as-needed.patch:
     - dropped the change is in the new version
 
