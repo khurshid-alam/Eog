@@ -1,3 +1,18 @@
+eog (2.27.90-0ubuntu1) karmic; urgency=low
+
+  * New upstream version:
+    - Fix crashes with plugins using Clutter 1.0 
+    - Make netbook-mode and xdg-fallback always enabled 
+    - Support Automake 1.11's silent build rules 
+    - Generate ChangeLog from git history 
+    - Build system fixes 
+    Bug fixes:
+    - #590124, Eog fails to compile if exempi/exif are not available 
+  * debian/patches/99_ltmain_as-needed.patch:
+    - dropped the change is in the new version
+
+ -- Sebastien Bacher <seb128@ubuntu.com>  Thu, 13 Aug 2009 10:24:23 +0200
+
 eog (2.27.5-0ubuntu1) karmic; urgency=low
 
   * New upstream version
