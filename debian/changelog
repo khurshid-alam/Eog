@@ -1,3 +1,14 @@
+eog (2.27.91-0ubuntu1) UNRELEASED; urgency=low
+
+  * New upstream version: (LP: #418380)
+    - Make "Open With..." plugin look more like Nautilus's (Marcus Carlson)
+    - Code fixes / improvements (Felix Riemann)
+    - Bug fixes:
+       #592649, Open with list should be in sync with nautilus (Marcus Carlson)
+    - New and updated translations
+
+ -- Andreas Moog <amoog@ubuntu.com>  Tue, 25 Aug 2009 02:34:48 +0200
+
 eog (2.27.90-0ubuntu1) karmic; urgency=low
 
   * New upstream version:
