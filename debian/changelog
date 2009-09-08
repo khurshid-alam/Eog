@@ -1,3 +1,9 @@
+eog (2.27.92-0ubuntu1) karmic; urgency=low
+
+  * New upstream version
+
+ -- Sebastien Bacher <seb128@ubuntu.com>  Tue, 08 Sep 2009 13:09:37 +0200
+
 eog (2.27.91-0ubuntu1) karmic; urgency=low
 
   * New upstream version: (LP: #418380)
