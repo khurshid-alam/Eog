@@ -1,3 +1,11 @@
+eog (2.29.1-0ubuntu2) karmic; urgency=low
+
+  * debian/patches/80_not_using_localmodlibs.patch,
+    debian/patches/90_autoconf.patch:
+    - don't use python LOCALMODLIBS to fix build issue
+
+ -- Sebastien Bacher <seb128@ubuntu.com>  Fri, 06 Nov 2009 00:15:24 +0100
+
 eog (2.29.1-0ubuntu1) lucid; urgency=low
 
   * Sync on Debian
