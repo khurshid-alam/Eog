@@ -1,5 +1,14 @@
-eog (2.29.1-0ubuntu1) UNRELEASED; urgency=low
+eog (2.29.1-0ubuntu1) karmic; urgency=low
 
+  * Sync on Debian
+  * debian/control.in, debian/rules:
+    - build with python
+  * debian/control.in,
+    debian/patches/01_lpi.patch,
+    debian/patches/99_autoconf.patch:
+    - launchpad integration changes
+  
+  [ Robert Ancell ]
   * New upstream release: (LP: #475004)
     - Support for animated GIFs (LP: #35545)
     - Enhance statusbar translatability
@@ -8,150 +17,76 @@ eog (2.29.1-0ubuntu1) UNRELEASED; urgency=low
   * debian/control.in:
     - Bump Standards-Version to 3.8.3
 
- -- Robert Ancell <robert.ancell@canonical.com>  Thu, 05 Nov 2009 13:07:54 +1100
+ -- Sebastien Bacher <seb128@ubuntu.com>  Thu, 05 Nov 2009 16:55:27 +0100
 
-eog (2.28.1-0ubuntu1) karmic; urgency=low
+eog (2.28.1-1) unstable; urgency=low
 
-  * New upstream release: (LP: #455904)
-    - Reverse Left/Right arrows action in RTL mode
-    - Make statusbar info string translatable
-    - Incorrect behavior when slideshow delay is set to 0 seconds
-    - Translation updates
+  * New upstream release.
+  * debian/copyright:
+    - added missing copyright holders.
+    - added copyright informations about src/eog-image-jpeg.c,
+       cut-n-paste/totem-screensaver/totem-scrsaver.h and
+       cut-n-paste/totem-screensaver/totem-scrsaver.c files, which 
+       are licensed under the LGPL-2.
 
- -- Robert Ancell <robert.ancell@canonical.com>  Tue, 20 Oct 2009 09:47:57 +1100
+ -- Andrea Veri <andrea.veri89@gmail.com>  Wed, 21 Oct 2009 23:29:28 +0200
 
-eog (2.28.0-0ubuntu1) karmic; urgency=low
+eog (2.28.0-1) unstable; urgency=low
 
-  * New upstream release (LP: #434337)
-    - Updated translations
+  * New upstream release.
+  * debian/patches/99_ltmain_as-needed.patch: Dropped, already there.
+  * debian/control{,.in}: Bump build-dependency on libgtk2.0-dev to >= 2.15.2,
+    drop build-dependency on libart-2.0-dev.
 
- -- Robert Ancell <robert.ancell@canonical.com>  Tue, 22 Sep 2009 09:54:26 +1000
+ -- Andreas Henriksson <andreas@fatal.se>  Wed, 23 Sep 2009 18:24:07 +0200
 
-eog (2.27.92-0ubuntu1) karmic; urgency=low
+eog (2.26.3-1) unstable; urgency=low
 
-  * New upstream version
+  * New upstream release.
+  * debian/control:
+    - bumped Standards-version to latest 3.8.3. No changes needed.
+    - added homepage field pointing it to the right project's
+      homepage.
+    - added ${misc:Depends} on both eog-dbg / eog-dev binaries making
+      lintian happy again.
 
- -- Sebastien Bacher <seb128@ubuntu.com>  Tue, 08 Sep 2009 13:09:37 +0200
+ -- Andrea Veri <andrea.veri89@gmail.com>  Tue, 15 Sep 2009 21:28:38 +0200
 
-eog (2.27.91-0ubuntu1) karmic; urgency=low
+eog (2.26.2-1) unstable; urgency=low
 
-  * New upstream version: (LP: #418380)
-    - Make "Open With..." plugin look more like Nautilus's (Marcus Carlson)
-    - Code fixes / improvements (Felix Riemann)
-    - Bug fixes:
-       #592649, Open with list should be in sync with nautilus (Marcus Carlson)
-    - New and updated translations
+  * Update build-dependencies to the 2.26 requirements.
+    Closes: #530649.
+  * New upstream release.
 
- -- Andreas Moog <amoog@ubuntu.com>  Tue, 25 Aug 2009 02:34:48 +0200
+ -- Josselin Mouette <joss@debian.org>  Tue, 26 May 2009 22:18:58 +0200
 
-eog (2.27.90-0ubuntu1) karmic; urgency=low
+eog (2.26.1-1) unstable; urgency=low
 
-  * New upstream version:
-    - Fix crashes with plugins using Clutter 1.0 
-    - Make netbook-mode and xdg-fallback always enabled 
-    - Support Automake 1.11's silent build rules 
-    - Generate ChangeLog from git history 
-    - Build system fixes 
-    Bug fixes:
-    - #590124, Eog fails to compile if exempi/exif are not available 
+  [ Josselin Mouette ]
+  * Add libglib2.0-doc and libgtk2.0-doc to b-d-i to ensure proper 
+    xrefs.
+
+  [ Luca Bruno ]
+  * New upstream release:
+    - Fix GError usage and avoid crashes when the tempfile can't be moved
+      to the destination. Closes: #507991
+  * debian/patches/02_sanitize_sys.path.patch:
+    - Remove as applied upstream.
   * debian/control.in:
-    - don't require libgnomeui
-  * debian/patches/99_ltmain_as-needed.patch:
-    - dropped the change is in the new version
+    - Build-Depends:
+      + Remove libart-2.0-dev.
+      + Add libxml2-dev for toolbareditor support.
+      + Bump libgtk2.0-dev to 2.15.1.
+      + Bump libgnome-desktop-dev to 2.25.1.
+    - eog-dev Depends:
+      + Remove libgnomeui-dev and libglade2-dev.
+      + Add libgtk2.0-dev.
+    - Specify section for debug package.
 
- -- Sebastien Bacher <seb128@ubuntu.com>  Thu, 13 Aug 2009 10:24:23 +0200
+  [ Josselin Mouette ]
+  * Remove useless build-dependencies on libglade and libgnomeui.
 
-eog (2.27.5-0ubuntu1) karmic; urgency=low
-
-  * New upstream version
-  * debian/control.in:
-    - updated gtk requirement 
-
- -- Sebastien Bacher <seb128@ubuntu.com>  Tue, 28 Jul 2009 22:23:07 +0200
-
-eog (2.27.4-0ubuntu1) karmic; urgency=low
-
-  * New upstream release: (LP: #399541)
-    - Allow having a "Save" button on the toolbar (Felix Riemann)
-    - Try to realise the main window from the main loop to reduce the risk
-      of crashes when clutter-using plugins use the sidebar. (Felix Riemann)
-    - New and updated translations
-
- -- Andreas Moog <amoog@ubuntu.com>  Wed, 15 Jul 2009 02:32:12 +0200
-
-eog (2.27.3-0ubuntu1) karmic; urgency=low
-
-  * New upstream release: (LP: #387880)
-    - Bug fixes:
-      #585357, Undefined entity in .de helpfile (Felix Riemann)
-   - New and updated translations
-
- -- Andreas Moog <amoog@ubuntu.com>  Wed, 17 Jun 2009 09:39:13 +0200
-
-eog (2.27.2-0ubuntu1) karmic; urgency=low
-
-  * New upstream release: (LP: #380578)
-    - Interpolation controllable independently for zoom-in and zoom-out
-      (Brad Greco, Evert Verhellen)
-    - Code improvements / fixes (Felix Riemann)
-    - Bug fixes:
-       #491197, Avoiding zoom-in blurriness (Brad Greco, Evert Verhellen)
-       #583268, properties in image properties dialog not selectable (Felix Riemann)
-       #583448, Crash on exif data (Felix Riemann)
-  * debian/patches
-    - update patches to apply cleanly to new version
-
- -- Andreas Moog <amoog@ubuntu.com>  Tue, 26 May 2009 14:01:19 +0200
-
-eog (2.27.1-0ubuntu1) karmic; urgency=low
-
-  * New upstream release: (LP: #375133)
-    - Drop libart_lgpl dependency (Felix Riemann)
-    - Allow disabling trash confirmation dialog (Felix Riemann)
-    - Shortcut improvements (Gabor Kelemen, Felix Riemann, Claudio Saavedra,
-      Cyriac Thomas)
-    - Reduce number of exported symbols (Felix Riemann)
-    - UI improvements (Claudio Saavedra, Robin Stocker)
-    - Code improvements / fixes (Josselin Mouette, Felix Riemann,
-      Claudio Saavedra)
-    - Bug fixes:
-      - #541967, Make possible to remove image with 'Delete' without being asked
-                 for confirmation (Felix Riemann)
-      - #543158, Make deletion confirmation dialog optional during session
-                 (Felix Riemann)
-      - #556378, "Best Fit" zoom setting should have a shortcut (Felix Riemann)
-      - #557317, image collection's scroll bar doesn't have a proportional slider
-                 (Robin Stocker)
-      - #571732, Get rid of deprecated libart_lgpl (Felix Riemann)
-      - #575772, Move to Trash button has no accelerator (Gabor Kelemen)
-      - #576558, Crashes when trying to save write protected file
-                 (Josselin Mouette, Felix Riemann)
-      - #579212, JPEG file causes memory corruption (Claudio Saavedra)
-      - #580600, eog crashes on drag&drop a directory from places menu (Felix Riemann)
-        (LP: #368299)
-      - #581180, Set as background on Right click (Cyriac Thomas)
-   * Rebase on debian/unstable, remaining changes:
-     - debian/control{.in}
-       - don't build-dep on scrollkeeper, not needed on buildd
-       - don't build-dep on libart, it's no longer used
-       - bump build-dep for gtk
-       - bump build-dep for gnome-desktop 
-       - add build-dep for libxml2-dev
-       - add build-dep for liblaunchpad-integration
-       - add build-dep on python-central
-       - let Vcs-Bzr point to desktop-team's location
-     - debian/patches
-       - add 01_lpi.patch to have launchpad integration
-       - drop 02_sanitize_sys.path.patch, merged upstream
-       - add 03_hide_menu_item.patch to hide the eog item
-       - add 99_autoconf.patch to update configure
-     - debian/rules:
-       - update clean target
-       - use --enable-python option and call dh_pycentral
-     - debian/watch:
-       - also look for unstable versions
-
- -- Andreas Moog <amoog@ubuntu.com>  Mon, 11 May 2009 23:51:13 +0200
+ -- Josselin Mouette <joss@debian.org>  Thu, 14 May 2009 08:42:20 +0200
 
 eog (2.24.3.1-1) unstable; urgency=low
 
