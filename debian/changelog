@@ -1,4 +1,4 @@
-eog (2.29.1-0ubuntu2) karmic; urgency=low
+eog (2.29.1-0ubuntu2) lucid; urgency=low
 
   * debian/patches/80_not_using_localmodlibs.patch,
     debian/patches/90_autoconf.patch:
