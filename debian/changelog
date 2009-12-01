@@ -1,3 +1,13 @@
+eog (2.29.3-0ubuntu1) lucid; urgency=low
+
+  * New upstream version
+  * debian/control.in:
+    - updated gtk requirement
+  * debian/patches/80_not_using_localmodlibs.patch:
+    - the change is in the new version
+
+ -- Sebastien Bacher <seb128@ubuntu.com>  Tue, 01 Dec 2009 15:52:20 +0100
+
 eog (2.29.1-0ubuntu2) lucid; urgency=low
 
   * debian/patches/80_not_using_localmodlibs.patch,
