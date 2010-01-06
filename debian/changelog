@@ -1,3 +1,9 @@
+eog (2.29.3-0ubuntu2) lucid; urgency=low
+
+  * No change rebuild to use the new libgnome-desktop soname
+
+ -- Sebastien Bacher <seb128@ubuntu.com>  Wed, 06 Jan 2010 19:53:11 +0100
+
 eog (2.29.3-0ubuntu1) lucid; urgency=low
 
   * New upstream version
