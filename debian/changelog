@@ -1,3 +1,17 @@
+eog (2.29.5-0ubuntu1) lucid; urgency=low
+
+  * New upstream version
+    - Remember last save location during session 
+    - String fixes / improvements 
+    - Improve GSEAL-compatibility 
+    - Use GtkInfoBar widget for the error message area 
+    Bug fixes:
+    - #604230, Don't remaind the last save location 
+    - #605851, Miscellaneous string fixes 
+    - #605852, Use Pango markup attributes in GtkBuilder file 
+    
+ -- Sebastien Bacher <seb128@ubuntu.com>  Tue, 12 Jan 2010 01:11:46 +0100
+
 eog (2.29.3-0ubuntu2) lucid; urgency=low
 
   * No change rebuild to use the new libgnome-desktop soname
