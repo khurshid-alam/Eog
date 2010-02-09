@@ -1,6 +1,16 @@
 eog (2.29.90-0ubuntu1) lucid; urgency=low
 
-  * New upstream version
+  * New upstream version:
+    - Further GSEAL-compatibility improvements 
+    - Allow switching to a random image from the collection
+    - Build fixes 
+    - Ask user if he actually needs the Appearance capplet after setting a new
+      desktop wallpaper through Eye of GNOME (lp: #503061)
+    Bug fixes:
+    - #606935, "Change desktop background" dialog shows up when using
+      "Set as desktop wallpaper" option in image viewer 
+    - #609184, Build failure: doesn't look for some required libs 
+    New and updated translations
 
  -- Sebastien Bacher <seb128@ubuntu.com>  Tue, 09 Feb 2010 23:57:36 +0100
 
