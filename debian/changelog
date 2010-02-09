@@ -1,3 +1,9 @@
+eog (2.29.90-0ubuntu1) lucid; urgency=low
+
+  * New upstream version
+
+ -- Sebastien Bacher <seb128@ubuntu.com>  Tue, 09 Feb 2010 23:57:36 +0100
+
 eog (2.29.5-0ubuntu1) lucid; urgency=low
 
   * New upstream version
