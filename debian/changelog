@@ -1,3 +1,14 @@
+eog (2.29.91-0ubuntu1) lucid; urgency=low
+
+  * New upstream version:
+    - Build fixes 
+    Bug fixes:
+    - #609184, Build failure: doesn't look for some required libs 
+    - #610692, eog 2.29.90 fails to build 
+    New and updated translations
+    
+ -- Sebastien Bacher <seb128@ubuntu.com>  Tue, 23 Feb 2010 01:04:18 +0100
+
 eog (2.29.90-0ubuntu1) lucid; urgency=low
 
   * New upstream version:
