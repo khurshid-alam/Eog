@@ -1,3 +1,14 @@
+eog (2.29.91-0ubuntu2) lucid; urgency=low
+
+  * debian/patches/02_toolbar_edit_button.patch:
+    - change by Ryan Lortie to add an edit button to the toolbar
+    - set /apps/eog/ui/external_editor to f-spot-viewer, it can't do editing
+      right now but that will be changed in lucid
+  * debian/patches/99_autoconf.patch:
+    - updated for the previous change
+
+ -- Sebastien Bacher <seb128@ubuntu.com>  Wed, 03 Mar 2010 21:12:30 +0100
+
 eog (2.29.91-0ubuntu1) lucid; urgency=low
 
   * New upstream version:
