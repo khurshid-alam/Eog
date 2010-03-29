@@ -1,3 +1,9 @@
+eog (2.30.0-0ubuntu1) lucid; urgency=low
+
+  * New upstream version
+
+ -- Sebastien Bacher <seb128@ubuntu.com>  Tue, 30 Mar 2010 00:22:39 +0200
+
 eog (2.29.91-0ubuntu2) lucid; urgency=low
 
   * debian/patches/02_toolbar_edit_button.patch:
