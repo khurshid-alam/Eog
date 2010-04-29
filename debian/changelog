@@ -1,3 +1,11 @@
+eog (2.30.1-0ubuntu1) lucid-proposed; urgency=low
+
+  * New upstream release:
+    - libjpeg-8 breaks lossless JPEG modification
+    - Updated translations
+
+ -- Robert Ancell <robert.ancell@canonical.com>  Thu, 29 Apr 2010 10:22:08 +1000
+
 eog (2.30.0-0ubuntu1) lucid; urgency=low
 
   * New upstream version
