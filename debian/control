@@ -8,8 +8,8 @@ Section: gnome
 Priority: optional
 Maintainer: Ubuntu Desktop Team <ubuntu-desktop@lists.ubuntu.com>
 XSBC-Original-Maintainer: Guilherme de S. Pastore <gpastore@debian.org>
-Uploaders: Andreas Henriksson <andreas@fatal.se>, Andrea Veri <andrea.veri89@gmail.com>, Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>, Josselin Mouette <joss@debian.org>, Sebastian Dröge <slomo@debian.org>
-Standards-Version: 3.8.3
+Uploaders: Andreas Henriksson <andreas@fatal.se>, Andrea Veri <andrea.veri89@gmail.com>, Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>, Emilio Pozuelo Monfort <pochu@debian.org>, Josselin Mouette <joss@debian.org>, Sebastian Dröge <slomo@debian.org>
+Standards-Version: 3.8.4
 Homepage: http://projects.gnome.org/eog
 Build-Depends: cdbs (>= 0.4.41),
                debhelper (>= 5),
@@ -17,7 +17,7 @@ Build-Depends: cdbs (>= 0.4.41),
                gtk-doc-tools (>= 1.9),
                intltool (>= 0.40.0),
                gnome-doc-utils,
-               libgtk2.0-dev (>= 2.17.5),
+               libgtk2.0-dev (>= 2.17.15),
                libglib2.0-dev (>= 2.15.3),
                libgnome-desktop-dev (>= 2.25.1),
                libgconf2-dev (>= 2.6.1-2),
@@ -47,11 +47,10 @@ Depends: ${shlibs:Depends},
          gnome-icon-theme (>= 2.19.1),
          shared-mime-info (>= 0.20)
 Recommends: librsvg2-common
-Conflicts: eog2
 Description: Eye of GNOME graphics viewer program
- eog or the Eye of GNOME is a simple graphics viewer for the GNOME 
- desktop which uses the gdk-pixbuf library.  It can deal with large 
- images, and zoom and scroll with constant memory usage.  Its goals are 
+ eog or the Eye of GNOME is a simple graphics viewer for the GNOME
+ desktop which uses the gdk-pixbuf library.  It can deal with large
+ images, and zoom and scroll with constant memory usage.  Its goals are
  simplicity and standards compliance.
 
 Package: eog-dbg
@@ -61,9 +60,9 @@ Priority: extra
 Depends: eog (= ${binary:Version}),
          ${misc:Depends}
 Description: Eye of GNOME graphics viewer program - debugging symbols
- eog or the Eye of GNOME is a simple graphics viewer for the GNOME 
- desktop which uses the gdk-pixbuf library.  It can deal with large 
- images, and zoom and scroll with constant memory usage.  Its goals are 
+ eog or the Eye of GNOME is a simple graphics viewer for the GNOME
+ desktop which uses the gdk-pixbuf library.  It can deal with large
+ images, and zoom and scroll with constant memory usage.  Its goals are
  simplicity and standards compliance.
  .
  This package contains the debugging symbols for eog.
@@ -75,8 +74,8 @@ Depends: eog (>= ${source:Version}),
          libgconf2-dev (>= 2.6.1-2),
          ${misc:Depends}
 Description: Development files for the Eye of GNOME
- eog or the Eye of GNOME is a graphics viewer for the GNOME desktop 
+ eog or the Eye of GNOME is a graphics viewer for the GNOME desktop
  which uses the gdk-pixbuf library.
  .
- This package contains header files and development information, which 
+ This package contains header files and development information, which
  is needed to build plugins for the Eye of GNOME.

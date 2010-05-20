@@ -1,113 +1,50 @@
-eog (2.30.1-0ubuntu1) lucid-proposed; urgency=low
+eog (2.30.1-1ubuntu1) maverick; urgency=low
 
-  * New upstream release:
-    - libjpeg-8 breaks lossless JPEG modification
-    - Updated translations
-
- -- Robert Ancell <robert.ancell@canonical.com>  Thu, 29 Apr 2010 10:22:08 +1000
-
-eog (2.30.0-0ubuntu1) lucid; urgency=low
-
-  * New upstream version
-
- -- Sebastien Bacher <seb128@ubuntu.com>  Tue, 30 Mar 2010 00:22:39 +0200
-
-eog (2.29.91-0ubuntu2) lucid; urgency=low
-
-  * debian/patches/02_toolbar_edit_button.patch:
-    - change by Ryan Lortie to add an edit button to the toolbar
-    - set /apps/eog/ui/external_editor to f-spot-viewer, it can't do editing
-      right now but that will be changed in lucid
-  * debian/patches/99_autoconf.patch:
-    - updated for the previous change
-
- -- Sebastien Bacher <seb128@ubuntu.com>  Wed, 03 Mar 2010 21:12:30 +0100
-
-eog (2.29.91-0ubuntu1) lucid; urgency=low
-
-  * New upstream version:
-    - Build fixes 
-    Bug fixes:
-    - #609184, Build failure: doesn't look for some required libs 
-    - #610692, eog 2.29.90 fails to build 
-    New and updated translations
-    
- -- Sebastien Bacher <seb128@ubuntu.com>  Tue, 23 Feb 2010 01:04:18 +0100
-
-eog (2.29.90-0ubuntu1) lucid; urgency=low
-
-  * New upstream version:
-    - Further GSEAL-compatibility improvements 
-    - Allow switching to a random image from the collection
-    - Build fixes 
-    - Ask user if he actually needs the Appearance capplet after setting a new
-      desktop wallpaper through Eye of GNOME (lp: #503061)
-    Bug fixes:
-    - #606935, "Change desktop background" dialog shows up when using
-      "Set as desktop wallpaper" option in image viewer 
-    - #609184, Build failure: doesn't look for some required libs 
-    New and updated translations
-
- -- Sebastien Bacher <seb128@ubuntu.com>  Tue, 09 Feb 2010 23:57:36 +0100
-
-eog (2.29.5-0ubuntu1) lucid; urgency=low
-
-  * New upstream version
-    - Remember last save location during session 
-    - String fixes / improvements 
-    - Improve GSEAL-compatibility 
-    - Use GtkInfoBar widget for the error message area 
-    Bug fixes:
-    - #604230, Don't remaind the last save location 
-    - #605851, Miscellaneous string fixes 
-    - #605852, Use Pango markup attributes in GtkBuilder file 
-    
- -- Sebastien Bacher <seb128@ubuntu.com>  Tue, 12 Jan 2010 01:11:46 +0100
-
-eog (2.29.3-0ubuntu2) lucid; urgency=low
-
-  * No change rebuild to use the new libgnome-desktop soname
-
- -- Sebastien Bacher <seb128@ubuntu.com>  Wed, 06 Jan 2010 19:53:11 +0100
-
-eog (2.29.3-0ubuntu1) lucid; urgency=low
-
-  * New upstream version
-  * debian/control.in:
-    - updated gtk requirement
-  * debian/patches/80_not_using_localmodlibs.patch:
-    - the change is in the new version
-
- -- Sebastien Bacher <seb128@ubuntu.com>  Tue, 01 Dec 2009 15:52:20 +0100
-
-eog (2.29.1-0ubuntu2) lucid; urgency=low
-
-  * debian/patches/80_not_using_localmodlibs.patch,
-    debian/patches/90_autoconf.patch:
-    - don't use python LOCALMODLIBS to fix build issue
-
- -- Sebastien Bacher <seb128@ubuntu.com>  Fri, 06 Nov 2009 00:15:24 +0100
-
-eog (2.29.1-0ubuntu1) lucid; urgency=low
-
-  * Sync on Debian
-  * debian/control.in, debian/rules:
+  * Resync on Debian
+  * debian/control.in, 
+    debian/rules:
     - build with python
   * debian/control.in,
     debian/patches/01_lpi.patch,
     debian/patches/99_autoconf.patch:
     - launchpad integration changes
-  
-  [ Robert Ancell ]
-  * New upstream release: (LP: #475004)
-    - Support for animated GIFs (LP: #35545)
-    - Enhance statusbar translatability
-    - Reverse Left/Right arrows action in RTL mode
-    - Incorrect behavior when slideshow delay is set to 0 seconds
-  * debian/control.in:
-    - Bump Standards-Version to 3.8.3
+  * debian/patches/02_toolbar_edit_button.patch:
+    - change by Ryan Lortie to add an edit button to the toolbar
+    - set /apps/eog/ui/external_editor to f-spot-viewer, it can't do editing
+      right now but that will be changed in lucid
 
- -- Sebastien Bacher <seb128@ubuntu.com>  Thu, 05 Nov 2009 16:55:27 +0100
+ -- Sebastien Bacher <seb128@ubuntu.com>  Thu, 20 May 2010 15:09:47 +0200
+
+eog (2.30.1-1) unstable; urgency=low
+
+  [ Luca Bruno ]
+  * New upstream release:
+    - Update Japanese translation. Closes: #550830.
+  * debian/control.in:
+    - Update Standards-version to latest 3.8.4. No changes needed.
+    - Bump libgtk2.0-dev build-depend to 2.17.15.
+  * debian/patches/01_nodisplay.patch:
+    - Refreshed.
+  * debian/copyright:
+    - Fix FSF address.
+
+  [ Michael Biebl ]
+  * Switch to source format 3.0 (quilt)
+    - Add debian/source/format.
+    - Add debian/patches/series.
+    - Remove /usr/share/cdbs/1/rules/simple-patchsys.mk from debian/rules.
+  * debian/control.in
+    - Add Vcs-* fields.
+    - Drop Conflicts: eog2, no longer necessary.
+
+ -- Michael Biebl <biebl@debian.org>  Mon, 03 May 2010 18:53:57 +0200
+
+eog (2.28.2-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/watch: don't uupdate.
+
+ -- Emilio Pozuelo Monfort <pochu@debian.org>  Fri, 18 Dec 2009 15:32:33 +0100
 
 eog (2.28.1-1) unstable; urgency=low
 

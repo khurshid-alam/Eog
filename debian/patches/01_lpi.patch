@@ -1,21 +1,23 @@
 # Description: add launchpad menu items to the application
 # UbuntuSpecific: launchpad
 #
-diff -Nur -x '*.orig' -x '*~' eog-2.27.2/configure.ac eog-2.27.2.new/configure.ac
---- eog-2.27.2/configure.ac	2009-05-26 13:55:20.000000000 +0200
-+++ eog-2.27.2.new/configure.ac	2009-05-26 13:55:33.000000000 +0200
-@@ -94,6 +94,7 @@
-              gio-2.0 >= $GLIB_REQUIRED \
+Index: eog-2.30.1/configure.ac
+===================================================================
+--- eog-2.30.1.orig/configure.ac	2010-04-26 22:16:07.000000000 +0200
++++ eog-2.30.1/configure.ac	2010-05-20 15:20:50.000000000 +0200
+@@ -99,6 +99,7 @@
+              gthread-2.0 >= $GLIB_REQUIRED \
               gnome-desktop-2.0 >= $GNOME_DESKTOP_REQUIRED \
               gdk-pixbuf-2.0 >= $GDKPIXBUF_REQUIRED \
 +	     launchpad-integration \
               gconf-2.0 >= $GCONF_REQUIRED \
               gtk+-unix-print-2.0 >= $GTK_PRINT_REQUIRED \
  	     gnome-icon-theme >= $GNOME_ICON_THEME_REQUIRED \
-diff -Nur -x '*.orig' -x '*~' eog-2.27.2/data/eog-ui.xml eog-2.27.2.new/data/eog-ui.xml
---- eog-2.27.2/data/eog-ui.xml	2009-05-26 13:55:20.000000000 +0200
-+++ eog-2.27.2.new/data/eog-ui.xml	2009-05-26 13:55:33.000000000 +0200
-@@ -69,6 +69,7 @@
+Index: eog-2.30.1/data/eog-ui.xml
+===================================================================
+--- eog-2.30.1.orig/data/eog-ui.xml	2010-04-26 22:16:07.000000000 +0200
++++ eog-2.30.1/data/eog-ui.xml	2010-05-20 15:20:50.000000000 +0200
+@@ -71,6 +71,7 @@
      </menu>
      <menu action="Help">
        <menuitem action="HelpManual"/>
@@ -23,9 +25,10 @@ diff -Nur -x '*.orig' -x '*~' eog-2.27.2/data/eog-ui.xml eog-2.27.2.new/data/eog
        <menuitem action="HelpAbout"/>
      </menu>
    </menubar>
-diff -Nur -x '*.orig' -x '*~' eog-2.27.2/src/eog-window.c eog-2.27.2.new/src/eog-window.c
---- eog-2.27.2/src/eog-window.c	2009-05-26 13:55:20.000000000 +0200
-+++ eog-2.27.2.new/src/eog-window.c	2009-05-26 13:55:33.000000000 +0200
+Index: eog-2.30.1/src/eog-window.c
+===================================================================
+--- eog-2.30.1.orig/src/eog-window.c	2010-04-26 22:16:07.000000000 +0200
++++ eog-2.30.1/src/eog-window.c	2010-05-20 15:20:50.000000000 +0200
 @@ -64,6 +64,7 @@
  #include <gdk/gdkkeysyms.h>
  #include <gtk/gtk.h>
@@ -34,7 +37,7 @@ diff -Nur -x '*.orig' -x '*~' eog-2.27.2/src/eog-window.c eog-2.27.2.new/src/eog
  
  #if HAVE_LCMS
  #include <X11/Xlib.h>
-@@ -4013,6 +4014,9 @@
+@@ -4321,6 +4322,9 @@
                  g_error_free (error);
          }
  
