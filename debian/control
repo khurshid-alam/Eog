@@ -8,8 +8,8 @@ Section: gnome
 Priority: optional
 Maintainer: Ubuntu Desktop Team <ubuntu-desktop@lists.ubuntu.com>
 XSBC-Original-Maintainer: Guilherme de S. Pastore <gpastore@debian.org>
-Uploaders: Andreas Henriksson <andreas@fatal.se>, Andrea Veri <andrea.veri89@gmail.com>, Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>, Emilio Pozuelo Monfort <pochu@debian.org>, Josselin Mouette <joss@debian.org>, Sebastian Dröge <slomo@debian.org>
-Standards-Version: 3.8.4
+Uploaders: Andreas Henriksson <andreas@fatal.se>, Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>, Emilio Pozuelo Monfort <pochu@debian.org>, Josselin Mouette <joss@debian.org>, Michael Biebl <biebl@debian.org>, Sebastian Dröge <slomo@debian.org>
+Standards-Version: 3.9.0
 Homepage: http://projects.gnome.org/eog
 Build-Depends: cdbs (>= 0.4.41),
                debhelper (>= 5),

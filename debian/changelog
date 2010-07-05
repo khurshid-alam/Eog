@@ -1,3 +1,16 @@
+eog (2.30.2-1ubuntu1) maverick; urgency=low
+
+  * Resync on Debian
+
+ -- Sebastien Bacher <seb128@ubuntu.com>  Mon, 05 Jul 2010 12:24:57 +0200
+
+eog (2.30.2-1) unstable; urgency=low
+
+  * New upstream bugfix release.
+  * Bump Standards-Version to 3.9.0. No further changes.
+
+ -- Michael Biebl <biebl@debian.org>  Sat, 03 Jul 2010 00:52:16 +0200
+
 eog (2.30.2-0ubuntu1) maverick; urgency=low
 
   * New upstream version
