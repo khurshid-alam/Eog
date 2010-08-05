@@ -1,3 +1,21 @@
+eog (2.31.5-0ubuntu1) maverick; urgency=low
+
+  * New upstream versions:
+    - New toolbar button and 'P' shortcut to pause the slideshow (lp: #272552)
+    - Rename "Image Collection" to "Image Gallery" 
+    - Update totem-scrsaver to use GDBus 
+    - Render SVGs natively when zoomed 
+    - Print SVGs as vector image 
+    - Embed page setup in print dialog 
+    - Various UI improvements 
+    - Further GSEAL-compatibility work 
+  * debian/control.in:
+    - require librsvg, updated glib and gtk requirements
+  * debian/control.in, debian/patches/99_autoconf.patch, debian/rules:
+    - run autoreconf at build time now
+
+ -- Sebastien Bacher <seb128@ubuntu.com>  Thu, 05 Aug 2010 11:18:27 +0200
+
 eog (2.30.2-1ubuntu1) maverick; urgency=low
 
   * Resync on Debian
