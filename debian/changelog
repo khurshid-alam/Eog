@@ -1,3 +1,9 @@
+eog (2.31.90-0ubuntu1) maverick; urgency=low
+
+  * New upstream release
+
+ -- Robert Ancell <robert.ancell@canonical.com>  Tue, 17 Aug 2010 10:51:07 +1000
+
 eog (2.31.5-0ubuntu1) maverick; urgency=low
 
   * New upstream versions:
