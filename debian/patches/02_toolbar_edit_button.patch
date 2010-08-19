@@ -24,7 +24,7 @@ diff -Nur -x '*.orig' -x '*~' eog-2.29.91/data/eog.schemas.in eog-2.29.91.new/da
 +      <applyto>/apps/eog/ui/external_editor</applyto>
 +      <owner>eog</owner>
 +      <type>string</type>
-+      <default>f-spot-view.desktop</default>
++      <default>shotwell-viewer.desktop</default>
 +      <locale name="C">
 +        <short>External program to use for editing images</short>
 +        <long>The desktop file name (including the ".desktop") of the application to use for
