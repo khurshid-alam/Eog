@@ -1,3 +1,9 @@
+eog (2.31.91-0ubuntu1) maverick; urgency=low
+
+  * New upstream release
+
+ -- Robert Ancell <robert.ancell@canonical.com>  Tue, 31 Aug 2010 15:01:09 +1000
+
 eog (2.31.90-0ubuntu2) maverick; urgency=low
 
   * debian/patches/02_toolbar_edit_button.patch:
