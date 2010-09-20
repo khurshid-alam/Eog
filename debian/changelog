@@ -1,4 +1,4 @@
-eog (2.31.92-0ubuntu1) UNRELEASED; urgency=low
+eog (2.31.92-0ubuntu1) maverick; urgency=low
 
   * New upstream release:
     - Copy image to disk when setting as desktop background when it is
@@ -14,7 +14,7 @@ eog (2.31.92-0ubuntu1) UNRELEASED; urgency=low
     - New and updated translations
   * Update debian/patches/02_toolbar_edit_button.patch
 
- -- Didier Roche <didrocks@ubuntu.com>  Mon, 20 Sep 2010 12:44:31 +0200
+ -- Didier Roche <didrocks@ubuntu.com>  Mon, 20 Sep 2010 13:04:27 +0200
 
 eog (2.31.91-0ubuntu1) maverick; urgency=low
 
