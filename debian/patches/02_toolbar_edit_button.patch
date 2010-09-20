@@ -2,9 +2,10 @@ Subject: [PATCH 1/2] Bug 609958 - add "Edit Image" toolbar button
 
 Add a conditionally-enabled "Edit Image" toolbar button.  The toolbar is
 only enabled if a specific image editor is specified in GConf.
-diff -Nur -x '*.orig' -x '*~' eog-2.29.91/configure.ac eog-2.29.91.new/configure.ac
---- eog-2.29.91/configure.ac	2010-03-03 21:19:25.000000000 +0100
-+++ eog-2.29.91.new/configure.ac	2010-03-03 21:19:25.000000000 +0100
+Index: eog-2.31.92/configure.ac
+===================================================================
+--- eog-2.31.92.orig/configure.ac	2010-09-20 12:53:11.688736001 +0200
++++ eog-2.31.92/configure.ac	2010-09-20 12:53:11.704736001 +0200
 @@ -96,6 +96,7 @@
  EOG_MODULES="gtk+-2.0 >= $GTK_REQUIRED \
               glib-2.0 >= $GLIB_REQUIRED \
@@ -13,10 +14,11 @@ diff -Nur -x '*.orig' -x '*~' eog-2.29.91/configure.ac eog-2.29.91.new/configure
               gthread-2.0 >= $GLIB_REQUIRED \
               gnome-desktop-2.0 >= $GNOME_DESKTOP_REQUIRED \
               gdk-pixbuf-2.0 >= $GDKPIXBUF_REQUIRED \
-diff -Nur -x '*.orig' -x '*~' eog-2.29.91/data/eog.schemas.in eog-2.29.91.new/data/eog.schemas.in
---- eog-2.29.91/data/eog.schemas.in	2010-02-21 12:32:12.000000000 +0100
-+++ eog-2.29.91.new/data/eog.schemas.in	2010-03-03 21:19:25.000000000 +0100
-@@ -257,6 +257,20 @@
+Index: eog-2.31.92/data/eog.schemas.in
+===================================================================
+--- eog-2.31.92.orig/data/eog.schemas.in	2010-09-11 00:19:10.000000000 +0200
++++ eog-2.31.92/data/eog.schemas.in	2010-09-20 12:53:11.704736001 +0200
+@@ -283,6 +283,20 @@
      </schema>
  
      <schema>
@@ -37,9 +39,10 @@ diff -Nur -x '*.orig' -x '*~' eog-2.29.91/data/eog.schemas.in eog-2.29.91.new/da
        <key>/schemas/apps/eog/plugins/active_plugins</key>
        <applyto>/apps/eog/plugins/active_plugins</applyto>
        <owner>eog</owner>
-diff -Nur -x '*.orig' -x '*~' eog-2.29.91/data/eog-toolbar.xml eog-2.29.91.new/data/eog-toolbar.xml
---- eog-2.29.91/data/eog-toolbar.xml	2009-08-11 12:49:55.000000000 +0200
-+++ eog-2.29.91.new/data/eog-toolbar.xml	2010-03-03 21:19:52.000000000 +0100
+Index: eog-2.31.92/data/eog-toolbar.xml
+===================================================================
+--- eog-2.31.92.orig/data/eog-toolbar.xml	2010-09-11 00:19:10.000000000 +0200
++++ eog-2.31.92/data/eog-toolbar.xml	2010-09-20 12:53:11.704736001 +0200
 @@ -31,5 +31,7 @@
      <separator/>
      <toolitem name="EditRotate270"/>
@@ -48,10 +51,11 @@ diff -Nur -x '*.orig' -x '*~' eog-2.29.91/data/eog-toolbar.xml eog-2.29.91.new/d
 +    <toolitem name="OpenEditor"/>
   </toolbar>
  </toolbars>
-diff -Nur -x '*.orig' -x '*~' eog-2.29.91/src/eog-config-keys.h eog-2.29.91.new/src/eog-config-keys.h
---- eog-2.29.91/src/eog-config-keys.h	2010-02-21 12:32:12.000000000 +0100
-+++ eog-2.29.91.new/src/eog-config-keys.h	2010-03-03 21:19:25.000000000 +0100
-@@ -55,6 +55,7 @@
+Index: eog-2.31.92/src/eog-config-keys.h
+===================================================================
+--- eog-2.31.92.orig/src/eog-config-keys.h	2010-09-11 00:19:10.000000000 +0200
++++ eog-2.31.92/src/eog-config-keys.h	2010-09-20 12:53:11.708736001 +0200
+@@ -57,6 +57,7 @@
  #define EOG_CONF_UI_DISABLE_TRASH_CONFIRMATION	"/apps/eog/ui/disable_trash_confirmation"
  #define EOG_CONF_UI_FILECHOOSER_XDG_FALLBACK	"/apps/eog/ui/filechooser_xdg_fallback"
  #define EOG_CONF_UI_PROPSDIALOG_NETBOOK_MODE	"/apps/eog/ui/propsdialog_netbook_mode"
@@ -59,10 +63,11 @@ diff -Nur -x '*.orig' -x '*~' eog-2.29.91/src/eog-config-keys.h eog-2.29.91.new/
  
  #define EOG_CONF_PLUGINS_ACTIVE_PLUGINS         "/apps/eog/plugins/active_plugins"
  
-diff -Nur -x '*.orig' -x '*~' eog-2.29.91/src/eog-window.c eog-2.29.91.new/src/eog-window.c
---- eog-2.29.91/src/eog-window.c	2010-03-03 21:19:25.000000000 +0100
-+++ eog-2.29.91.new/src/eog-window.c	2010-03-03 21:19:25.000000000 +0100
-@@ -62,6 +62,7 @@
+Index: eog-2.31.92/src/eog-window.c
+===================================================================
+--- eog-2.31.92.orig/src/eog-window.c	2010-09-20 12:53:11.692736001 +0200
++++ eog-2.31.92/src/eog-window.c	2010-09-20 12:53:11.708736001 +0200
+@@ -64,6 +64,7 @@
  #include <glib/gi18n.h>
  #include <gio/gio.h>
  #include <gdk/gdkkeysyms.h>
@@ -70,15 +75,15 @@ diff -Nur -x '*.orig' -x '*~' eog-2.29.91/src/eog-window.c eog-2.29.91.new/src/e
  #include <gtk/gtk.h>
  #include <gconf/gconf-client.h>
  #include <launchpad-integration.h>
-@@ -216,6 +217,7 @@
- static void eog_window_set_wallpaper (EogWindow *window, const gchar *filename);
+@@ -222,6 +223,7 @@
+ static void eog_window_set_wallpaper (EogWindow *window, const gchar *filename, const gchar *visible_filename);
  static gboolean eog_window_save_images (EogWindow *window, GList *images);
  static void eog_window_finish_saving (EogWindow *window);
 +static GAppInfo *get_appinfo_for_editor (EogWindow *window);
  
  static GQuark
  eog_window_error_quark (void)
-@@ -1122,6 +1124,8 @@
+@@ -1236,6 +1238,8 @@
  static void
  eog_window_update_openwith_menu (EogWindow *window, EogImage *image)
  {
@@ -87,7 +92,7 @@ diff -Nur -x '*.orig' -x '*~' eog-2.29.91/src/eog-window.c eog-2.29.91.new/src/e
  	GFile *file;
  	GFileInfo *file_info;
  	GList *iter;
-@@ -1137,6 +1141,9 @@
+@@ -1251,6 +1255,9 @@
  
  	priv = window->priv;
  
@@ -97,7 +102,7 @@ diff -Nur -x '*.orig' -x '*~' eog-2.29.91/src/eog-window.c eog-2.29.91.new/src/e
  	file = eog_image_get_file (image);
  	file_info = g_file_query_info (file,
  				       G_FILE_ATTRIBUTE_STANDARD_CONTENT_TYPE,
-@@ -1179,6 +1186,10 @@
+@@ -1293,6 +1300,10 @@
                  GAppInfo *app = iter->data;
                  gchar name[64];
  
@@ -108,7 +113,7 @@ diff -Nur -x '*.orig' -x '*~' eog-2.29.91/src/eog-window.c eog-2.29.91.new/src/e
                  /* Do not include eog itself */
                  if (g_ascii_strcasecmp (g_app_info_get_executable (app),
                                          g_get_prgname ()) == 0) {
-@@ -1266,6 +1277,12 @@
+@@ -1380,6 +1391,12 @@
          }
  
          g_list_free (apps);
@@ -121,7 +126,7 @@ diff -Nur -x '*.orig' -x '*~' eog-2.29.91/src/eog-window.c eog-2.29.91.new/src/e
  }
  
  static void
-@@ -4236,6 +4253,108 @@
+@@ -4384,6 +4401,108 @@
  	} while (priv->save_job != NULL);
  }
  
@@ -230,7 +235,7 @@ diff -Nur -x '*.orig' -x '*~' eog-2.29.91/src/eog-window.c eog-2.29.91.new/src/e
  static void
  eog_window_construct_ui (EogWindow *window)
  {
-@@ -4288,6 +4407,8 @@
+@@ -4435,6 +4554,8 @@
  				      G_N_ELEMENTS (action_entries_image),
  				      window);
  

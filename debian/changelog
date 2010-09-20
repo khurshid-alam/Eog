@@ -12,6 +12,7 @@ eog (2.31.92-0ubuntu1) UNRELEASED; urgency=low
       (LP: #632810)
     - Background setting doesn't work as expected (Claudio Saavedra)
     - New and updated translations
+  * Update debian/patches/02_toolbar_edit_button.patch
 
  -- Didier Roche <didrocks@ubuntu.com>  Mon, 20 Sep 2010 12:44:31 +0200
 
