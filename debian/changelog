@@ -1,3 +1,20 @@
+eog (2.31.92-0ubuntu1) UNRELEASED; urgency=low
+
+  * New upstream release:
+    - Copy image to disk when setting as desktop background when it is
+      located on removable media (Claudio Saavedra)
+    - Ask user whether to reload an externally modified image
+      (Claudio Saavedra)
+    - Miscellaneous code fixes (Claudio Saavedra)
+    - Side pane always shown at startup when plug-in is activated
+      (Claudio Saavedra)
+    - EOG prevents the Desktop thumbnails to be updated (Claudio Saavedra)
+      (LP: #632810)
+    - Background setting doesn't work as expected (Claudio Saavedra)
+    - New and updated translations
+
+ -- Didier Roche <didrocks@ubuntu.com>  Mon, 20 Sep 2010 12:44:31 +0200
+
 eog (2.31.91-0ubuntu1) maverick; urgency=low
 
   * New upstream release
