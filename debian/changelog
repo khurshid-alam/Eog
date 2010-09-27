@@ -1,3 +1,10 @@
+eog (2.32.0-0ubuntu1) maverick; urgency=low
+
+  * New upstream release:
+    - updated translations
+
+ -- Didier Roche <didrocks@ubuntu.com>  Tue, 28 Sep 2010 00:35:23 +0200
+
 eog (2.31.92-0ubuntu1) maverick; urgency=low
 
   * New upstream release:
