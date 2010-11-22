@@ -1,3 +1,25 @@
+eog (2.91.1-0ubuntu1~build1) natty; urgency=low
+
+  * New upstream release
+  * debian/control:
+    - Change build dependencies to GTK3 ones
+  * debian/rules:
+    - Remove --enable-python as it is not supported with GTK3 yet
+  * debian/eog.gschema.override:
+  * debian/eog.install:
+    - Set default image editor to Shotwell
+  * debian/patches/00git_no_gtk_widget_hide_all.patch:
+    - gtk_widget_hide_all() no longer exists
+  * debian/patches/00git_gtk_combo_box_text1.patch:
+  * debian/patches/00git_gtk_combo_box_text2.patch:
+    - Use new GtkComboBoxText API
+  * debian/patches/01_lpi.patch:
+    - Disabled as it doesn't support GTK3 yet
+  * debian/patches/02_toolbar_edit_button.patch:
+    - Applied upstream
+
+ -- Robert Ancell <robert.ancell@canonical.com>  Mon, 08 Nov 2010 10:51:22 +1100
+
 eog (2.32.0-0ubuntu1) maverick; urgency=low
 
   * New upstream release:
