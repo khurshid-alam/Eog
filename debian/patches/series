@@ -1,5 +1,3 @@
-00git_no_gtk_widget_hide_all.patch
-00git_gtk_combo_box_text1.patch
-00git_gtk_combo_box_text2.patch
+00git_gnome3_build.patch
 01_nodisplay.patch
 #01_lpi.patch

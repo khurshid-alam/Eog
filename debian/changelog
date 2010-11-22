@@ -1,3 +1,17 @@
+eog (2.91.2-0ubuntu1~build1) natty; urgency=low
+
+  * New upstream release
+  * debian/control:
+    - Bump build-depends on libgnome-desktop-3-dev
+  * debian/patches/00git_gnome3_build.patch:
+    - Fix build
+  * debian/patches/00git_no_gtk_widget_hide_all.patch:
+  * debian/patches/00git_gtk_combo_box_text1.patch:
+  * debian/patches/00git_gtk_combo_box_text2.patch:
+    - Applied upstream
+
+ -- Robert Ancell <robert.ancell@canonical.com>  Mon, 22 Nov 2010 19:13:43 +1100
+
 eog (2.91.1-0ubuntu1~build1) natty; urgency=low
 
   * New upstream release
