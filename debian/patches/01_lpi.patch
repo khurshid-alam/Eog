@@ -9,7 +9,7 @@ Index: eog-2.91.1/configure.ac
               gthread-2.0 >= $GLIB_REQUIRED \
               gnome-desktop-3.0 >= $GNOME_DESKTOP_REQUIRED \
               gdk-pixbuf-2.0 >= $GDKPIXBUF_REQUIRED \
-+	     launchpad-integration \
++             launchpad-integration-3.0 \
               gconf-2.0 >= $GCONF_REQUIRED \
               gtk+-unix-print-3.0 >= $GTK_PRINT_REQUIRED \
  	     gnome-icon-theme >= $GNOME_ICON_THEME_REQUIRED \

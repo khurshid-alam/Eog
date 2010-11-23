@@ -8,8 +8,8 @@ Section: gnome
 Priority: optional
 Maintainer: Ubuntu Desktop Team <ubuntu-desktop@lists.ubuntu.com>
 XSBC-Original-Maintainer: Guilherme de S. Pastore <gpastore@debian.org>
-Uploaders: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>, Michael Biebl <biebl@debian.org>
-Standards-Version: 3.9.0
+Uploaders: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Standards-Version: 3.9.1
 Homepage: http://projects.gnome.org/eog
 Build-Depends: cdbs (>= 0.4.41),
                debhelper (>= 5),
@@ -37,7 +37,7 @@ Build-Depends: cdbs (>= 0.4.41),
                python-gobject-dev (>= 2.15.1),
                python-gtk2-dev (>= 2.13.0),
                python-central (>= 0.5.6),
-               liblaunchpad-integration-dev (>= 0.1.17)
+               liblaunchpad-integration-3.0-dev
 Build-Depends-Indep: libglib2.0-doc, libgtk3.0-doc
 XS-Python-Version: current
 Vcs-Bzr: https://code.launchpad.net/~ubuntu-desktop/eog/ubuntu
