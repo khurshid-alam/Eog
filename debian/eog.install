@@ -8,5 +8,6 @@ debian/tmp/usr/share/locale
 debian/tmp/usr/share/applications
 debian/tmp/usr/lib/eog/plugins/*plugin
 debian/tmp/usr/lib/eog/plugins/*.so
+debian/tmp/usr/share/GConf
 debian/tmp/usr/share/glib-2.0/schemas
 debian/eog.gschema.override usr/share/glib-2.0/schemas
