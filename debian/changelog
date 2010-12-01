@@ -1,3 +1,11 @@
+eog (2.91.3-0ubuntu1) UNRELEASED; urgency=low
+
+  * New upstream version
+  * debian/control.in:
+    - build-depends on gsettings-desktop-schemas-dev, not on libgconf2-dev
+
+ -- Sebastien Bacher <seb128@ubuntu.com>  Wed, 01 Dec 2010 16:31:09 +0100
+
 eog (2.91.2-0ubuntu1~build2) natty; urgency=low
 
   * debian/control:
