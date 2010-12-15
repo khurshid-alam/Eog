@@ -1,3 +1,10 @@
+eog (2.91.3-0ubuntu2~build1) natty; urgency=low
+
+  * debian/control:
+    - Update Vcs-Bzr link
+
+ -- Robert Ancell <robert.ancell@canonical.com>  Wed, 15 Dec 2010 17:35:53 +1100
+
 eog (2.91.3-0ubuntu1) natty; urgency=low
 
   * New upstream version

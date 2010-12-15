@@ -35,7 +35,7 @@ Build-Depends: cdbs (>= 0.4.41),
                liblaunchpad-integration-3.0-dev
 Build-Depends-Indep: libglib2.0-doc, libgtk3.0-doc
 XS-Python-Version: current
-Vcs-Bzr: https://code.launchpad.net/~ubuntu-desktop/eog/ubuntu
+Vcs-Bzr: https://code.launchpad.net/~gnome3-team/eog/ubuntu
 
 Package: eog
 Architecture: any
