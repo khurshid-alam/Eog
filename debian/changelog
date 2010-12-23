@@ -1,3 +1,9 @@
+eog (2.91.5-0ubuntu1~build1) natty; urgency=low
+
+  * New upstream release
+
+ -- Rodrigo Moya <rodrigo.moya@canonical.com>  Thu, 23 Dec 2010 16:10:26 +0100
+
 eog (2.91.3-0ubuntu2~build1) natty; urgency=low
 
   * debian/control:
