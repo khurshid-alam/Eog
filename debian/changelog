@@ -1,3 +1,13 @@
+eog (2.91.6-0ubuntu1~build1) natty; urgency=low
+
+  * New upstream release
+  * debian/control:
+    - Add build dependency on libpeas-dev
+  * debian/patches/01_lpi.patch:
+    - Rebased patch
+
+ -- Rodrigo Moya <rodrigo.moya@canonical.com>  Mon, 17 Jan 2011 12:54:43 +0100
+
 eog (2.91.5-0ubuntu1~build1) natty; urgency=low
 
   * New upstream release

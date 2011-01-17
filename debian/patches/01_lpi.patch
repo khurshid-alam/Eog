@@ -17,9 +17,9 @@ Index: eog-2.91.3/src/eog-window.c
 ===================================================================
 --- eog-2.91.3.orig/src/eog-window.c	2010-11-20 14:16:31.000000000 +0100
 +++ eog-2.91.3/src/eog-window.c	2010-12-01 18:47:38.000000000 +0100
-@@ -67,6 +67,8 @@
- #include <gio/gdesktopappinfo.h>
- #include <gtk/gtk.h>
+@@ -72,6 +72,8 @@
+ #include <libpeas/peas-extension-set.h>
+ #include <libpeas/peas-activatable.h>
  
 +#include <launchpad-integration.h>
 +
@@ -47,4 +47,4 @@ Index: eog-2.91.3/configure.ac
 +             launchpad-integration-3.0 \
               gnome-icon-theme >= $GNOME_ICON_THEME_REQUIRED \
               shared-mime-info >= $SHARED_MIME_INFO_REQUIRED \
-              gsettings-desktop-schemas >= $DESKTOP_SCHEMAS_REQUIRED"
+              gsettings-desktop-schemas >= $DESKTOP_SCHEMAS_REQUIRED \
