@@ -1,3 +1,11 @@
+eog (2.91.90-0ubuntu1~build2) UNRELEASED; urgency=low
+
+  * New upstream release
+  * debian/control:
+    - Use new GTK3 package names
+
+ -- Robert Ancell <robert.ancell@canonical.com>  Tue, 22 Feb 2011 17:05:53 +1100
+
 eog (2.91.7-0ubuntu1~build1) natty; urgency=low
 
   * New upstream release
