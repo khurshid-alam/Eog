@@ -1,4 +1,4 @@
-eog (2.91.90-0ubuntu1~build2) UNRELEASED; urgency=low
+eog (2.91.90-0ubuntu1~build2) natty; urgency=low
 
   * New upstream release
   * debian/control:
