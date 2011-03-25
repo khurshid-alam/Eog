@@ -1,3 +1,9 @@
+eog (2.91.92-0ubuntu1~build1) natty; urgency=low
+
+  * New upstream release
+
+ -- Rodrigo Moya <rodrigo.moya@canonical.com>  Tue, 22 Mar 2011 16:19:29 +0100
+
 eog (2.91.90-0ubuntu1~build2) natty; urgency=low
 
   * New upstream release
