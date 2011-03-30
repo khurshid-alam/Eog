@@ -1,3 +1,10 @@
+eog (2.91.92-0ubuntu1~build2) natty; urgency=low
+
+  * debian/*:
+    + add gir1.2-eog-3.0 package
+
+ -- Rico Tzschichholz <ricotz@ubuntu.com>  Wed, 30 Mar 2011 14:59:21 +0200
+
 eog (2.91.92-0ubuntu1~build1) natty; urgency=low
 
   * New upstream release
