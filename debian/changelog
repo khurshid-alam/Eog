@@ -1,3 +1,9 @@
+eog (3.0.0-0ubuntu1~build1) natty; urgency=low
+
+  * New upstream release
+
+ -- Rico Tzschichholz <ricotz@ubuntu.com>  Wed, 06 Apr 2011 07:00:25 +0200
+
 eog (2.91.92-0ubuntu1~build2) natty; urgency=low
 
   * debian/*:
