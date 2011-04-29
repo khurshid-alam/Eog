@@ -2,10 +2,12 @@ debian/gnome-eog.xpm usr/share/pixmaps
 debian/tmp/usr/bin
 debian/tmp/usr/share/eog
 debian/tmp/usr/share/omf
+debian/tmp/usr/share/glib-2.0/schemas
+debian/tmp/usr/share/GConf/gsettings
 debian/tmp/usr/share/gnome
 debian/tmp/usr/share/icons
 debian/tmp/usr/share/locale
 debian/tmp/usr/share/applications
-debian/tmp/etc
 debian/tmp/usr/lib/eog/plugins/*plugin
 debian/tmp/usr/lib/eog/plugins/*.so
+debian/eog.gschema.override usr/share/glib-2.0/schemas

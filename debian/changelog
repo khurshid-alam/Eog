@@ -1,3 +1,128 @@
+eog (3.0.0-0ubuntu1~build1) natty; urgency=low
+
+  * New upstream release
+
+ -- Rico Tzschichholz <ricotz@ubuntu.com>  Wed, 06 Apr 2011 07:00:25 +0200
+
+eog (2.91.92-0ubuntu1~build2) natty; urgency=low
+
+  * debian/*:
+    + add gir1.2-eog-3.0 package
+
+ -- Rico Tzschichholz <ricotz@ubuntu.com>  Wed, 30 Mar 2011 14:59:21 +0200
+
+eog (2.91.92-0ubuntu1~build1) natty; urgency=low
+
+  * New upstream release
+
+ -- Rodrigo Moya <rodrigo.moya@canonical.com>  Tue, 22 Mar 2011 16:19:29 +0100
+
+eog (2.91.90-0ubuntu1~build2) natty; urgency=low
+
+  * New upstream release
+  * debian/control:
+    - Use new GTK3 package names
+
+ -- Robert Ancell <robert.ancell@canonical.com>  Tue, 22 Feb 2011 17:05:53 +1100
+
+eog (2.91.7-0ubuntu1~build1) natty; urgency=low
+
+  * New upstream release
+
+ -- Robert Ancell <robert.ancell@canonical.com>  Tue, 01 Feb 2011 15:06:41 +1100
+
+eog (2.91.6-0ubuntu1~build2) natty; urgency=low
+
+  * Build depend on gobject-introspection
+
+ -- Rodrigo Moya <rodrigo.moya@canonical.com>  Tue, 25 Jan 2011 17:31:08 +0100
+
+eog (2.91.6-0ubuntu1~build1) natty; urgency=low
+
+  * New upstream release
+  * debian/control:
+    - Add build dependency on libpeas-dev
+  * debian/patches/01_lpi.patch:
+    - Rebased patch
+
+ -- Rodrigo Moya <rodrigo.moya@canonical.com>  Mon, 17 Jan 2011 12:54:43 +0100
+
+eog (2.91.5-0ubuntu1~build1) natty; urgency=low
+
+  * New upstream release
+
+ -- Rodrigo Moya <rodrigo.moya@canonical.com>  Thu, 23 Dec 2010 16:10:26 +0100
+
+eog (2.91.3-0ubuntu2~build1) natty; urgency=low
+
+  * debian/control:
+    - Update Vcs-Bzr link
+
+ -- Robert Ancell <robert.ancell@canonical.com>  Wed, 15 Dec 2010 17:35:53 +1100
+
+eog (2.91.3-0ubuntu1) natty; urgency=low
+
+  * New upstream version
+  * debian/control.in:
+    - build-depends on gsettings-desktop-schemas-dev, not on libgconf2-dev
+  * debian/patches/00git_gnome3_build.patch:
+    - dropped, it's in the new version
+  * debian/patches/01_lpi.patch:
+    - new version update
+  * debian/eog.install:
+    - install the gconf to gsettings conversion script
+
+ -- Sebastien Bacher <seb128@ubuntu.com>  Wed, 01 Dec 2010 19:01:59 +0100
+
+eog (2.91.2-0ubuntu1~build2) natty; urgency=low
+
+  * debian/control:
+    - Use standards-version 3.9.1
+    - Change build depends on liblaunchpad-intgration-dev to
+      liblaunchpad-intgration-3.0-dev
+  * debian/rules:
+    - Disable LDFLAGS, they are breaking the build
+  * debian/patches/01_lpi.patch:
+    - Updated to use GTK3 LPI
+
+ -- Robert Ancell <robert.ancell@canonical.com>  Tue, 23 Nov 2010 17:11:34 +1100
+
+eog (2.91.2-0ubuntu1~build1) natty; urgency=low
+
+  * New upstream release
+  * debian/control:
+    - Bump build-depends on libgnome-desktop-3-dev
+  * debian/patches/00git_gnome3_build.patch:
+    - Fix build
+  * debian/patches/00git_no_gtk_widget_hide_all.patch:
+  * debian/patches/00git_gtk_combo_box_text1.patch:
+  * debian/patches/00git_gtk_combo_box_text2.patch:
+    - Applied upstream
+
+ -- Robert Ancell <robert.ancell@canonical.com>  Mon, 22 Nov 2010 19:13:43 +1100
+
+eog (2.91.1-0ubuntu1~build1) natty; urgency=low
+
+  * New upstream release
+  * debian/control:
+    - Change build dependencies to GTK3 ones
+  * debian/rules:
+    - Remove --enable-python as it is not supported with GTK3 yet
+  * debian/eog.gschema.override:
+  * debian/eog.install:
+    - Set default image editor to Shotwell
+  * debian/patches/00git_no_gtk_widget_hide_all.patch:
+    - gtk_widget_hide_all() no longer exists
+  * debian/patches/00git_gtk_combo_box_text1.patch:
+  * debian/patches/00git_gtk_combo_box_text2.patch:
+    - Use new GtkComboBoxText API
+  * debian/patches/01_lpi.patch:
+    - Disabled as it doesn't support GTK3 yet
+  * debian/patches/02_toolbar_edit_button.patch:
+    - Applied upstream
+
+ -- Robert Ancell <robert.ancell@canonical.com>  Mon, 08 Nov 2010 10:51:22 +1100
+
 eog (2.32.1-0ubuntu2) natty; urgency=low
 
   * No change rebuild for new python default
