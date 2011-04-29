@@ -10,4 +10,5 @@ debian/tmp/usr/share/locale
 debian/tmp/usr/share/applications
 debian/tmp/usr/lib/eog/plugins/*plugin
 debian/tmp/usr/lib/eog/plugins/*.so
+debian/tmp/usr/lib/eog/girepository-1.0
 debian/eog.gschema.override usr/share/glib-2.0/schemas
