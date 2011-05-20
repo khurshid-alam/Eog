@@ -8,7 +8,7 @@ Section: gnome
 Priority: optional
 Maintainer: Ubuntu Desktop Team <ubuntu-desktop@lists.ubuntu.com>
 XSBC-Original-Maintainer: Guilherme de S. Pastore <gpastore@debian.org>
-Uploaders: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>, Emilio Pozuelo Monfort <pochu@debian.org>, Josselin Mouette <joss@debian.org>, Michael Biebl <biebl@debian.org>
+Uploaders: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>, Emilio Pozuelo Monfort <pochu@debian.org>, Frederic Peters <fpeters@debian.org>, Josselin Mouette <joss@debian.org>, Michael Biebl <biebl@debian.org>, Sjoerd Simons <sjoerd@debian.org>
 Standards-Version: 3.9.0
 Homepage: http://projects.gnome.org/eog
 Build-Depends: cdbs (>= 0.4.41),
@@ -51,9 +51,10 @@ Depends: ${shlibs:Depends},
          gnome-icon-theme (>= 2.19.1),
          shared-mime-info (>= 0.20),
          gsettings-desktop-schemas (>= 2.91.92)
-Conflicts: gir1.2-eog-3.0
 Recommends: librsvg2-common
 Breaks: eog-plugins (<< 2.91)
+Conflicts: gir1.2-eog-3.0
+Replaces: gir1.2-eog-3.0
 Description: Eye of GNOME graphics viewer program
  eog or the Eye of GNOME is a simple graphics viewer for the GNOME
  desktop which uses the gdk-pixbuf library.  It can deal with large
