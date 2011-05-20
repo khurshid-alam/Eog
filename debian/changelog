@@ -1,4 +1,4 @@
-eog (3.0.1-1ubuntu1) UNRELEASED; urgency=low
+eog (3.0.1-1ubuntu1) oneiric; urgency=low
 
   * Resynchronize on Debian, based on the gnome3-team ppa work, thanks to
     Rico Tzschichholz, Rodrigo Moya and Robert Ancell
@@ -19,7 +19,7 @@ eog (3.0.1-1ubuntu1) UNRELEASED; urgency=low
   * debian/rules
     - use dh-autoreconf
 
- -- Chris Coulson <chris.coulson@canonical.com>  Fri, 20 May 2011 17:57:19 +0100
+ -- Chris Coulson <chris.coulson@canonical.com>  Fri, 20 May 2011 17:58:02 +0100
 
 eog (3.0.1-1) experimental; urgency=low
 
