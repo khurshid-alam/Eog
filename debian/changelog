@@ -1,3 +1,9 @@
+eog (3.0.2-0ubuntu1) oneiric; urgency=low
+
+  * New upstream release
+
+ -- Rodrigo Moya <rodrigo.moya@canonical.com>  Wed, 25 May 2011 10:17:58 +0200
+
 eog (3.0.1-1ubuntu1) oneiric; urgency=low
 
   * Resynchronize on Debian, based on the gnome3-team ppa work, thanks to
