@@ -1,31 +1,39 @@
-eog (3.0.2-0ubuntu1) oneiric; urgency=low
+eog (3.0.2-1ubuntu1) oneiric; urgency=low
 
-  * New upstream release
-
- -- Rodrigo Moya <rodrigo.moya@canonical.com>  Wed, 25 May 2011 10:17:58 +0200
-
-eog (3.0.1-1ubuntu1) oneiric; urgency=low
-
-  * Resynchronize on Debian, based on the gnome3-team ppa work, thanks to
-    Rico Tzschichholz, Rodrigo Moya and Robert Ancell
-  * Remaining changes:
+  * Resynchronize on Debian
+  * Remaing diff:
   * debian/control.in:
     - Build-Depends on dh-autoreconf and liblaunchpad-integration-3.0-dev
-  * debian/eog-dev.install:
-    - install the documentation
   * debian/eog.gschema.override:
     - define the default editor to shotwell
   * debian/eog.install:
     - install the gsettings schemas override
+  * debian/eog-dev.install:
+    - install the documentation
+  * debian/patches/01_nodisplay.patch:
+    - dropped, it was useful to simplify the gnome menus but is stop the
+      users to find eog in unity or gnome-shell nowadays. (lp: #769979)
   * debian/patches/01_lpi.patch,
     - launchpad integration changes
-  * debian/patches/01_nodisplay.patch:
-    - dropped, it was useful to simplify the gnome menus but is stopping
-      users finding eog in unity or gnome-shell nowadays. (LP: #769979)
   * debian/rules
     - use dh-autoreconf
 
- -- Chris Coulson <chris.coulson@canonical.com>  Fri, 20 May 2011 17:58:02 +0100
+ -- Sebastien Bacher <seb128@ubuntu.com>  Mon, 02 May 2011 11:11:08 +0200
+
+eog (3.0.2-1) experimental; urgency=low
+
+  * New upstream stable release.
+  * debian/watch: Switch to .bz2 tarballs.
+  * Switch to debhelper compatibility level 8.
+    - Bump Build-Depends on debhelper.
+    - Strip leading debian/tmp/ from .install files.
+  * debian/control.in
+    - Bump Standards-Version to 3.9.2. No further changes.
+    - Add Build-Depends on librsvg2-dev (>= 2.26.0) for scaling svg images.
+  * debian/eog-dev.install
+    - Install gtk-doc API documentation.
+
+ -- Michael Biebl <biebl@debian.org>  Sat, 04 Jun 2011 18:31:50 +0200
 
 eog (3.0.1-1) experimental; urgency=low
 
