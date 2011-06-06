@@ -1,3 +1,10 @@
+eog (3.0.2-1ubuntu2) UNRELEASED; urgency=low
+
+  * debian/eog.gsettings-override, debian/eog.install: 
+    - use correct naming so it's handled by dh_installgsettings
+
+ -- Sebastien Bacher <seb128@ubuntu.com>  Mon, 06 Jun 2011 17:36:34 +0200
+
 eog (3.0.2-1ubuntu1) oneiric; urgency=low
 
   * Resynchronize on Debian
