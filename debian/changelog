@@ -1,3 +1,13 @@
+eog (3.1.2-0ubuntu1) oneiric; urgency=low
+
+  * New upstream release
+  * debian/watch:
+    - Watch unstable versions
+  * debian/eog.install:
+    - Remove installation of non-existing directories
+
+ -- Rodrigo Moya <rodrigo.moya@canonical.com>  Fri, 01 Jul 2011 11:31:40 +0200
+
 eog (3.0.2-1ubuntu3) oneiric; urgency=low
 
   * No-change rebuild against libgnome-desktop-3-2
