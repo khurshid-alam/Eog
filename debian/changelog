@@ -1,5 +1,7 @@
 eog (3.1.4-0ubuntu1) UNRELEASED; urgency=low
 
+  * New upsteam release:
+    - if saving an image fails it's done silently (LP: #673299)
   * debian/control:
     - set Vcs-Bzr to the ubuntu-desktop team, no gnome3-team
 
