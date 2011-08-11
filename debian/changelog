@@ -1,3 +1,12 @@
+eog (3.1.4-0ubuntu2) oneiric; urgency=low
+
+  * Added libgrip gesture support (LP: #823640)
+    - added debian/patches/02_grip_gestures.patch
+    - adds pinch-to-zoom, rotate, and drag gestures
+    - adds build-depends on libgrip-dev
+
+ -- Stephen M. Webb <stephen.webb@canonical.com>  Wed, 10 Aug 2011 10:10:37 -0400
+
 eog (3.1.4-0ubuntu1) oneiric; urgency=low
 
   * New upsteam release:

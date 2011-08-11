@@ -9,7 +9,7 @@ include /usr/share/gnome-pkg-tools/1/rules/uploaders.mk
 
 LDFLAGS += -Wl,-O1 -Wl,--as-needed
 
-DEB_CONFIGURE_EXTRA_FLAGS += --enable-gtk-doc --disable-scrollkeeper
+DEB_CONFIGURE_EXTRA_FLAGS += --enable-gtk-doc --disable-scrollkeeper --with-libgrip
 
 DEB_DH_MAKESHLIBS_ARGS_ALL += --no-act
 
