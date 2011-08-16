@@ -1,3 +1,9 @@
+eog (3.1.5-0ubuntu1) oneiric; urgency=low
+
+  * New upstream release
+
+ -- Rodrigo Moya <rodrigo.moya@canonical.com>  Tue, 16 Aug 2011 12:11:41 +0200
+
 eog (3.1.4-0ubuntu2) oneiric; urgency=low
 
   * Added libgrip gesture support (LP: #823640)
