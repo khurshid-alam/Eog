@@ -1,3 +1,9 @@
+eog (3.1.90-0ubuntu1) oneiric; urgency=low
+
+  * New upstream release
+
+ -- Rodrigo Moya <rodrigo.moya@canonical.com>  Mon, 05 Sep 2011 10:19:55 +0200
+
 eog (3.1.5-0ubuntu1) oneiric; urgency=low
 
   * New upstream release
