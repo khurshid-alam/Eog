@@ -1,3 +1,9 @@
+eog (3.1.92-0ubuntu3) UNRELEASED; urgency=low
+
+  * Update Bzr-Vcs tag to point to ~ubuntu-desktop instead of ~gnome3-team
+
+ -- Chase Douglas <chase.douglas@ubuntu.com>  Fri, 23 Sep 2011 13:02:57 -0700
+
 eog (3.1.92-0ubuntu2) oneiric; urgency=low
 
   * Fix rotation gesture direction (LP: #848799)
