@@ -227,11 +227,11 @@ Author: Canonical DX Multi-Touch Team  <multi-touch-dev@lists.launchpad.net>
 +		case GRIP_GESTURE_ROTATE: {
 +			GripEventGestureRotate *rotate = (GripEventGestureRotate *)event;
 +
-+			if (zero_angle - rotate->angle >= EOG_GESTURE_ROTATE_THRESHOLD) {
++			if (rotate->angle - zero_angle >= EOG_GESTURE_ROTATE_THRESHOLD) {
 +				apply_transformation (EOG_WINDOW (user_data),
 +						eog_transform_rotate_new (90));
 +				zero_angle = rotate->angle;
-+			} else if (rotate->angle - zero_angle >= EOG_GESTURE_ROTATE_THRESHOLD) {
++			} else if (zero_angle - rotate->angle >= EOG_GESTURE_ROTATE_THRESHOLD) {
 +				apply_transformation (EOG_WINDOW (user_data),
 +						eog_transform_rotate_new (270));
 +				zero_angle = rotate->angle;
