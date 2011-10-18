@@ -43,7 +43,7 @@ Build-Depends: cdbs (>= 0.4.41),
                dh-autoreconf,
                liblaunchpad-integration-3.0-dev
 Build-Depends-Indep: libglib2.0-doc, libgtk-3-doc
-Vcs-Bzr: https://code.launchpad.net/~gnome3-team/eog/ubuntu
+Vcs-Bzr: https://code.launchpad.net/~ubuntu-desktop/eog/ubuntu
 
 Package: eog
 Architecture: any

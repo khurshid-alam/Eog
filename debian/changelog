@@ -1,3 +1,14 @@
+eog (3.2.1-0ubuntu1) UNRELEASED; urgency=low
+
+  [ Chase Douglas ]
+  * Update Bzr-Vcs tag to point to ~ubuntu-desktop instead of ~gnome3-team
+
+  [ Didier Roche ]
+  * New upstream release (LP: #877186)
+    - new and updated translations
+
+ -- Didier Roche <didrocks@ubuntu.com>  Tue, 18 Oct 2011 09:48:34 +0200
+
 eog (3.2.0-0ubuntu1) oneiric; urgency=low
 
   * New upstream release: Translation updates only.
