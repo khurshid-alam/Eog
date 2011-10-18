@@ -1,8 +1,10 @@
 Description: Add uTouch gesture functionality via libgrip.
 Author: Canonical DX Multi-Touch Team  <multi-touch-dev@lists.launchpad.net>
 
---- a/configure.ac
-+++ b/configure.ac
+Index: eog/configure.ac
+===================================================================
+--- eog.orig/configure.ac	2011-09-27 07:12:58.067205089 +0200
++++ eog/configure.ac	2011-09-27 07:13:02.871205320 +0200
 @@ -286,6 +286,23 @@
  AM_CONDITIONAL([HAVE_RSVG], [test "x$have_rsvg" = "xyes"])
  
@@ -33,8 +35,10 @@ Author: Canonical DX Multi-Touch Team  <multi-touch-dev@lists.launchpad.net>
  	GObject Introspection.......:  ${have_introspection}
 +	Libgrip gestures............:  ${have_libgrip}
  "
---- a/src/eog-scroll-view.c
-+++ b/src/eog-scroll-view.c
+Index: eog/src/eog-scroll-view.c
+===================================================================
+--- eog.orig/src/eog-scroll-view.c	2011-09-27 07:12:56.631205018 +0200
++++ eog/src/eog-scroll-view.c	2011-09-27 07:13:02.871205320 +0200
 @@ -10,6 +10,9 @@
  #include <librsvg/rsvg.h>
  #include <librsvg/rsvg-cairo.h>
@@ -175,8 +179,10 @@ Author: Canonical DX Multi-Touch Team  <multi-touch-dev@lists.launchpad.net>
  	priv->hadj = GTK_ADJUSTMENT (gtk_adjustment_new (0, 100, 0, 10, 10, 100));
  	g_signal_connect (priv->hadj, "value_changed",
  			  G_CALLBACK (adjustment_changed_cb),
---- a/src/eog-window.c
-+++ b/src/eog-window.c
+Index: eog/src/eog-window.c
+===================================================================
+--- eog.orig/src/eog-window.c	2011-09-27 07:12:58.067205089 +0200
++++ eog/src/eog-window.c	2011-09-27 07:13:02.887205322 +0200
 @@ -68,6 +68,9 @@
  #include <gdk/gdkkeysyms.h>
  #include <gio/gdesktopappinfo.h>
@@ -198,7 +204,7 @@ Author: Canonical DX Multi-Touch Team  <multi-touch-dev@lists.launchpad.net>
  #define is_rtl (gtk_widget_get_default_direction () == GTK_TEXT_DIR_RTL)
  
  typedef enum {
-@@ -4419,6 +4426,51 @@
+@@ -4422,6 +4429,51 @@
  	g_free (tooltip);
  }
  
@@ -250,7 +256,7 @@ Author: Canonical DX Multi-Touch Team  <multi-touch-dev@lists.launchpad.net>
  static void
  eog_window_construct_ui (EogWindow *window)
  {
-@@ -4636,6 +4688,15 @@
+@@ -4639,6 +4691,15 @@
  					     _eog_zoom_shrink_to_boolean,
  					     NULL, NULL, NULL);
  	}

@@ -8,19 +8,17 @@ Section: gnome
 Priority: optional
 Maintainer: Ubuntu Desktop Team <ubuntu-desktop@lists.ubuntu.com>
 XSBC-Original-Maintainer: Guilherme de S. Pastore <gpastore@debian.org>
-Uploaders: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>, Emilio Pozuelo Monfort <pochu@debian.org>, Josselin Mouette <joss@debian.org>, Michael Biebl <biebl@debian.org>
-Standards-Version: 3.9.0
+Uploaders: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Standards-Version: 3.9.2
 Homepage: http://projects.gnome.org/eog
 Build-Depends: cdbs (>= 0.4.41),
-               debhelper (>= 5),
-               dh-autoreconf,
+               debhelper (>= 8),
                gnome-pkg-tools (>= 0.10),
                gtk-doc-tools (>= 1.9),
                intltool (>= 0.40.0),
                pkg-config,
                gnome-doc-utils,
                libgtk-3-dev (>= 3.0.2),
-               liblaunchpad-integration-3.0-dev,
                libglib2.0-dev (>= 2.25.15),
                libgnome-desktop-3-dev (>= 2.91.2),
                gnome-icon-theme (>= 2.19.1),
@@ -32,6 +30,7 @@ Build-Depends: cdbs (>= 0.4.41),
                liblcms-dev,
                libexempi-dev (>= 1.99.5),
                libjpeg62-dev,
+               librsvg2-dev (>= 2.26.0),
                libdbus-glib-1-dev (>= 0.71),
                libxml2-dev (>= 2.0),
                libx11-dev,
@@ -40,9 +39,11 @@ Build-Depends: cdbs (>= 0.4.41),
                gir1.2-glib-2.0,
                gir1.2-gtk-3.0 (>= 3.0.0),
                gobject-introspection (>= 0.9.12-4~),
-               libgirepository1.0-dev (>= 0.9.12)
+               libgirepository1.0-dev (>= 0.9.12),
+               dh-autoreconf,
+               liblaunchpad-integration-3.0-dev
 Build-Depends-Indep: libglib2.0-doc, libgtk-3-doc
-Vcs-Bzr: https://code.launchpad.net/~ubuntu-desktop/eog/ubuntu
+Vcs-Bzr: https://code.launchpad.net/~gnome3-team/eog/ubuntu
 
 Package: eog
 Architecture: any
@@ -52,9 +53,10 @@ Depends: ${shlibs:Depends},
          gnome-icon-theme (>= 2.19.1),
          shared-mime-info (>= 0.20),
          gsettings-desktop-schemas (>= 2.91.92)
-Conflicts: gir1.2-eog-3.0
 Recommends: librsvg2-common
 Breaks: eog-plugins (<< 2.91)
+Conflicts: gir1.2-eog-3.0
+Replaces: gir1.2-eog-3.0
 Description: Eye of GNOME graphics viewer program
  eog or the Eye of GNOME is a simple graphics viewer for the GNOME
  desktop which uses the gdk-pixbuf library.  It can deal with large

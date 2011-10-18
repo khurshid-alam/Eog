@@ -1,8 +1,9 @@
-eog (3.1.92-0ubuntu3) UNRELEASED; urgency=low
+eog (3.2.0-0ubuntu1) oneiric; urgency=low
 
-  * Update Bzr-Vcs tag to point to ~ubuntu-desktop instead of ~gnome3-team
+  * New upstream release: Translation updates only.
+  * Refresh patches to apply cleanly.
 
- -- Chase Douglas <chase.douglas@ubuntu.com>  Fri, 23 Sep 2011 13:02:57 -0700
+ -- Martin Pitt <martin.pitt@ubuntu.com>  Tue, 27 Sep 2011 07:13:37 +0200
 
 eog (3.1.92-0ubuntu2) oneiric; urgency=low
 
