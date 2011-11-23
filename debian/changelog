@@ -1,113 +1,64 @@
-eog (3.2.1-0ubuntu1) oneiric-proposed; urgency=low
+eog (3.2.2-2ubuntu1) UNRELEASED; urgency=low
 
-  [ Chase Douglas ]
-  * Update Bzr-Vcs tag to point to ~ubuntu-desktop instead of ~gnome3-team
-
-  [ Didier Roche ]
-  * New upstream release (LP: #877186)
-    - new and updated translations
-
- -- Didier Roche <didrocks@ubuntu.com>  Tue, 18 Oct 2011 09:48:34 +0200
-
-eog (3.2.0-0ubuntu1) oneiric; urgency=low
-
-  * New upstream release: Translation updates only.
-  * Refresh patches to apply cleanly.
-
- -- Martin Pitt <martin.pitt@ubuntu.com>  Tue, 27 Sep 2011 07:13:37 +0200
-
-eog (3.1.92-0ubuntu2) oneiric; urgency=low
-
-  * Fix rotation gesture direction (LP: #848799)
-
- -- Chase Douglas <chase.douglas@ubuntu.com>  Fri, 23 Sep 2011 11:06:08 -0700
-
-eog (3.1.92-0ubuntu1) oneiric; urgency=low
-
-  * New upstream release
-
- -- Rodrigo Moya <rodrigo.moya@canonical.com>  Tue, 20 Sep 2011 10:48:32 +0200
-
-eog (3.1.91-0ubuntu1) oneiric; urgency=low
-
-  * New upstream version
-
- -- Sebastien Bacher <seb128@ubuntu.com>  Tue, 06 Sep 2011 15:40:48 +0200
-
-eog (3.1.90-0ubuntu1) oneiric; urgency=low
-
-  * New upstream release
-
- -- Rodrigo Moya <rodrigo.moya@canonical.com>  Mon, 05 Sep 2011 10:19:55 +0200
-
-eog (3.1.5-0ubuntu1) oneiric; urgency=low
-
-  * New upstream release
-
- -- Rodrigo Moya <rodrigo.moya@canonical.com>  Tue, 16 Aug 2011 12:11:41 +0200
-
-eog (3.1.4-0ubuntu2) oneiric; urgency=low
-
-  * Added libgrip gesture support (LP: #823640)
-    - added debian/patches/02_grip_gestures.patch
-    - adds pinch-to-zoom, rotate, and drag gestures
-    - adds build-depends on libgrip-dev
-
- -- Stephen M. Webb <stephen.webb@canonical.com>  Wed, 10 Aug 2011 10:10:37 -0400
-
-eog (3.1.4-0ubuntu1) oneiric; urgency=low
-
-  * New upsteam release:
-    - if saving an image fails it's done silently (LP: #673299)
-  * debian/control:
-    - set Vcs-Bzr to the ubuntu-desktop team, no gnome3-team
-
- -- Didier Roche <didrocks@ubuntu.com>  Tue, 26 Jul 2011 15:28:21 +0200
-
-eog (3.1.2-0ubuntu1) oneiric; urgency=low
-
-  * New upstream release
-  * debian/watch:
-    - Watch unstable versions
-  * debian/eog.install:
-    - Remove installation of non-existing directories
-
- -- Rodrigo Moya <rodrigo.moya@canonical.com>  Fri, 01 Jul 2011 11:31:40 +0200
-
-eog (3.0.2-1ubuntu3) oneiric; urgency=low
-
-  * No-change rebuild against libgnome-desktop-3-2
-
- -- Steve Langasek <steve.langasek@ubuntu.com>  Sat, 25 Jun 2011 09:26:44 -0700
-
-eog (3.0.2-1ubuntu2) oneiric; urgency=low
-
-  * debian/eog.gsettings-override, debian/eog.install: 
-    - use correct naming so it's handled by dh_installgsettings
-
- -- Sebastien Bacher <seb128@ubuntu.com>  Mon, 06 Jun 2011 17:36:34 +0200
-
-eog (3.0.2-1ubuntu1) oneiric; urgency=low
-
-  * Resynchronize on Debian
-  * Remaing diff:
+  * Resynchronize on Debian, remaining diffs:
   * debian/control.in:
-    - Build-Depends on dh-autoreconf and liblaunchpad-integration-3.0-dev
-  * debian/eog.gschema.override:
+    - Build-Depends on dh-autoreconf, liblaunchpad-integration-3.0-dev, 
+      libgrip-dev
+  * debian/eog.gsettings-override:
     - define the default editor to shotwell
-  * debian/eog.install:
-    - install the gsettings schemas override
   * debian/eog-dev.install:
     - install the documentation
-  * debian/patches/01_nodisplay.patch:
-    - dropped, it was useful to simplify the gnome menus but is stop the
-      users to find eog in unity or gnome-shell nowadays. (lp: #769979)
   * debian/patches/01_lpi.patch,
     - launchpad integration changes
+  * debian/patches/02_grip_gestures.patch:
+    -  support pinch-to-zoom, rotate, and drag gestures  
   * debian/rules
     - use dh-autoreconf
 
- -- Sebastien Bacher <seb128@ubuntu.com>  Mon, 02 May 2011 11:11:08 +0200
+ -- Sebastien Bacher <seb128@ubuntu.com>  Tue, 22 Nov 2011 20:52:38 +0100
+
+eog (3.2.2-2) unstable; urgency=low
+
+  * Upload to unstable.
+
+ -- Michael Biebl <biebl@debian.org>  Sat, 19 Nov 2011 01:30:53 +0100
+
+eog (3.2.2-1) experimental; urgency=low
+
+  * New upstream release.
+  * debian/control.in:
+    - Drop Build-Depends on libdbus-glib-1-dev, no longer required.
+  * debian/watch:
+    - Fix regex to correctly match directories.
+
+ -- Michael Biebl <biebl@debian.org>  Thu, 17 Nov 2011 20:59:59 +0100
+
+eog (3.2.1-1) experimental; urgency=low
+
+  [ Josselin Mouette ]
+  * 01_nodisplay.patch: dropped. Let’s show applications in the shell 
+    now. Closes: #624560.
+
+  [ Sjoerd Simons ]
+  * New upstream release (3.2.1)
+  * debian/watch: Monitor xz tarballs
+  * debian/control.in: Update glib build-depends
+  * debian/eog.install: Remove omf dir, no longer used
+
+ -- Sjoerd Simons <sjoerd@debian.org>  Wed, 02 Nov 2011 20:35:55 +0000
+
+eog (3.0.2-2) unstable; urgency=low
+
+  * debian/control.in:
+    - Change Build-Depends on libjpeg62-dev to libjpeg-dev in preparation of
+      the libjpeg8 transition.
+    - Add Depends on gir1.2-peas-1.0 to eog. (Closes: #630910)
+    - Remove Build-Depends on gir1.2-gtk-3.0 and let libgtk-3-dev pull that
+      dependency in. Bump Build-Depends on libgtk-3-dev to (>= 3.0.8-1~)
+      accordingly.
+    - Update Vcs-* fields.
+
+ -- Michael Biebl <biebl@debian.org>  Fri, 15 Jul 2011 17:52:56 +0200
 
 eog (3.0.2-1) experimental; urgency=low
 
