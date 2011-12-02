@@ -1,3 +1,12 @@
+eog (3.2.2-2ubuntu2) UNRELEASED; urgency=low
+
+  * debian/patches/git_correct_units.patch:
+    - git patch to use the correct units for file stats
+  * debian/patches/git_dont_change_permission_on_edit.patch:
+    - git patch to preserve the permissions on images edition (lp: #792145)
+
+ -- Sebastien Bacher <seb128@ubuntu.com>  Fri, 02 Dec 2011 17:06:28 +0100
+
 eog (3.2.2-2ubuntu1) precise; urgency=low
 
   * Resynchronize on Debian, remaining diffs:

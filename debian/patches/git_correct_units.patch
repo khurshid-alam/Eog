@@ -1,0 +1,67 @@
+From 8af8ac974294f9a42a8f7e43aaf251bbd4141c7d Mon Sep 17 00:00:00 2001
+From: Felix Riemann <friemann@gnome.org>
+Date: Sat, 26 Nov 2011 15:11:45 +0000
+Subject: Stop using g_format_size_for_display()
+
+It uses the wrong unit suffixes/basis and has since been declared as
+deprecated. Replaced by g_format_size() using the correct basis.
+---
+diff --git a/src/eog-file-chooser.c b/src/eog-file-chooser.c
+index 314d511..f0a2569 100644
+--- a/src/eog-file-chooser.c
++++ b/src/eog-file-chooser.c
+@@ -280,10 +280,10 @@ set_preview_pixbuf (EogFileChooser *chooser, GdkPixbuf *pixbuf, goffset size)
+ 		bytes_str = gdk_pixbuf_get_option (pixbuf, "tEXt::Thumb::Size");
+ 		if (bytes_str != NULL) {
+ 			bytes = atoi (bytes_str);
+-			size_str = g_format_size_for_display (bytes);
++			size_str = g_format_size (bytes);
+ 		}
+ 		else {
+-			size_str = g_format_size_for_display (size);
++			size_str = g_format_size (size);
+ 		}
+ 
+ 		/* try to read image dimensions */
+diff --git a/src/eog-properties-dialog.c b/src/eog-properties-dialog.c
+index 5ec5b13..a650c69 100644
+--- a/src/eog-properties-dialog.c
++++ b/src/eog-properties-dialog.c
+@@ -162,7 +162,7 @@ pd_update_general_tab (EogPropertiesDialog *prop_dlg,
+ 	gtk_label_set_text (GTK_LABEL (prop_dlg->priv->type_label), type_str);
+ 
+ 	bytes = eog_image_get_bytes (image);
+-	bytes_str = g_format_size_for_display (bytes);
++	bytes_str = g_format_size (bytes);
+ 
+ 	gtk_label_set_text (GTK_LABEL (prop_dlg->priv->bytes_label), bytes_str);
+ 
+diff --git a/src/eog-thumb-view.c b/src/eog-thumb-view.c
+index 6d7f146..b2dcb12 100644
+--- a/src/eog-thumb-view.c
++++ b/src/eog-thumb-view.c
+@@ -408,7 +408,7 @@ thumbview_get_tooltip_string (EogImage *image)
+ 	ExifData *exif_data;
+ #endif
+ 
+-	bytes = g_format_size_for_display (eog_image_get_bytes (image));
++	bytes = g_format_size (eog_image_get_bytes (image));
+ 
+ 	eog_image_get_size (image, &width, &height);
+ 
+diff --git a/src/eog-window.c b/src/eog-window.c
+index 452e5fa..6393e44 100644
+--- a/src/eog-window.c
++++ b/src/eog-window.c
+@@ -513,9 +513,9 @@ update_status_bar (EogWindow *window)
+ 		bytes = eog_image_get_bytes (priv->image);
+ 
+ 		if ((width > 0) && (height > 0)) {
+-			char *size_string;
++			gchar *size_string;
+ 
+-			size_string = g_format_size_for_display (bytes);
++			size_string = g_format_size (bytes);
+ 
+ 			/* Translators: This is the string displayed in the statusbar
+ 			 * The tokens are from left to right:
