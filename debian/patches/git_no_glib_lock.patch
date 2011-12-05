@@ -1,0 +1,36 @@
+From ee4f6b27027421ee1e7cb14948f587da83171668 Mon Sep 17 00:00:00 2001
+From: Ryan Lortie <desrt@desrt.ca>
+Date: Wed, 02 Nov 2011 14:08:14 +0000
+Subject: Don't lock GDK around g_application_run()
+
+An unintended interaction between GtkApplication and GDK threading made
+this necessary before.  That code has since been simplified, breaking
+this formerly-working code.
+
+https://bugzilla.gnome.org/show_bug.cgi?id=662630
+---
+diff --git a/src/main.c b/src/main.c
+index 4e78732..e83abed 100644
+--- a/src/main.c
++++ b/src/main.c
+@@ -161,8 +161,6 @@ main (int argc, char **argv)
+ 	              "gtk-application-prefer-dark-theme", TRUE,
+ 	              NULL);
+ 
+-	gdk_threads_enter ();
+-
+ 	EOG_APP->flags = flags;
+ 	if (force_new_instance) {
+ 		GApplicationFlags app_flags = g_application_get_flags (G_APPLICATION (EOG_APP));
+@@ -173,8 +171,6 @@ main (int argc, char **argv)
+ 	g_application_run (G_APPLICATION (EOG_APP), argc, argv);
+ 	g_object_unref (EOG_APP);
+ 
+-	gdk_threads_leave ();
+-
+   	if (startup_files)
+ 		g_strfreev (startup_files);
+ 
+--
+cgit v0.9.0.2
+

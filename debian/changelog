@@ -1,3 +1,10 @@
+eog (3.2.2-2ubuntu3) UNRELEASED; urgency=low
+
+  * debian/patches/git_no_glib_lock.patch:
+    - git patch to fix issues with the new glib serie
+
+ -- Sebastien Bacher <seb128@ubuntu.com>  Mon, 05 Dec 2011 18:31:17 +0100
+
 eog (3.2.2-2ubuntu2) precise; urgency=low
 
   * debian/patches/git_correct_units.patch:

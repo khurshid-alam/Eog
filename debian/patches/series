@@ -2,4 +2,5 @@
 02_grip_gestures.patch
 git_correct_units.patch
 git_dont_change_permission_on_edit.patch
+git_no_glib_lock.patch
 
