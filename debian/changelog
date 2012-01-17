@@ -1,11 +1,11 @@
-eog (3.3.4-0ubuntu1) UNRELEASED; urgency=low
+eog (3.3.4-0ubuntu1) precise; urgency=low
 
   * New upstream version
-  * Drop patches included in the new version
+  * Drop the patches included in the new version
   * debian/control.in:
     - updated glib requirement
 
- -- Sebastien Bacher <seb128@ubuntu.com>  Tue, 17 Jan 2012 15:48:14 +0100
+ -- Sebastien Bacher <seb128@ubuntu.com>  Tue, 17 Jan 2012 17:06:58 +0100
 
 eog (3.2.2-2ubuntu3) precise; urgency=low
 
