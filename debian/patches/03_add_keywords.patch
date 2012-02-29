@@ -1,0 +1,9 @@
+=== modified file 'data/eog.desktop.in.in'
+--- a/data/eog.desktop.in.in	2011-05-02 11:11:08 +0000
++++ b/data/eog.desktop.in.in	2012-02-29 02:05:20 +0000
+@@ -14,3 +14,4 @@
+ X-GNOME-Bugzilla-Version=@VERSION@
+ X-GNOME-DocPath=eog/eog.xml
+ MimeType=image/bmp;image/gif;image/jpeg;image/jpg;image/pjpeg;image/png;image/tiff;image/x-bmp;image/x-gray;image/x-icb;image/x-ico;image/x-png;image/x-portable-anymap;image/x-portable-bitmap;image/x-portable-graymap;image/x-portable-pixmap;image/x-xbitmap;image/x-xpixmap;image/x-pcx;image/svg+xml;image/svg+xml-compressed;image/vnd.wap.wbmp;
++_Keywords=Image;Viewer;Picture;Slideshow;Graphics;
+

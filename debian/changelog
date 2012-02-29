@@ -1,3 +1,11 @@
+eog (3.3.90-0ubuntu2) UNRELEASED; urgency=low
+
+  [ Nekhelesh Ramananthan krnekhelesh ]
+  * debian/patches/03_add_keywords.patch:
+    - add keywords for looking for correct keyword (LP: #943028)
+
+ -- Didier Roche <didrocks@ubuntu.com>  Wed, 29 Feb 2012 10:51:16 +0100
+
 eog (3.3.90-0ubuntu1) precise; urgency=low
 
   * New upstream release.
