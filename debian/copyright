@@ -36,7 +36,7 @@ License:
     51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
 
     On Debian Systems, the full text of the license can be found on
-    /usr/share/common-licenses/GPL
+    /usr/share/common-licenses/GPL-2
 
 Files: src/eog-image-jpeg.c, cut-n-paste/totem-screensaver/totem-scrsaver.h,
        cut-n-paste/totem-screensaver/totem-scrsaver.c

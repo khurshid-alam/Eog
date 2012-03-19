@@ -1,75 +1,13 @@
-eog (3.3.91-0ubuntu1) precise; urgency=low
+eog (3.3.92-0ubuntu1) UNRELEASED; urgency=low
 
   * New upstream version:
-    - don't segfault on toolbar edition (lp: #671202)
-  * debian/patches/03_add_keywords.patch:
-    - dropped, the patch is included in the new version
-  
-  [ Nekhelesh Ramananthan krnekhelesh ]
-  * debian/patches/03_add_keywords.patch:
-    - add keywords for looking for correct keyword (LP: #943028)
-
- -- Sebastien Bacher <seb128@ubuntu.com>  Mon, 05 Mar 2012 21:45:13 +0100
-
-eog (3.3.90-0ubuntu1) precise; urgency=low
-
-  * New upstream release.
-    - Relayout metadata sidebar to require less horizontal space
-    - Lots of - mostly deprecated - code cleanup
-  * debian/watch: Watch for unstable releases
-
- -- Jeremy Bicha <jbicha@ubuntu.com>  Tue, 21 Feb 2012 11:58:00 -0500
-
-eog (3.3.5-0ubuntu1) precise; urgency=low
-
-  * New upstream version:
-    - Don't show sidebar by default, or at least remember setting 
-      (lp: #927858)
-  * debian/control.in:
-    - updated gtk requirement
-
- -- Sebastien Bacher <seb128@ubuntu.com>  Tue, 07 Feb 2012 13:38:10 +0100
-
-eog (3.3.4-0ubuntu2) precise; urgency=low
-
-  * debian/eog.gsettings-override:
-    - don't display the sidebar by default (lp: #923708)
-
- -- Sebastien Bacher <seb128@ubuntu.com>  Wed, 01 Feb 2012 15:57:46 +0100
-
-eog (3.3.4-0ubuntu1) precise; urgency=low
-
-  * New upstream version
-  * Drop the patches included in the new version
-  * debian/control.in:
-    - updated glib requirement
-
- -- Sebastien Bacher <seb128@ubuntu.com>  Tue, 17 Jan 2012 17:06:58 +0100
-
-eog (3.2.2-2ubuntu3) precise; urgency=low
-
-  * debian/patches/git_no_glib_lock.patch:
-    - git patch to fix issues with the new glib serie
-
- -- Sebastien Bacher <seb128@ubuntu.com>  Mon, 05 Dec 2011 18:32:02 +0100
-
-eog (3.2.2-2ubuntu2) precise; urgency=low
-
-  * debian/patches/git_correct_units.patch:
-    - git patch to use the correct units for file stats
-  * debian/patches/git_dont_change_permission_on_edit.patch:
-    - git patch to preserve the permissions on images edition (lp: #792145)
-
- -- Sebastien Bacher <seb128@ubuntu.com>  Fri, 02 Dec 2011 17:17:25 +0100
-
-eog (3.2.2-2ubuntu1) precise; urgency=low
-
+    - don't segfault when mouse scrolling though thumnbails (lp: #672312)
   * Resynchronize on Debian, remaining diffs:
   * debian/control.in:
     - Build-Depends on dh-autoreconf, liblaunchpad-integration-3.0-dev, 
       libgrip-dev
   * debian/eog.gsettings-override:
-    - define the default editor to shotwell
+    - define the default editor, don't display sidebar by default
   * debian/eog-dev.install:
     - install the documentation
   * debian/patches/01_lpi.patch,
@@ -79,7 +17,18 @@ eog (3.2.2-2ubuntu1) precise; urgency=low
   * debian/rules
     - use dh-autoreconf
 
- -- Sebastien Bacher <seb128@ubuntu.com>  Wed, 23 Nov 2011 18:29:47 +0100
+ -- Sebastien Bacher <seb128@ubuntu.com>  Mon, 19 Mar 2012 22:45:54 +0100
+
+eog (3.3.91-1) experimental; urgency=low
+
+  * New upstream release.
+  * Bump libglib2.0-dev, libgtk-3-dev and libgdk-pixbuf2.0-dev Build-Deps.
+  * Set Maintainer to the GNOME team.
+  * Update Standards-Version to 3.9.3, no changes needed.
+  * Point to versioned GPL-2 file.
+  * Build-Depend on libgdk-pixbuf2.0-doc to fix cross-reference links.
+
+ -- Jordi Mallach <jordi@debian.org>  Wed, 07 Mar 2012 14:23:42 +0100
 
 eog (3.2.2-2) unstable; urgency=low
 
