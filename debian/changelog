@@ -1,3 +1,10 @@
+eog (3.4.0-0ubuntu1) precise; urgency=low
+
+  * New upstream release:
+    - Updated translations
+
+ -- Robert Ancell <robert.ancell@canonical.com>  Tue, 27 Mar 2012 10:50:51 +1100
+
 eog (3.3.92-0ubuntu1) precise; urgency=low
 
   * New upstream version:
