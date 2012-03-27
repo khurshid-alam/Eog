@@ -1,4 +1,4 @@
-eog (3.4.0-0ubuntu1) precise; urgency=low
+eog (3.4.0-0ubuntu1) precise-proposed; urgency=low
 
   * New upstream release:
     - Updated translations
