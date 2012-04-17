@@ -1,3 +1,10 @@
+eog (3.4.1-0ubuntu1) precise; urgency=low
+
+  * New upstream release:
+    - Extend help docs
+
+ -- Robert Ancell <robert.ancell@canonical.com>  Tue, 17 Apr 2012 14:11:53 +1000
+
 eog (3.4.0-0ubuntu1) precise-proposed; urgency=low
 
   * New upstream release:
