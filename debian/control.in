@@ -34,8 +34,7 @@ Build-Depends: cdbs (>= 0.4.41),
                gobject-introspection (>= 0.9.12-4~),
                libgirepository1.0-dev (>= 0.9.12),
                dh-autoreconf,
-               libgrip-dev (>= 0.3.0),
-               liblaunchpad-integration-3.0-dev
+               libgrip-dev (>= 0.3.0)
 Build-Depends-Indep: libgdk-pixbuf2.0-doc, libglib2.0-doc, libgtk-3-doc
 Vcs-Bzr: https://code.launchpad.net/~ubuntu-desktop/eog/ubuntu
 
