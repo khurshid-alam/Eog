@@ -1,3 +1,9 @@
+eog (3.5.3-0ubuntu1) quantal; urgency=low
+
+  * New upstream release
+
+ -- Robert Ancell <robert.ancell@canonical.com>  Wed, 18 Jul 2012 10:13:06 +1200
+
 eog (3.5.2-0ubuntu1) quantal; urgency=low
 
   * New upstream release
