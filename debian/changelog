@@ -1,3 +1,9 @@
+eog (3.5.4-0ubuntu1) UNRELEASED; urgency=low
+
+  * New upstream version
+
+ -- Sebastien Bacher <seb128@ubuntu.com>  Mon, 06 Aug 2012 22:42:25 +0200
+
 eog (3.5.3-0ubuntu1) quantal; urgency=low
 
   * New upstream release
