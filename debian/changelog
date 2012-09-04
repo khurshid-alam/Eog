@@ -1,8 +1,8 @@
-eog (3.5.91-0ubuntu2) UNRELEASED; urgency=low
+eog (3.5.91-0ubuntu2) quantal; urgency=low
 
   * Update gesture framework patch for new name (LP: #1046058)
 
- -- Chase Douglas <chase.douglas@ubuntu.com>  Tue, 04 Sep 2012 21:29:53 +0000
+ -- Chase Douglas <chase.douglas@ubuntu.com>  Tue, 04 Sep 2012 15:56:21 -0700
 
 eog (3.5.91-0ubuntu1) quantal; urgency=low
 
