@@ -1,4 +1,4 @@
-Description: Add uTouch gesture functionality via libgrip.
+Description: Add gesture functionality via libgrip.
 Author: Canonical DX Multi-Touch Team  <multi-touch-dev@lists.launchpad.net>
 
 Index: eog/configure.ac
@@ -9,7 +9,7 @@ Index: eog/configure.ac
  AM_CONDITIONAL([HAVE_RSVG], [test "x$have_rsvg" = "xyes"])
  
  # ****************
-+# utouch
++# Open Input Framework
 +# ****************
 +GRIP_REQUIRED=0.2.1
 +
@@ -72,10 +72,10 @@ Index: eog/src/eog-scroll-view.c
  
 +#ifdef HAVE_LIBGRIP
 +static void
-+_utouch_gesture_event (GtkWidget        *widget,
-+                       GripTimeType      time_type,
-+                       GripGestureEvent *event,
-+                       gpointer          user_data)
++_oif_gesture_event (GtkWidget        *widget,
++                    GripTimeType      time_type,
++                    GripGestureEvent *event,
++                    gpointer          user_data)
 +{
 +        EogScrollView *view = EOG_SCROLL_VIEW (widget);
 +        EogScrollViewPrivate *priv = view->priv;
@@ -163,7 +163,7 @@ Index: eog/src/eog-scroll-view.c
 +						GRIP_GESTURE_PINCH,
 +						GRIP_DEVICE_ALL,
 +						2,
-+						_utouch_gesture_event,
++						_oif_gesture_event,
 +						NULL, NULL);
 +
 +	  grip_gesture_manager_register_window (manager,
@@ -171,7 +171,7 @@ Index: eog/src/eog-scroll-view.c
 +						GRIP_GESTURE_DRAG,
 +						GRIP_DEVICE_TOUCHSCREEN,
 +						2,
-+						_utouch_gesture_event,
++						_oif_gesture_event,
 +						NULL, NULL);
 +	}
 +#endif
@@ -211,7 +211,7 @@ Index: eog/src/eog-window.c
 +#ifdef HAVE_LIBGRIP
 +static float zero_angle;
 +static void
-+_utouch_window_gesture_event (GtkWidget        *widget,
++_oif_window_gesture_event (GtkWidget        *widget,
 +                              GripTimeType      time_type,
 +                              GripGestureEvent *event,
 +                              gpointer          user_data)
@@ -266,7 +266,7 @@ Index: eog/src/eog-window.c
 +					      GRIP_GESTURE_ROTATE,
 +					      GRIP_DEVICE_ALL,
 +					      2,
-+					      _utouch_window_gesture_event,
++					      _oif_window_gesture_event,
 +					      window, NULL);
 +#endif
  	g_settings_bind (priv->view_settings, EOG_CONF_VIEW_SCROLL_WHEEL_ZOOM,
