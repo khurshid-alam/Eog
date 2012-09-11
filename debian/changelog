@@ -1,3 +1,11 @@
+eog (3.5.91-0ubuntu3) quantal; urgency=low
+
+  * debian/eog.gsettings-override:
+    - Dropped, override moved to ubuntu-default-settings and
+      ubuntu-gnome-default-settings
+
+ -- Jeremy Bicha <jbicha@ubuntu.com>  Tue, 11 Sep 2012 19:40:10 -0400
+
 eog (3.5.91-0ubuntu2) quantal; urgency=low
 
   * Update gesture framework patch for new name (LP: #1046058)
