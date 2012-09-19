@@ -1,11 +1,11 @@
 Description: Add gesture functionality via libgrip.
 Author: Canonical DX Multi-Touch Team  <multi-touch-dev@lists.launchpad.net>
 
-Index: eog/configure.ac
+Index: eog-3.5.92/configure.ac
 ===================================================================
---- eog.orig/configure.ac	2011-09-27 07:12:58.067205089 +0200
-+++ eog/configure.ac	2011-09-27 07:13:02.871205320 +0200
-@@ -286,6 +286,23 @@
+--- eog-3.5.92.orig/configure.ac	2012-09-08 04:49:10.000000000 +1200
++++ eog-3.5.92/configure.ac	2012-09-20 10:20:50.594534976 +1200
+@@ -284,6 +284,23 @@
  AM_CONDITIONAL([HAVE_RSVG], [test "x$have_rsvg" = "xyes"])
  
  # ****************
@@ -29,19 +29,19 @@ Index: eog/configure.ac
  # CFLAGS/LIBS init
  # ****************
  
-@@ -372,4 +389,5 @@
+@@ -370,4 +387,5 @@
  	JPEG support ...............:  ${have_jpeg}
  	Colour management support ..:  ${have_lcms}
  	GObject Introspection.......:  ${have_introspection}
 +	Libgrip gestures............:  ${have_libgrip}
  "
-Index: eog/src/eog-scroll-view.c
+Index: eog-3.5.92/src/eog-scroll-view.c
 ===================================================================
---- eog.orig/src/eog-scroll-view.c	2011-09-27 07:12:56.631205018 +0200
-+++ eog/src/eog-scroll-view.c	2011-09-27 07:13:02.871205320 +0200
-@@ -10,6 +10,9 @@
+--- eog-3.5.92.orig/src/eog-scroll-view.c	2012-09-08 04:52:11.000000000 +1200
++++ eog-3.5.92/src/eog-scroll-view.c	2012-09-20 10:20:50.594534976 +1200
+@@ -9,6 +9,9 @@
+ #ifdef HAVE_RSVG
  #include <librsvg/rsvg.h>
- #include <librsvg/rsvg-cairo.h>
  #endif
 +#ifdef HAVE_LIBGRIP
 +#include <libgrip/grip.h>
@@ -49,7 +49,7 @@ Index: eog/src/eog-scroll-view.c
  
  #include "eog-config-keys.h"
  #include "eog-enum-types.h"
-@@ -140,11 +143,15 @@
+@@ -138,11 +141,15 @@
  	/* Scroll wheel zoom */
  	gdouble zoom_multiplier;
  
@@ -66,7 +66,7 @@ Index: eog/src/eog-scroll-view.c
  #if 0
  	/* status of progressive loading */
  	ProgressiveState progressive_state;
-@@ -1684,6 +1691,82 @@
+@@ -1701,6 +1708,82 @@
  	return TRUE;
  }
  
@@ -149,7 +149,7 @@ Index: eog/src/eog-scroll-view.c
  static void
  display_map_event (GtkWidget *widget, GdkEvent *event, gpointer data)
  {
-@@ -2460,6 +2543,29 @@
+@@ -2471,6 +2554,29 @@
  	priv->override_bg_color = NULL;
  	priv->background_surface = NULL;
  
@@ -179,11 +179,11 @@ Index: eog/src/eog-scroll-view.c
  	priv->hadj = GTK_ADJUSTMENT (gtk_adjustment_new (0, 100, 0, 10, 10, 100));
  	g_signal_connect (priv->hadj, "value_changed",
  			  G_CALLBACK (adjustment_changed_cb),
-Index: eog/src/eog-window.c
+Index: eog-3.5.92/src/eog-window.c
 ===================================================================
---- eog.orig/src/eog-window.c	2011-09-27 07:12:58.067205089 +0200
-+++ eog/src/eog-window.c	2011-09-27 07:13:02.887205322 +0200
-@@ -68,6 +68,9 @@
+--- eog-3.5.92.orig/src/eog-window.c	2012-09-20 04:20:32.000000000 +1200
++++ eog-3.5.92/src/eog-window.c	2012-09-20 10:20:50.594534976 +1200
+@@ -70,6 +70,9 @@
  #include <gdk/gdkkeysyms.h>
  #include <gio/gdesktopappinfo.h>
  #include <gtk/gtk.h>
@@ -204,7 +204,7 @@ Index: eog/src/eog-window.c
  #define is_rtl (gtk_widget_get_default_direction () == GTK_TEXT_DIR_RTL)
  
  typedef enum {
-@@ -4422,6 +4429,51 @@
+@@ -4374,6 +4381,51 @@
  	g_free (tooltip);
  }
  
@@ -256,7 +256,7 @@ Index: eog/src/eog-window.c
  static void
  eog_window_construct_ui (EogWindow *window)
  {
-@@ -4639,6 +4691,15 @@
+@@ -4593,6 +4645,15 @@
  					     _eog_zoom_shrink_to_boolean,
  					     NULL, NULL, NULL);
  	}

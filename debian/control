@@ -7,7 +7,7 @@ Section: gnome
 Priority: optional
 Maintainer: Ubuntu Desktop Team <ubuntu-desktop@lists.ubuntu.com>
 XSBC-Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
-Uploaders: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>, Jeremy Bicha <jbicha@ubuntu.com>, Jordi Mallach <jordi@debian.org>
+Uploaders: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>, Jeremy Bicha <jbicha@ubuntu.com>
 Standards-Version: 3.9.3
 Homepage: http://projects.gnome.org/eog
 Build-Depends: cdbs (>= 0.4.41),
@@ -30,7 +30,7 @@ Build-Depends: cdbs (>= 0.4.41),
                liblcms2-dev,
                libexempi-dev (>= 1.99.5),
                libjpeg-dev,
-               librsvg2-dev (>= 2.26.0),
+               librsvg2-dev (>= 2.36.2),
                libxml2-dev (>= 2.0),
                libx11-dev,
                libatk1.0-dev (>= 1.32.0-2~),
