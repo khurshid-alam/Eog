@@ -1,4 +1,4 @@
-eog (3.6.1-1ubuntu1) UNRELEASED; urgency=low
+eog (3.6.1-1ubuntu1) raring; urgency=low
 
   * Resynchronize on Debian remaining diff:
   * debian/control.in:
@@ -8,7 +8,7 @@ eog (3.6.1-1ubuntu1) UNRELEASED; urgency=low
   * debian/rules
     - use dh-autoreconf
 
- -- Sebastien Bacher <seb128@ubuntu.com>  Mon, 12 Nov 2012 15:28:11 +0100
+ -- Sebastien Bacher <seb128@ubuntu.com>  Mon, 12 Nov 2012 15:43:25 +0100
 
 eog (3.6.1-1) experimental; urgency=low
 
