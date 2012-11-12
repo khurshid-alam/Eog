@@ -1,115 +1,57 @@
-eog (3.6.0-0ubuntu1) quantal; urgency=low
+eog (3.6.1-1ubuntu1) UNRELEASED; urgency=low
 
-  * New upstream stable release
-
- -- Robert Ancell <robert.ancell@canonical.com>  Tue, 25 Sep 2012 10:06:52 +1200
-
-eog (3.5.92-0ubuntu1) quantal; urgency=low
-
-  * New upstream bugfix release
-  * debian/control:
-    - Bump build-depends on librsvg2-dev
-
- -- Robert Ancell <robert.ancell@canonical.com>  Thu, 20 Sep 2012 10:27:31 +1200
-
-eog (3.5.91-0ubuntu3) quantal; urgency=low
-
-  * debian/eog.gsettings-override:
-    - Dropped, override moved to ubuntu-default-settings and
-      ubuntu-gnome-default-settings
-
- -- Jeremy Bicha <jbicha@ubuntu.com>  Tue, 11 Sep 2012 19:40:10 -0400
-
-eog (3.5.91-0ubuntu2) quantal; urgency=low
-
-  * Update gesture framework patch for new name (LP: #1046058)
-
- -- Chase Douglas <chase.douglas@ubuntu.com>  Tue, 04 Sep 2012 15:56:21 -0700
-
-eog (3.5.91-0ubuntu1) quantal; urgency=low
-
-  * New upstream bugfix release
-
- -- Robert Ancell <robert.ancell@canonical.com>  Tue, 04 Sep 2012 09:20:54 +1200
-
-eog (3.5.90-0ubuntu1) quantal; urgency=low
-
-  * New upstream release.
-  * debian/control.in: Build-depend on yelp-tools instead of gnome-doc-utils
-  * debian/eog.install: Update for new help install location
-
- -- Jeremy Bicha <jbicha@ubuntu.com>  Mon, 20 Aug 2012 16:28:40 -0400
-
-eog (3.5.4-0ubuntu1) quantal; urgency=low
-
-  * New upstream version
-
- -- Sebastien Bacher <seb128@ubuntu.com>  Mon, 06 Aug 2012 22:50:52 +0200
-
-eog (3.5.3-0ubuntu1) quantal; urgency=low
-
-  * New upstream release
-
- -- Robert Ancell <robert.ancell@canonical.com>  Wed, 18 Jul 2012 10:13:06 +1200
-
-eog (3.5.2-0ubuntu1) quantal; urgency=low
-
-  * New upstream release
-
- -- Robert Ancell <robert.ancell@canonical.com>  Tue, 26 Jun 2012 10:20:34 +1200
-
-eog (3.5.1-0ubuntu2) quantal; urgency=low
-
-  * Rebuild for the libgnome-desktop SOVER bump.
-
- -- Adam Conrad <adconrad@ubuntu.com>  Thu, 07 Jun 2012 15:55:44 -0600
-
-eog (3.5.1-0ubuntu1) quantal; urgency=low
-
-  * New upstream release
-  * debian/control:
-    - Drop dependency on liblaunchpad-integration-3.0-dev
-  * debian/patches/01_lpi.patch:
-    - Dropped, we no longer do Launchpad integration
-  * debian/watch:
-    - Watch for unstable versions
-
- -- Robert Ancell <robert.ancell@canonical.com>  Mon, 14 May 2012 14:00:06 +1200
-
-eog (3.4.1-0ubuntu1) precise; urgency=low
-
-  * New upstream release:
-    - Extend help docs
-
- -- Robert Ancell <robert.ancell@canonical.com>  Tue, 17 Apr 2012 14:11:53 +1000
-
-eog (3.4.0-0ubuntu1) precise-proposed; urgency=low
-
-  * New upstream release:
-    - Updated translations
-
- -- Robert Ancell <robert.ancell@canonical.com>  Tue, 27 Mar 2012 10:50:51 +1100
-
-eog (3.3.92-0ubuntu1) precise; urgency=low
-
-  * New upstream version:
-    - don't segfault when mouse scrolling though thumnbails (lp: #672312)
-  * Resynchronize on Debian, remaining diffs:
+  * Resynchronize on Debian remaining diff:
   * debian/control.in:
-    - Build-Depends on dh-autoreconf, liblaunchpad-integration-3.0-dev, 
-      libgrip-dev
-  * debian/eog.gsettings-override:
-    - define the default editor, don't display sidebar by default
-  * debian/eog-dev.install:
-    - install the documentation
-  * debian/patches/01_lpi.patch,
-    - launchpad integration changes
+    - Build-Depends on dh-autoreconf, libgrip-dev
   * debian/patches/02_grip_gestures.patch:
     -  support pinch-to-zoom, rotate, and drag gestures  
   * debian/rules
     - use dh-autoreconf
 
- -- Sebastien Bacher <seb128@ubuntu.com>  Mon, 19 Mar 2012 22:57:26 +0100
+ -- Sebastien Bacher <seb128@ubuntu.com>  Mon, 12 Nov 2012 15:28:11 +0100
+
+eog (3.6.1-1) experimental; urgency=low
+
+  * Team upload.
+  * New upstream release
+    - adjust to new help location
+    - increase build-dependencies
+
+ -- Simon McVittie <smcv@debian.org>  Mon, 22 Oct 2012 20:24:02 +0100
+
+eog (3.4.2-1) unstable; urgency=low
+
+  [ Jeremy Bicha ]
+  * debian/control.in: Recommend yelp
+
+  [ Michael Biebl ]
+  * New upstream release.
+
+ -- Michael Biebl <biebl@debian.org>  Wed, 13 Jun 2012 23:21:35 +0200
+
+eog (3.4.1-2) unstable; urgency=low
+
+  * Upload to unstable.
+
+ -- Michael Biebl <biebl@debian.org>  Thu, 19 Apr 2012 03:58:38 +0200
+
+eog (3.4.1-1) experimental; urgency=low
+
+  * New upstream translation release.
+
+ -- Michael Biebl <biebl@debian.org>  Tue, 17 Apr 2012 16:31:52 +0200
+
+eog (3.4.0-1) experimental; urgency=low
+
+  * New upstream release.
+
+ -- Michael Biebl <biebl@debian.org>  Wed, 28 Mar 2012 00:20:01 +0200
+
+eog (3.3.92-1) experimental; urgency=low
+
+  * New upstream development release.
+
+ -- Michael Biebl <biebl@debian.org>  Tue, 20 Mar 2012 03:16:11 +0100
 
 eog (3.3.91-1) experimental; urgency=low
 
@@ -121,6 +63,16 @@ eog (3.3.91-1) experimental; urgency=low
   * Build-Depend on libgdk-pixbuf2.0-doc to fix cross-reference links.
 
  -- Jordi Mallach <jordi@debian.org>  Wed, 07 Mar 2012 14:23:42 +0100
+
+eog (3.2.2-3) unstable; urgency=low
+
+  * debian/patches/0001-Don-t-lock-GDK-around-g_application_run.patch:
+    Don't lock GDK around g_application_run(). An unintended interaction
+    between GtkApplication and GDK threading made this necessary before.
+    That code has since been simplified, breaking this formerly-working code.
+    Patch cherry-picked from upstream Git. (Closes: #665374)
+
+ -- Michael Biebl <biebl@debian.org>  Wed, 04 Apr 2012 23:23:23 +0200
 
 eog (3.2.2-2) unstable; urgency=low
 
