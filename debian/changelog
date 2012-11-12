@@ -1,3 +1,9 @@
+eog (3.6.2-0ubuntu1) raring; urgency=low
+
+  * New upstream release
+
+ -- Robert Ancell <robert.ancell@canonical.com>  Tue, 13 Nov 2012 10:26:43 +1300
+
 eog (3.6.1-1ubuntu1) raring; urgency=low
 
   * Resynchronize on Debian remaining diff:
