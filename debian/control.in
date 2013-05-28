@@ -12,7 +12,7 @@ Build-Depends: cdbs (>= 0.4.41),
                gtk-doc-tools (>= 1.9),
                intltool (>= 0.40.0),
                pkg-config,
-               libgtk-3-dev (>= 3.3.6),
+               libgtk-3-dev (>= 3.6),
                libgdk-pixbuf2.0-dev (>= 2.19.1),
                libglib2.0-dev (>= 2.31.0),
                libgnome-desktop-3-dev (>= 2.91.2),
@@ -76,7 +76,7 @@ Description: Eye of GNOME graphics viewer program - debugging symbols
 Package: eog-dev
 Architecture: all
 Depends: eog (>= ${source:Version}),
-         libgtk-3-dev (>= 3.0.0),
+         libgtk-3-dev (>= 3.6),
          ${misc:Depends}
 Description: Development files for the Eye of GNOME
  eog or the Eye of GNOME is a graphics viewer for the GNOME desktop

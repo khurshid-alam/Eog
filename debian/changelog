@@ -1,3 +1,10 @@
+eog (3.8.2-0ubuntu1) UNRELEASED; urgency=low
+
+  * New upstream version
+  * debian/control.in: updated gtk requirement
+
+ -- Sebastien Bacher <seb128@ubuntu.com>  Tue, 28 May 2013 15:06:28 +0200
+
 eog (3.6.2-0ubuntu3) saucy; urgency=low
 
   * No-change rebuild against latest gnome-desktop3 
