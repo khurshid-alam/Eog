@@ -1,3 +1,11 @@
+eog (3.6.2-0ubuntu2) saucy; urgency=low
+
+  * debian/patches/0001-Set-better-window-size.patch: better figure out a scale
+    factor for images that have a bigger height than screen size when taking
+    into account window decoration. Thanks Leonardo Donelli!. (LP: #646798)
+
+ -- Mathieu Trudel-Lapierre <mathieu-tl@ubuntu.com>  Thu, 09 May 2013 20:37:22 -0400
+
 eog (3.6.2-0ubuntu1) raring; urgency=low
 
   * New upstream release
