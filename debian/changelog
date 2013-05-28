@@ -1,3 +1,9 @@
+eog (3.6.2-0ubuntu3) saucy; urgency=low
+
+  * No-change rebuild against latest gnome-desktop3 
+
+ -- Jeremy Bicha <jbicha@ubuntu.com>  Tue, 28 May 2013 08:25:40 -0400
+
 eog (3.6.2-0ubuntu2) saucy; urgency=low
 
   * debian/patches/0001-Set-better-window-size.patch: better figure out a scale
