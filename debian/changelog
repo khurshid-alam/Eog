@@ -1,8 +1,8 @@
-eog (3.8.2-0ubuntu2) UNRELEASED; urgency=low
+eog (3.8.2-0ubuntu2) saucy; urgency=low
 
   * Build without libgrip until the lib segfault is resolved
 
- -- Sebastien Bacher <seb128@ubuntu.com>  Fri, 07 Jun 2013 20:08:48 +0200
+ -- Sebastien Bacher <seb128@ubuntu.com>  Fri, 07 Jun 2013 20:18:10 +0200
 
 eog (3.8.2-0ubuntu1) saucy; urgency=low
 
