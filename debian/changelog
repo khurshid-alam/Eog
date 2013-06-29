@@ -1,47 +1,49 @@
-eog (3.8.2-0ubuntu2) saucy; urgency=low
+eog (3.8.2-1ubuntu1) UNRELEASED; urgency=low
 
-  * Build without libgrip until the lib segfault is resolved
+  * Resynchronize on Debian. Remaining changes:
+    - debian/control.in:
+      + Build-Depends on dh-autoreconf, libgrip-dev
+    - debian/patches/02_grip_gestures.patch:
+      + support pinch-to-zoom, rotate, and drag gestures
+        (and re-enabled now that libgrip is fixed)
+    - debian/rules
+      + use dh-autoreconf
 
- -- Sebastien Bacher <seb128@ubuntu.com>  Fri, 07 Jun 2013 20:18:10 +0200
+ -- Jeremy Bicha <jbicha@ubuntu.com>  Sat, 29 Jun 2013 10:06:16 -0400
 
-eog (3.8.2-0ubuntu1) saucy; urgency=low
+eog (3.8.2-1) unstable; urgency=low
 
-  * New upstream version
-  * debian/control.in: updated gtk requirement
+  * Upload to unstable.
+  * New upstream release.
+  * Drop obsolete --disable-scrollkeeper configure flag.
+  * Lower Build-Depends on libgnome-desktop-3-dev again. It's not really
+    required and unstable still has an old libgnome-desktop version.
+  * Bump Standards-Version to 3.9.4. No further changes.
+  * Add Build-Depends on autotools-dev as lintian was complaining about
+    outdated config.{guess,sub}.
 
- -- Sebastien Bacher <seb128@ubuntu.com>  Tue, 28 May 2013 15:23:03 +0200
+ -- Michael Biebl <biebl@debian.org>  Thu, 06 Jun 2013 07:04:51 +0200
 
-eog (3.6.2-0ubuntu3) saucy; urgency=low
+eog (3.8.0-2) experimental; urgency=low
 
-  * No-change rebuild against latest gnome-desktop3 
+  * debian/control.in:
+    + Bump libgnome-desktop-3-dev build dependency to ensure a
+      dependency on the new SONAME.
 
- -- Jeremy Bicha <jbicha@ubuntu.com>  Tue, 28 May 2013 08:25:40 -0400
+ -- Emilio Pozuelo Monfort <pochu@debian.org>  Fri, 29 Mar 2013 12:20:48 +0100
 
-eog (3.6.2-0ubuntu2) saucy; urgency=low
+eog (3.8.0-1) experimental; urgency=low
 
-  * debian/patches/0001-Set-better-window-size.patch: better figure out a scale
-    factor for images that have a bigger height than screen size when taking
-    into account window decoration. Thanks Leonardo Donelli!. (LP: #646798)
+  * New upstream release.
 
- -- Mathieu Trudel-Lapierre <mathieu-tl@ubuntu.com>  Thu, 09 May 2013 20:37:22 -0400
+ -- Andreas Henriksson <andreas@fatal.se>  Wed, 27 Mar 2013 23:33:32 +0100
 
-eog (3.6.2-0ubuntu1) raring; urgency=low
+eog (3.7.91-1) experimental; urgency=low
 
   * New upstream release
+  * Bump build-dependency on libgtk-3-dev to (>= 3.5.4)
 
- -- Robert Ancell <robert.ancell@canonical.com>  Tue, 13 Nov 2012 10:26:43 +1300
-
-eog (3.6.1-1ubuntu1) raring; urgency=low
-
-  * Resynchronize on Debian remaining diff:
-  * debian/control.in:
-    - Build-Depends on dh-autoreconf, libgrip-dev
-  * debian/patches/02_grip_gestures.patch:
-    -  support pinch-to-zoom, rotate, and drag gestures  
-  * debian/rules
-    - use dh-autoreconf
-
- -- Sebastien Bacher <seb128@ubuntu.com>  Mon, 12 Nov 2012 15:43:25 +0100
+ -- Andreas Henriksson <andreas@fatal.se>  Mon, 18 Mar 2013 21:04:05 +0100
 
 eog (3.6.1-1) experimental; urgency=low
 
