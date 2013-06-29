@@ -1,4 +1,4 @@
-eog (3.8.2-1ubuntu1) UNRELEASED; urgency=low
+eog (3.8.2-1ubuntu1) saucy; urgency=low
 
   * Resynchronize on Debian. Remaining changes:
     - debian/control.in:
@@ -9,7 +9,7 @@ eog (3.8.2-1ubuntu1) UNRELEASED; urgency=low
     - debian/rules
       + use dh-autoreconf
 
- -- Jeremy Bicha <jbicha@ubuntu.com>  Sat, 29 Jun 2013 10:06:16 -0400
+ -- Jeremy Bicha <jbicha@ubuntu.com>  Sat, 29 Jun 2013 10:27:35 -0400
 
 eog (3.8.2-1) unstable; urgency=low
 
