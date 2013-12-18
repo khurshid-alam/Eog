@@ -1,3 +1,24 @@
+eog (3.10.1-1ubuntu1) trusty; urgency=medium
+
+  * Resynchronize on Debian. Remaining changes:
+    - debian/control.in:
+      + Build-Depends on dh-autoreconf, libgrip-dev
+      + Use ubuntu vcs fields
+    - debian/patches/02_grip_gestures.patch:
+      + support pinch-to-zoom, rotate, and drag gestures
+        (and re-enabled now that libgrip is fixed)
+    - debian/rules
+      + use dh-autoreconf 
+
+ -- Jackson Doak <noskcaj@ubuntu.com>  Wed, 18 Dec 2013 19:32:36 +1100
+
+eog (3.10.1-1) unstable; urgency=low
+
+  * New upstream release.
+  * Bump build-dependency on libgtk-3-dev to >= 3.7.8.
+
+ -- Andreas Henriksson <andreas@fatal.se>  Thu, 17 Oct 2013 12:34:54 +0200
+
 eog (3.8.2-1ubuntu1) saucy; urgency=low
 
   * Resynchronize on Debian. Remaining changes:

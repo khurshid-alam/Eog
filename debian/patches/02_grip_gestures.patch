@@ -1,11 +1,15 @@
 Description: Add gesture functionality via libgrip.
 Author: Canonical DX Multi-Touch Team  <multi-touch-dev@lists.launchpad.net>
 
-Index: eog-3.5.92/configure.ac
-===================================================================
---- eog-3.5.92.orig/configure.ac	2012-09-08 04:49:10.000000000 +1200
-+++ eog-3.5.92/configure.ac	2012-09-20 10:20:50.594534976 +1200
-@@ -284,6 +284,23 @@
+---
+ configure.ac          |   18 ++++++++
+ src/eog-scroll-view.c |  108 +++++++++++++++++++++++++++++++++++++++++++++++++-
+ src/eog-window.c      |   61 ++++++++++++++++++++++++++++
+ 3 files changed, 186 insertions(+), 1 deletion(-)
+
+--- a/configure.ac
++++ b/configure.ac
+@@ -293,6 +293,23 @@ fi
  AM_CONDITIONAL([HAVE_RSVG], [test "x$have_rsvg" = "xyes"])
  
  # ****************
@@ -29,16 +33,14 @@ Index: eog-3.5.92/configure.ac
  # CFLAGS/LIBS init
  # ****************
  
-@@ -370,4 +387,5 @@
+@@ -378,4 +395,5 @@ Configure summary:
  	JPEG support ...............:  ${have_jpeg}
  	Colour management support ..:  ${have_lcms}
  	GObject Introspection.......:  ${have_introspection}
 +	Libgrip gestures............:  ${have_libgrip}
  "
-Index: eog-3.5.92/src/eog-scroll-view.c
-===================================================================
---- eog-3.5.92.orig/src/eog-scroll-view.c	2012-09-08 04:52:11.000000000 +1200
-+++ eog-3.5.92/src/eog-scroll-view.c	2012-09-20 10:20:50.594534976 +1200
+--- a/src/eog-scroll-view.c
++++ b/src/eog-scroll-view.c
 @@ -9,6 +9,9 @@
  #ifdef HAVE_RSVG
  #include <librsvg/rsvg.h>
@@ -49,7 +51,7 @@ Index: eog-3.5.92/src/eog-scroll-view.c
  
  #include "eog-config-keys.h"
  #include "eog-enum-types.h"
-@@ -138,11 +141,15 @@
+@@ -138,11 +141,15 @@ struct _EogScrollViewPrivate {
  	/* Scroll wheel zoom */
  	gdouble zoom_multiplier;
  
@@ -66,7 +68,7 @@ Index: eog-3.5.92/src/eog-scroll-view.c
  #if 0
  	/* status of progressive loading */
  	ProgressiveState progressive_state;
-@@ -1701,6 +1708,82 @@
+@@ -1710,6 +1717,82 @@ eog_scroll_view_motion_event (GtkWidget
  	return TRUE;
  }
  
@@ -149,7 +151,7 @@ Index: eog-3.5.92/src/eog-scroll-view.c
  static void
  display_map_event (GtkWidget *widget, GdkEvent *event, gpointer data)
  {
-@@ -2471,6 +2554,29 @@
+@@ -2482,6 +2565,29 @@ eog_scroll_view_init (EogScrollView *vie
  	priv->override_bg_color = NULL;
  	priv->background_surface = NULL;
  
@@ -179,10 +181,8 @@ Index: eog-3.5.92/src/eog-scroll-view.c
  	priv->hadj = GTK_ADJUSTMENT (gtk_adjustment_new (0, 100, 0, 10, 10, 100));
  	g_signal_connect (priv->hadj, "value_changed",
  			  G_CALLBACK (adjustment_changed_cb),
-Index: eog-3.5.92/src/eog-window.c
-===================================================================
---- eog-3.5.92.orig/src/eog-window.c	2012-09-20 04:20:32.000000000 +1200
-+++ eog-3.5.92/src/eog-window.c	2012-09-20 10:20:50.594534976 +1200
+--- a/src/eog-window.c
++++ b/src/eog-window.c
 @@ -70,6 +70,9 @@
  #include <gdk/gdkkeysyms.h>
  #include <gio/gdesktopappinfo.h>
@@ -193,7 +193,7 @@ Index: eog-3.5.92/src/eog-window.c
  
  #include <libpeas/peas-extension-set.h>
  #include <libpeas/peas-activatable.h>
-@@ -103,6 +106,10 @@
+@@ -101,6 +104,10 @@ G_DEFINE_TYPE (EogWindow, eog_window, GT
  
  #define EOG_WALLPAPER_FILENAME "eog-wallpaper"
  
@@ -204,7 +204,7 @@ Index: eog-3.5.92/src/eog-window.c
  #define is_rtl (gtk_widget_get_default_direction () == GTK_TEXT_DIR_RTL)
  
  typedef enum {
-@@ -4374,6 +4381,51 @@
+@@ -4673,6 +4680,51 @@ eog_window_add_open_editor_action (EogWi
  	g_free (tooltip);
  }
  
@@ -256,7 +256,7 @@ Index: eog-3.5.92/src/eog-window.c
  static void
  eog_window_construct_ui (EogWindow *window)
  {
-@@ -4593,6 +4645,15 @@
+@@ -4892,6 +4944,15 @@ eog_window_construct_ui (EogWindow *wind
  					     _eog_zoom_shrink_to_boolean,
  					     NULL, NULL, NULL);
  	}
