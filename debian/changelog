@@ -1,3 +1,9 @@
+eog (3.10.2-0ubuntu1) UNRELEASED; urgency=medium
+
+  * New upstream version
+
+ -- Sebastien Bacher <seb128@ubuntu.com>  Mon, 13 Jan 2014 16:38:08 +0100
+
 eog (3.10.1-1ubuntu1) trusty; urgency=medium
 
   * Resynchronize on Debian. Remaining changes:
