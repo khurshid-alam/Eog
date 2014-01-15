@@ -1,3 +1,10 @@
+eog (3.10.2-0ubuntu2) trusty; urgency=medium
+
+  * debian/patches/03_unity_control_center.patch:
+    - Use Unity control center in Unity (LP: #1257505)
+
+ -- Robert Ancell <robert.ancell@canonical.com>  Wed, 15 Jan 2014 14:48:07 +1300
+
 eog (3.10.2-0ubuntu1) trusty; urgency=medium
 
   * New upstream version
