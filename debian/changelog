@@ -1,9 +1,9 @@
-eog (3.10.2-0ubuntu3) UNRELEASED; urgency=medium
+eog (3.10.2-0ubuntu3) trusty; urgency=medium
 
   * debian/patches/git_dialog_dont_lock.patch:
     - don't lock when closing dialogs, thanks Lars Uebernickel (lp:#1262801)
 
- -- Sebastien Bacher <seb128@ubuntu.com>  Thu, 16 Jan 2014 15:42:16 +0100
+ -- Sebastien Bacher <seb128@ubuntu.com>  Thu, 16 Jan 2014 15:42:37 +0100
 
 eog (3.10.2-0ubuntu2) trusty; urgency=medium
 
