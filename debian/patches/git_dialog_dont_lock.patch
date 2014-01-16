@@ -1,0 +1,44 @@
+From 757128bc3792cca59115df3b956bffedd3732214 Mon Sep 17 00:00:00 2001
+From: Lars Uebernickel <lars.uebernickel@canonical.com>
+Date: Tue, 07 Jan 2014 11:18:19 +0000
+Subject: Don't call gdk_threads_init()
+
+Accessing gdk from outside the main thread is deprecated.
+
+This also replaces an occurence of gdk_threads_add_idle_full() with an
+idle source that is dispatched to the main thread.
+
+https://bugzilla.gnome.org/show_bug.cgi?id=721755
+---
+diff --git a/src/eog-image.c b/src/eog-image.c
+index 08b7173..2b646f5 100644
+--- a/src/eog-image.c
++++ b/src/eog-image.c
+@@ -493,9 +493,9 @@ do_emit_size_prepared_signal (EogImage *img)
+ static void
+ eog_image_emit_size_prepared (EogImage *img)
+ {
+-	gdk_threads_add_idle_full (G_PRIORITY_DEFAULT_IDLE,
+-				   (GSourceFunc) do_emit_size_prepared_signal,
+-				   g_object_ref (img), g_object_unref);
++	g_idle_add_full (G_PRIORITY_DEFAULT_IDLE,
++			 (GSourceFunc) do_emit_size_prepared_signal,
++			 g_object_ref (img), g_object_unref);
+ }
+ 
+ static gboolean
+diff --git a/src/main.c b/src/main.c
+index 187015b..9c9cbfc 100644
+--- a/src/main.c
++++ b/src/main.c
+@@ -146,7 +146,6 @@
+ #endif
+ 	eog_debug_init ();
+ 	eog_job_scheduler_init ();
+-	gdk_threads_init ();
+ 	eog_thumbnail_init ();
+ 
+ 	/* Load special style properties for EogThumbView's scrollbar */
+--
+cgit v0.9.2
+
