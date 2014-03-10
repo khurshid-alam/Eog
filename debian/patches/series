@@ -1,3 +1,4 @@
 02_grip_gestures.patch
 03_unity_control_center.patch
 git_dialog_dont_lock.patch
+git_icc_color.patch

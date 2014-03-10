@@ -1,3 +1,10 @@
+eog (3.10.2-0ubuntu4) UNRELEASED; urgency=medium
+
+  * debian/patches/git_icc_color.patch
+    - use sRGB when there is no profile attached to the image (lp: #272584)
+
+ -- Sebastien Bacher <seb128@ubuntu.com>  Mon, 10 Mar 2014 19:08:50 +0100
+
 eog (3.10.2-0ubuntu3) trusty; urgency=medium
 
   * debian/patches/git_dialog_dont_lock.patch:
