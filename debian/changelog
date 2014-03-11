@@ -1,4 +1,4 @@
-eog (3.10.2-0ubuntu5) UNRELEASED; urgency=medium
+eog (3.10.2-0ubuntu5) trusty; urgency=medium
 
   [ Lars Uebernickel ]
   * debian/patches/disable-appmenu-on-unity.patch:
@@ -6,7 +6,7 @@ eog (3.10.2-0ubuntu5) UNRELEASED; urgency=medium
        and a menubar (such as unity). The menubar already contains all 
        the actions of the appmenu. Having both is redundant."
 
- -- Sebastien Bacher <seb128@ubuntu.com>  Tue, 11 Mar 2014 12:39:03 +0100
+ -- Sebastien Bacher <seb128@ubuntu.com>  Tue, 11 Mar 2014 12:40:30 +0100
 
 eog (3.10.2-0ubuntu4) trusty; urgency=medium
 
