@@ -1,3 +1,8 @@
+Description: Disables the application menu on platforms that show an app menu
+  and a menubar (such as unity). The menubar already contains all the actions of
+  the appmenu. Having both is redundant.
+Forwarded: doesn't make sense upstream until eog is ported to GMenuModel
+Author: Lars Uebernickel <lars.uebernickel@canonical.com>
 diff --git a/src/eog-application.c b/src/eog-application.c
 index a77157a..c4f899d 100644
 --- a/src/eog-application.c
