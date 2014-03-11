@@ -1,0 +1,25 @@
+diff --git a/src/eog-application.c b/src/eog-application.c
+index a77157a..c4f899d 100644
+--- a/src/eog-application.c
++++ b/src/eog-application.c
+@@ -225,9 +225,19 @@ eog_application_init_app_menu (EogApplication *application)
+ static void
+ eog_application_startup (GApplication *application)
+ {
++	gboolean shows_app_menu;
++	gboolean shows_menubar;
++
++	g_object_get (gtk_settings_get_default (),
++		      "gtk-shell-shows-app-menu", &shows_app_menu,
++		      "gtk-shell-shows-menubar", &shows_menubar,
++		      NULL);
++
++	if (shows_app_menu && !shows_menubar)
++		eog_application_init_app_menu (EOG_APPLICATION (application));
++
+ 	G_APPLICATION_CLASS (eog_application_parent_class)->startup (application);
+ 
+-	eog_application_init_app_menu (EOG_APPLICATION (application));
+ }
+ 
+ static void
