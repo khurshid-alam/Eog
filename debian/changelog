@@ -1,3 +1,11 @@
+eog (3.10.2-0ubuntu6) UNRELEASED; urgency=medium
+
+  * debian/patches/disable-appmenu-on-unity.patch:
+    chain up to GtkApplication's startup handler before calling
+    gtk_application_set_app_menu() (lp: #1330117)
+
+ -- Lars Uebernickel <lars.uebernickel@ubuntu.com>  Tue, 17 Jun 2014 19:03:09 +0200
+
 eog (3.10.2-0ubuntu5) trusty; urgency=medium
 
   [ Lars Uebernickel ]
