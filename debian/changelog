@@ -1,3 +1,41 @@
+eog (3.12.1-1ubuntu1) UNRELEASED; urgency=medium
+
+  * Resynchronize on Debian, remaining changes
+    - debian/control.in:
+      + Build-Depends on libgrip-dev
+    - debian/patches/02_grip_gestures.patch:
+      + support pinch-to-zoom, rotate, and drag gestures
+    - debian/rules
+      + use dh-autoreconf
+
+ -- Sebastien Bacher <seb128@ubuntu.com>  Tue, 10 Jun 2014 15:52:46 +0200
+
+eog (3.12.1-1) experimental; urgency=medium
+
+  * New upstream translation release.
+  * Rebuild against new gnome-desktop.
+  * Bump gnome-desktop build-dependency accordingly.
+
+ -- Josselin Mouette <joss@debian.org>  Sat, 26 Apr 2014 10:42:48 +0200
+
+eog (3.12.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Revert changes in 3.10.1-2
+    - i.e. lower gnome-desktop build-dependency again
+  * eog: Install appdata file
+
+ -- Andreas Henriksson <andreas@fatal.se>  Tue, 25 Mar 2014 13:11:12 +0100
+
+eog (3.11.90-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Update build-dependencies according to configure.ac changes:
+    - bump Gtk+ 3.10.6, glib 2.38.0, gtk-doc 1.16
+    - drop libx11-dev (sunkeysym)
+
+ -- Andreas Henriksson <andreas@fatal.se>  Tue, 18 Feb 2014 01:36:19 +0100
+
 eog (3.10.2-0ubuntu6) utopic; urgency=medium
 
   * debian/patches/disable-appmenu-on-unity.patch:
@@ -6,56 +44,11 @@ eog (3.10.2-0ubuntu6) utopic; urgency=medium
 
  -- Lars Uebernickel <lars.uebernickel@ubuntu.com>  Tue, 17 Jun 2014 19:03:09 +0200
 
-eog (3.10.2-0ubuntu5) trusty; urgency=medium
+eog (3.10.1-2) experimental; urgency=low
 
-  [ Lars Uebernickel ]
-  * debian/patches/disable-appmenu-on-unity.patch:
-    - "Disables the application menu on platforms that show an app menu 
-       and a menubar (such as unity). The menubar already contains all 
-       the actions of the appmenu. Having both is redundant."
+  * Force build against experimental version of gnome-desktop
 
- -- Sebastien Bacher <seb128@ubuntu.com>  Tue, 11 Mar 2014 12:40:30 +0100
-
-eog (3.10.2-0ubuntu4) trusty; urgency=medium
-
-  * debian/patches/git_icc_color.patch
-    - use sRGB when there is no profile attached to the image (lp: #272584)
-
- -- Sebastien Bacher <seb128@ubuntu.com>  Mon, 10 Mar 2014 19:17:48 +0100
-
-eog (3.10.2-0ubuntu3) trusty; urgency=medium
-
-  * debian/patches/git_dialog_dont_lock.patch:
-    - don't lock when closing dialogs, thanks Lars Uebernickel (lp:#1262801)
-
- -- Sebastien Bacher <seb128@ubuntu.com>  Thu, 16 Jan 2014 15:42:37 +0100
-
-eog (3.10.2-0ubuntu2) trusty; urgency=medium
-
-  * debian/patches/03_unity_control_center.patch:
-    - Use Unity control center in Unity (LP: #1257505)
-
- -- Robert Ancell <robert.ancell@canonical.com>  Wed, 15 Jan 2014 14:48:07 +1300
-
-eog (3.10.2-0ubuntu1) trusty; urgency=medium
-
-  * New upstream version
-
- -- Sebastien Bacher <seb128@ubuntu.com>  Mon, 13 Jan 2014 17:06:43 +0100
-
-eog (3.10.1-1ubuntu1) trusty; urgency=medium
-
-  * Resynchronize on Debian. Remaining changes:
-    - debian/control.in:
-      + Build-Depends on dh-autoreconf, libgrip-dev
-      + Use ubuntu vcs fields
-    - debian/patches/02_grip_gestures.patch:
-      + support pinch-to-zoom, rotate, and drag gestures
-        (and re-enabled now that libgrip is fixed)
-    - debian/rules
-      + use dh-autoreconf 
-
- -- Jackson Doak <noskcaj@ubuntu.com>  Wed, 18 Dec 2013 19:32:36 +1100
+ -- Sjoerd Simons <sjoerd@debian.org>  Sun, 03 Nov 2013 11:25:04 +0100
 
 eog (3.10.1-1) unstable; urgency=low
 
@@ -63,19 +56,6 @@ eog (3.10.1-1) unstable; urgency=low
   * Bump build-dependency on libgtk-3-dev to >= 3.7.8.
 
  -- Andreas Henriksson <andreas@fatal.se>  Thu, 17 Oct 2013 12:34:54 +0200
-
-eog (3.8.2-1ubuntu1) saucy; urgency=low
-
-  * Resynchronize on Debian. Remaining changes:
-    - debian/control.in:
-      + Build-Depends on dh-autoreconf, libgrip-dev
-    - debian/patches/02_grip_gestures.patch:
-      + support pinch-to-zoom, rotate, and drag gestures
-        (and re-enabled now that libgrip is fixed)
-    - debian/rules
-      + use dh-autoreconf
-
- -- Jeremy Bicha <jbicha@ubuntu.com>  Sat, 29 Jun 2013 10:27:35 -0400
 
 eog (3.8.2-1) unstable; urgency=low
 

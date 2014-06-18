@@ -7,9 +7,11 @@ Author: Canonical DX Multi-Touch Team  <multi-touch-dev@lists.launchpad.net>
  src/eog-window.c      |   61 ++++++++++++++++++++++++++++
  3 files changed, 186 insertions(+), 1 deletion(-)
 
---- a/configure.ac
-+++ b/configure.ac
-@@ -293,6 +293,23 @@ fi
+Index: eog-3.12.1/configure.ac
+===================================================================
+--- eog-3.12.1.orig/configure.ac	2014-06-10 15:53:49.645517158 +0200
++++ eog-3.12.1/configure.ac	2014-06-10 15:53:49.637517158 +0200
+@@ -290,6 +290,23 @@
  AM_CONDITIONAL([HAVE_RSVG], [test "x$have_rsvg" = "xyes"])
  
  # ****************
@@ -33,14 +35,16 @@ Author: Canonical DX Multi-Touch Team  <multi-touch-dev@lists.launchpad.net>
  # CFLAGS/LIBS init
  # ****************
  
-@@ -378,4 +395,5 @@ Configure summary:
+@@ -368,4 +385,5 @@
  	JPEG support ...............:  ${have_jpeg}
  	Colour management support ..:  ${have_lcms}
  	GObject Introspection.......:  ${have_introspection}
 +	Libgrip gestures............:  ${have_libgrip}
  "
---- a/src/eog-scroll-view.c
-+++ b/src/eog-scroll-view.c
+Index: eog-3.12.1/src/eog-scroll-view.c
+===================================================================
+--- eog-3.12.1.orig/src/eog-scroll-view.c	2014-06-10 15:53:49.645517158 +0200
++++ eog-3.12.1/src/eog-scroll-view.c	2014-06-10 15:53:49.637517158 +0200
 @@ -9,6 +9,9 @@
  #ifdef HAVE_RSVG
  #include <librsvg/rsvg.h>
@@ -51,7 +55,7 @@ Author: Canonical DX Multi-Touch Team  <multi-touch-dev@lists.launchpad.net>
  
  #include "eog-config-keys.h"
  #include "eog-enum-types.h"
-@@ -138,11 +141,15 @@ struct _EogScrollViewPrivate {
+@@ -138,11 +141,15 @@
  	/* Scroll wheel zoom */
  	gdouble zoom_multiplier;
  
@@ -68,7 +72,7 @@ Author: Canonical DX Multi-Touch Team  <multi-touch-dev@lists.launchpad.net>
  #if 0
  	/* status of progressive loading */
  	ProgressiveState progressive_state;
-@@ -1710,6 +1717,82 @@ eog_scroll_view_motion_event (GtkWidget
+@@ -1703,6 +1710,82 @@
  	return TRUE;
  }
  
@@ -151,7 +155,7 @@ Author: Canonical DX Multi-Touch Team  <multi-touch-dev@lists.launchpad.net>
  static void
  display_map_event (GtkWidget *widget, GdkEvent *event, gpointer data)
  {
-@@ -2482,6 +2565,29 @@ eog_scroll_view_init (EogScrollView *vie
+@@ -2464,6 +2547,29 @@
  	priv->override_bg_color = NULL;
  	priv->background_surface = NULL;
  
@@ -181,8 +185,10 @@ Author: Canonical DX Multi-Touch Team  <multi-touch-dev@lists.launchpad.net>
  	priv->hadj = GTK_ADJUSTMENT (gtk_adjustment_new (0, 100, 0, 10, 10, 100));
  	g_signal_connect (priv->hadj, "value_changed",
  			  G_CALLBACK (adjustment_changed_cb),
---- a/src/eog-window.c
-+++ b/src/eog-window.c
+Index: eog-3.12.1/src/eog-window.c
+===================================================================
+--- eog-3.12.1.orig/src/eog-window.c	2014-06-10 15:53:49.645517158 +0200
++++ eog-3.12.1/src/eog-window.c	2014-06-10 15:53:49.641517158 +0200
 @@ -70,6 +70,9 @@
  #include <gdk/gdkkeysyms.h>
  #include <gio/gdesktopappinfo.h>
@@ -193,7 +199,7 @@ Author: Canonical DX Multi-Touch Team  <multi-touch-dev@lists.launchpad.net>
  
  #include <libpeas/peas-extension-set.h>
  #include <libpeas/peas-activatable.h>
-@@ -101,6 +104,10 @@ G_DEFINE_TYPE (EogWindow, eog_window, GT
+@@ -96,6 +99,10 @@
  
  #define EOG_WALLPAPER_FILENAME "eog-wallpaper"
  
@@ -204,7 +210,7 @@ Author: Canonical DX Multi-Touch Team  <multi-touch-dev@lists.launchpad.net>
  #define is_rtl (gtk_widget_get_default_direction () == GTK_TEXT_DIR_RTL)
  
  typedef enum {
-@@ -4673,6 +4680,51 @@ eog_window_add_open_editor_action (EogWi
+@@ -4832,6 +4839,51 @@
  	g_free (tooltip);
  }
  
@@ -256,7 +262,7 @@ Author: Canonical DX Multi-Touch Team  <multi-touch-dev@lists.launchpad.net>
  static void
  eog_window_construct_ui (EogWindow *window)
  {
-@@ -4892,6 +4944,15 @@ eog_window_construct_ui (EogWindow *wind
+@@ -5054,6 +5106,15 @@
  					     _eog_zoom_shrink_to_boolean,
  					     NULL, NULL, NULL);
  	}
