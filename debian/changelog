@@ -1,4 +1,4 @@
-eog (3.12.1-1ubuntu1) UNRELEASED; urgency=medium
+eog (3.12.1-1ubuntu1) utopic; urgency=medium
 
   * Resynchronize on Debian, remaining changes
     - debian/control.in:
@@ -8,7 +8,7 @@ eog (3.12.1-1ubuntu1) UNRELEASED; urgency=medium
     - debian/rules
       + use dh-autoreconf
 
- -- Sebastien Bacher <seb128@ubuntu.com>  Tue, 10 Jun 2014 15:52:46 +0200
+ -- Sebastien Bacher <seb128@ubuntu.com>  Wed, 18 Jun 2014 11:57:18 +0200
 
 eog (3.12.1-1) experimental; urgency=medium
 
