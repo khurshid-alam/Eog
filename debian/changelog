@@ -1,4 +1,4 @@
-eog (3.10.2-0ubuntu6) UNRELEASED; urgency=medium
+eog (3.10.2-0ubuntu6) utopic; urgency=medium
 
   * debian/patches/disable-appmenu-on-unity.patch:
     chain up to GtkApplication's startup handler before calling
