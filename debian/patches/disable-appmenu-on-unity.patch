@@ -3,11 +3,11 @@ Description: Disables the application menu on platforms that show an app menu
   the appmenu. Having both is redundant.
 Forwarded: doesn't make sense upstream until eog is ported to GMenuModel
 Author: Lars Uebernickel <lars.uebernickel@canonical.com>
-diff --git a/src/eog-application.c b/src/eog-application.c
-index a77157a..23fa99c 100644
---- a/src/eog-application.c
-+++ b/src/eog-application.c
-@@ -235,6 +235,8 @@
+Index: eog-3.12.2/src/eog-application.c
+===================================================================
+--- eog-3.12.2.orig/src/eog-application.c
++++ eog-3.12.2/src/eog-application.c
+@@ -253,6 +253,8 @@ eog_application_startup (GApplication *a
  	GError *error = NULL;
  	GtkSettings *settings;
  	GtkCssProvider *provider;
@@ -16,7 +16,7 @@ index a77157a..23fa99c 100644
  
  	G_APPLICATION_CLASS (eog_application_parent_class)->startup (application);
  
-@@ -273,7 +275,13 @@
+@@ -291,7 +293,13 @@ eog_application_startup (GApplication *a
  	              "gtk-application-prefer-dark-theme", TRUE,
  	              NULL);
  
@@ -28,6 +28,6 @@ index a77157a..23fa99c 100644
 +
 +	if (shows_app_menu && !shows_menubar)
 +		eog_application_init_app_menu (EOG_APPLICATION (application));
- }
  
- static void
+ 	app->priv->extensions = peas_extension_set_new (
+ 				   PEAS_ENGINE (app->priv->plugin_engine),
