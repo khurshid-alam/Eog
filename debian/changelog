@@ -1,3 +1,9 @@
+eog (3.12.2-0ubuntu2) utopic; urgency=medium
+
+  * No change rebuild for gnome-desktop 3.12
+
+ -- Tim Lunn <tim@feathertop.org>  Mon, 29 Sep 2014 20:41:24 +1000
+
 eog (3.12.2-0ubuntu1) utopic; urgency=medium
 
   * New upstream release
