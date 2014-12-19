@@ -7,8 +7,12 @@ eog (3.14.1-1ubuntu1) UNRELEASED; urgency=low
       + support pinch-to-zoom, rotate, and drag gestures
     - debian/rules
       + use dh-autoreconf
+  * 0001-Make-sure-the-libpeas-gtk-dependency-isn-t-optimized.patch:
+    Cherry-pick. eog doesn't use symbols from PeasGtkPluginManager, but it
+    does use the widget via GtkBuilder so needs to link to it. The link was
+    being removed by --as-needed: use g_ensure_type to ensure it's kept.
 
- -- Iain Lane <iain.lane@canonical.com>  Fri, 19 Dec 2014 10:01:38 +0000
+ -- Iain Lane <iain.lane@canonical.com>  Fri, 19 Dec 2014 10:15:26 +0000
 
 eog (3.14.1-1) unstable; urgency=medium
 
