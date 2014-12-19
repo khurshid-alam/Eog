@@ -18,3 +18,5 @@ binary-post-install/eog::
 	rm -rf `pwd`/debian/eog/usr/share/eog/gir-1.0/
 
 DEB_DH_GIREPOSITORY_ARGS_eog += -ldebian/tmp/usr/share/eog/gir-1.0/ /usr/lib/eog/girepository-1.0/
+
+common-binary-post-install-arch:: list-missing

@@ -1,8 +1,59 @@
+eog (3.14.1-1ubuntu1) UNRELEASED; urgency=low
+
+  * Merge from Debian unstable.  Remaining changes:
+    - debian/control.in:
+      + Build-Depends on libgrip-dev
+    - debian/patches/02_grip_gestures.patch:
+      + support pinch-to-zoom, rotate, and drag gestures
+    - debian/rules
+      + use dh-autoreconf
+
+ -- Iain Lane <iain.lane@canonical.com>  Fri, 19 Dec 2014 10:01:38 +0000
+
+eog (3.14.1-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Bump Build-Depends on libgtk-3-dev to (>= 3.14.0) as per configure.ac.
+  * Update Homepage URL.
+  * Bump Standards-Version to 3.9.6. No further changes.
+  * Drop obsolete Conflicts/Replaces: gir1.2-eog-3.0.
+
+ -- Michael Biebl <biebl@debian.org>  Tue, 14 Oct 2014 23:03:14 +0200
+
+eog (3.14.0-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Andreas Henriksson <andreas@fatal.se>  Tue, 23 Sep 2014 09:13:34 +0200
+
+eog (3.13.92-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Sjoerd Simons <sjoerd@debian.org>  Sat, 20 Sep 2014 10:01:00 +0200
+
+eog (3.13.90-1) experimental; urgency=medium
+
+  * New upstream release
+
+ -- Sjoerd Simons <sjoerd@debian.org>  Sat, 06 Sep 2014 13:52:06 +0200
+
+eog (3.12.2-1) unstable; urgency=medium
+
+  [ Josselin Mouette ]
+  * Relax gnome-desktop dependencies again.
+
+  [ Jean Schurger ]
+  * New upstream release
+  * Bump Standards-Version to 3.9.5. No further changes.
+
+ -- Andreas Henriksson <andreas@fatal.se>  Tue, 15 Jul 2014 13:07:34 +0200
+
 eog (3.12.2-0ubuntu2) utopic; urgency=medium
 
   * No change rebuild for gnome-desktop 3.12
 
- -- Tim Lunn <tim@feathertop.org>  Mon, 29 Sep 2014 20:41:24 +1000
+ -- Tim Lunn <tim@feathertop.org>  Tue, 23 Sep 2014 08:22:46 +1000
 
 eog (3.12.2-0ubuntu1) utopic; urgency=medium
 
