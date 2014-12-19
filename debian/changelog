@@ -1,4 +1,4 @@
-eog (3.14.1-1ubuntu1) UNRELEASED; urgency=low
+eog (3.14.1-1ubuntu1) vivid; urgency=low
 
   * Merge from Debian unstable.  Remaining changes:
     - debian/control.in:
@@ -12,7 +12,7 @@ eog (3.14.1-1ubuntu1) UNRELEASED; urgency=low
     does use the widget via GtkBuilder so needs to link to it. The link was
     being removed by --as-needed: use g_ensure_type to ensure it's kept.
 
- -- Iain Lane <iain.lane@canonical.com>  Fri, 19 Dec 2014 10:15:26 +0000
+ -- Iain Lane <iain.lane@canonical.com>  Fri, 19 Dec 2014 10:26:59 +0000
 
 eog (3.14.1-1) unstable; urgency=medium
 
