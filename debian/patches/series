@@ -1,4 +1,2 @@
 02_grip_gestures.patch
 disable-appmenu-on-unity.patch
-
-0001-Make-sure-the-libpeas-gtk-dependency-isn-t-optimized.patch

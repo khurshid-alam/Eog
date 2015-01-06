@@ -5,9 +5,9 @@
 Source: eog
 Section: gnome
 Priority: optional
-Maintainer: Ubuntu Desktop Team <ubuntu-desktop@lists.ubuntu.com>
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 XSBC-Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
-Uploaders: Andreas Henriksson <andreas@fatal.se>, Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>, Josselin Mouette <joss@debian.org>, Michael Biebl <biebl@debian.org>, Sjoerd Simons <sjoerd@debian.org>
+Uploaders: Andreas Henriksson <andreas@fatal.se>, Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>, Michael Biebl <biebl@debian.org>, Sjoerd Simons <sjoerd@debian.org>
 Standards-Version: 3.9.6
 Homepage: https://wiki.gnome.org/Apps/EyeOfGnome
 Build-Depends: cdbs (>= 0.4.41),
@@ -23,7 +23,6 @@ Build-Depends: cdbs (>= 0.4.41),
                libglib2.0-dev (>= 2.38.0),
                libgnome-desktop-3-dev (>= 2.91.2),
                libgrip-dev (>= 0.3.0),
-               gnome-icon-theme (>= 2.19.1),
                shared-mime-info (>= 0.20),
                gsettings-desktop-schemas-dev (>= 2.91.92),
                libpeas-dev (>= 0.7.4),
@@ -46,7 +45,6 @@ Architecture: any
 Depends: ${shlibs:Depends},
          ${misc:Depends},
          ${gir:Depends},
-         gnome-icon-theme (>= 2.19.1),
          shared-mime-info (>= 0.20),
          gsettings-desktop-schemas (>= 2.91.92),
          gir1.2-peas-1.0
