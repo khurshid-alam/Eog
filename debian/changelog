@@ -1,3 +1,10 @@
+eog (3.14.3-1ubuntu2) vivid; urgency=medium
+
+  * Drop libgrip patches; this is supported natively upstream now using the
+    new GtkGesture support in Gtk+ 3.14.
+
+ -- Iain Lane <iain@orangesquash.org.uk>  Thu, 22 Jan 2015 17:42:26 +0000
+
 eog (3.14.3-1ubuntu1) vivid; urgency=medium
 
   * Merge from Debian unstable.  Remaining changes:
