@@ -1,29 +1,21 @@
-eog (3.14.3-1ubuntu3) UNRELEASED; urgency=medium
+eog (3.16.2-1) unstable; urgency=medium
 
-  * Actually drop patch
+  * New upstream release.
+  * Drop libxml2 build-dependency according to configure.ac changes.
+  * Update debian/patches/disable-appmenu-when-not-needed.patch to apply.
 
- -- Iain Lane <iain@orangesquash.org.uk>  Thu, 22 Jan 2015 17:46:56 +0000
+ -- Andreas Henriksson <andreas@fatal.se>  Tue, 19 May 2015 16:23:57 +0200
 
-eog (3.14.3-1ubuntu2) vivid; urgency=medium
+eog (3.14.4-1) experimental; urgency=medium
 
-  * Drop libgrip patches; this is supported natively upstream now using the
-    new GtkGesture support in Gtk+ 3.14.
+  * New upstream release 3.14.4, fixing bug:
+    + eog crashes when attempting two-finger zoom gesture on touchpad (LP:
+    #1436920)
+  * disable-appmenu-when-not-needed.patch: Take a patch from Ubuntu to disable
+    the app menu when we're showing the traditional menu, which has all of the
+    same actions.
 
- -- Iain Lane <iain@orangesquash.org.uk>  Thu, 22 Jan 2015 17:42:26 +0000
-
-eog (3.14.3-1ubuntu1) vivid; urgency=medium
-
-  * Merge from Debian unstable.  Remaining changes:
-    - debian/control.in:
-      + Build-Depends on libgrip-dev
-    - debian/patches/02_grip_gestures.patch:
-      + support pinch-to-zoom, rotate, and drag gestures
-    - debian/patches/disable-appmenu-on-unity.patch:
-      + Don't display the app menu when we have the traditional menu.
-    - debian/rules
-      + use dh-autoreconf
-
- -- Iain Lane <iain.lane@canonical.com>  Tue, 06 Jan 2015 13:23:37 +0000
+ -- Iain Lane <laney@debian.org>  Wed, 01 Apr 2015 17:47:12 +0100
 
 eog (3.14.3-1) experimental; urgency=medium
 
@@ -35,22 +27,6 @@ eog (3.14.3-1) experimental; urgency=medium
   * New upstream release 3.14.3
 
  -- Jackson Doak <noskcaj@ubuntu.com>  Tue, 06 Jan 2015 13:04:23 +0000
-
-eog (3.14.1-1ubuntu1) vivid; urgency=low
-
-  * Merge from Debian unstable.  Remaining changes:
-    - debian/control.in:
-      + Build-Depends on libgrip-dev
-    - debian/patches/02_grip_gestures.patch:
-      + support pinch-to-zoom, rotate, and drag gestures
-    - debian/rules
-      + use dh-autoreconf
-  * 0001-Make-sure-the-libpeas-gtk-dependency-isn-t-optimized.patch:
-    Cherry-pick. eog doesn't use symbols from PeasGtkPluginManager, but it
-    does use the widget via GtkBuilder so needs to link to it. The link was
-    being removed by --as-needed: use g_ensure_type to ensure it's kept.
-
- -- Iain Lane <iain.lane@canonical.com>  Fri, 19 Dec 2014 10:26:59 +0000
 
 eog (3.14.1-1) unstable; urgency=medium
 
@@ -91,30 +67,6 @@ eog (3.12.2-1) unstable; urgency=medium
 
  -- Andreas Henriksson <andreas@fatal.se>  Tue, 15 Jul 2014 13:07:34 +0200
 
-eog (3.12.2-0ubuntu2) utopic; urgency=medium
-
-  * No change rebuild for gnome-desktop 3.12
-
- -- Tim Lunn <tim@feathertop.org>  Tue, 23 Sep 2014 08:22:46 +1000
-
-eog (3.12.2-0ubuntu1) utopic; urgency=medium
-
-  * New upstream release
-
- -- Robert Ancell <robert.ancell@canonical.com>  Mon, 14 Jul 2014 10:03:26 +1200
-
-eog (3.12.1-1ubuntu1) utopic; urgency=medium
-
-  * Resynchronize on Debian, remaining changes
-    - debian/control.in:
-      + Build-Depends on libgrip-dev
-    - debian/patches/02_grip_gestures.patch:
-      + support pinch-to-zoom, rotate, and drag gestures
-    - debian/rules
-      + use dh-autoreconf
-
- -- Sebastien Bacher <seb128@ubuntu.com>  Wed, 18 Jun 2014 11:57:18 +0200
-
 eog (3.12.1-1) experimental; urgency=medium
 
   * New upstream translation release.
@@ -140,14 +92,6 @@ eog (3.11.90-1) experimental; urgency=medium
     - drop libx11-dev (sunkeysym)
 
  -- Andreas Henriksson <andreas@fatal.se>  Tue, 18 Feb 2014 01:36:19 +0100
-
-eog (3.10.2-0ubuntu6) utopic; urgency=medium
-
-  * debian/patches/disable-appmenu-on-unity.patch:
-    chain up to GtkApplication's startup handler before calling
-    gtk_application_set_app_menu() (lp: #1330117)
-
- -- Lars Uebernickel <lars.uebernickel@ubuntu.com>  Tue, 17 Jun 2014 19:03:09 +0200
 
 eog (3.10.1-2) experimental; urgency=low
 

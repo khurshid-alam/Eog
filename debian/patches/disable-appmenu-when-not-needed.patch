@@ -28,6 +28,6 @@ Index: b/src/eog-application.c
 +
 +	if (shows_app_menu && !shows_menubar)
 +		eog_application_init_app_menu (EOG_APPLICATION (application));
+ 	eog_application_init_accelerators (GTK_APPLICATION (app));
  
  	app->priv->extensions = peas_extension_set_new (
- 				   PEAS_ENGINE (app->priv->plugin_engine),
