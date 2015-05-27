@@ -1,4 +1,4 @@
-eog (3.16.2-1ubuntu1) UNRELEASED; urgency=medium
+eog (3.16.2-1ubuntu1) wily; urgency=medium
 
   * debian/patches/unity_traditional_titlebar.patch:
     - use traditional titlebar under Unity (bgo #749976)
