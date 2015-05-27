@@ -1,0 +1,54 @@
+# Description: Show traditional titlebar under unity
+# Upstream: https://bugzilla.gnome.org/show_bug.cgi?id=749976
+#
+--- eog-3.16.2/src/eog-window.c.ubuntu	2015-05-27 17:04:47.929538729 +0200
++++ eog-3.16.2/src/eog-window.c	2015-05-27 17:37:39.807532353 +0200
+@@ -4196,6 +4196,29 @@
+ 	gtk_button_set_image (GTK_BUTTON (button), zoom_image);
+ }
+ 
++static gboolean
++in_desktop (const gchar *name)
++{
++	const gchar *desktop_name_list;
++	gchar **names;
++	gboolean in_list = FALSE;
++	gint i;
++
++	desktop_name_list = g_getenv ("XDG_CURRENT_DESKTOP");
++	if (!desktop_name_list)
++		return FALSE;
++
++	names = g_strsplit (desktop_name_list, ":", -1);
++	for (i = 0; names[i] && !in_list; i++)
++		if (strcmp (names[i], name) == 0) {
++			in_list = TRUE;
++			break;
++		}
++	g_strfreev (names);
++
++	return in_list;
++}
++
+ static void
+ eog_window_construct_ui (EogWindow *window)
+ {
+@@ -4223,10 +4246,14 @@
+ 	gtk_widget_show (priv->box);
+ 
+ 	headerbar = gtk_header_bar_new ();
+-	gtk_header_bar_set_show_close_button (GTK_HEADER_BAR (headerbar), TRUE);
+-	gtk_header_bar_set_title (GTK_HEADER_BAR (headerbar),
+-				  g_get_application_name ());
+-	gtk_window_set_titlebar (GTK_WINDOW (window), headerbar);
++	if (!in_desktop ("Unity")) {
++		gtk_header_bar_set_show_close_button (GTK_HEADER_BAR (headerbar), TRUE);
++		gtk_header_bar_set_title (GTK_HEADER_BAR (headerbar),
++					  g_get_application_name ());
++		gtk_window_set_titlebar (GTK_WINDOW (window), headerbar);
++	} else {
++		gtk_container_add (GTK_CONTAINER (priv->box), headerbar);
++	}
+ 	gtk_widget_show (headerbar);
+ 
+ 	zoom_button = gtk_toggle_button_new ();
