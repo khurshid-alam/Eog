@@ -1,3 +1,18 @@
+eog (3.16.3-1ubuntu1) wily; urgency=low
+
+  * Merge from Debian unstable.  Remaining changes:
+    + debian/patches/unity_traditional_titlebar.patch:
+      - use traditional titlebar under Unity (bgo #749976)
+
+ -- Iain Lane <iain@orangesquash.org.uk>  Wed, 26 Aug 2015 17:13:31 +0100
+
+eog (3.16.3-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Refresh patches.
+
+ -- Michael Biebl <biebl@debian.org>  Fri, 21 Aug 2015 09:04:58 +0200
+
 eog (3.16.2-1ubuntu1) wily; urgency=medium
 
   * debian/patches/unity_traditional_titlebar.patch:
