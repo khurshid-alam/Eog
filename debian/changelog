@@ -1,8 +1,14 @@
-eog (3.16.3-1ubuntu2) UNRELEASED; urgency=medium
+eog (3.16.3-1ubuntu4) UNRELEASED; urgency=medium
 
+  [ Iain Lane ]
   * Make the toolbar hide in fullscreen.
 
- -- Iain Lane <iain.lane@canonical.com>  Mon, 21 Sep 2015 11:53:13 +0100
+  [ Lars Uebernickel ]
+  * Add debian/patches/0001-Add-a-traditional-menu-bar.patch
+  * Update debian/patches/0002-Show-traditional-title-bar-in-unity.patch:
+    update to make work with menubar patch and use GActionGroup's signals
+
+ -- Lars Uebernickel <lars.uebernickel@ubuntu.com>  Tue, 29 Sep 2015 12:30:46 +0200
 
 eog (3.16.3-1ubuntu1) wily; urgency=low
 

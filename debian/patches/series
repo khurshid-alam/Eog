@@ -1,3 +1,2 @@
-disable-appmenu-when-not-needed.patch
-unity_traditional_titlebar.patch
-
+0001-Add-a-traditional-menu-bar.patch
+0002-Show-traditional-title-bar-in-unity.patch
