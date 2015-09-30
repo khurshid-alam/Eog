@@ -8,6 +8,8 @@ eog (3.16.3-1ubuntu2) UNRELEASED; urgency=medium
   * Add debian/patches/0001-Add-a-traditional-menu-bar.patch (LP: #1491699)
   * Update debian/patches/0002-Show-traditional-title-bar-in-unity.patch:
     update to make work with menubar patch and use GActionGroup's signals
+  * Add debian/patches/Put-Exit-Fullscreen-button-into-toolbar.patch
+    (GNOME #755799)
 
  -- Lars Uebernickel <lars.uebernickel@ubuntu.com>  Tue, 29 Sep 2015 12:30:46 +0200
 

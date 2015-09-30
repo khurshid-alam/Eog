@@ -3,7 +3,7 @@ From: Lars Uebernickel <lars.uebernickel@canonical.com>
 Date: Tue, 29 Sep 2015 12:25:29 +0200
 Subject: [PATCH 2/2] Show traditional title bar in unity
 
-Based on a patch by Sebastien Bacher <seb128@ubuntu.com>
+Based on a patch by Iain Lane <iain@orangesquash.org.uk>
 ---
  src/eog-window.c | 66 ++++++++++++++++++++++++++++++++++++++++++++++----------
  1 file changed, 55 insertions(+), 11 deletions(-)
