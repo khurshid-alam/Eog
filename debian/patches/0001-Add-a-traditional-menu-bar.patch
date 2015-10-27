@@ -11,10 +11,10 @@ Subject: [PATCH 1/2] Add a traditional menu bar
  4 files changed, 259 insertions(+), 30 deletions(-)
  create mode 100644 data/eog-menubar.xml
 
-Index: b/data/eog-menubar.xml
+Index: eog-3.18.0/data/eog-menubar.xml
 ===================================================================
 --- /dev/null
-+++ b/data/eog-menubar.xml
++++ eog-3.18.0/data/eog-menubar.xml
 @@ -0,0 +1,205 @@
 +<?xml version="1.0" encoding="utf-8"?>
 +<interface>
@@ -221,11 +221,11 @@ Index: b/data/eog-menubar.xml
 +    </submenu>
 +  </menu>
 +</interface>
-Index: b/src/eog-application.c
+Index: eog-3.18.0/src/eog-application.c
 ===================================================================
---- a/src/eog-application.c
-+++ b/src/eog-application.c
-@@ -169,17 +169,34 @@
+--- eog-3.18.0.orig/src/eog-application.c
++++ eog-3.18.0/src/eog-application.c
+@@ -169,17 +169,34 @@ eog_application_init_app_menu (EogApplic
  					 application);
  
  	builder = gtk_builder_new ();
@@ -270,11 +270,11 @@ Index: b/src/eog-application.c
  	}
  
  	action = g_action_map_lookup_action (G_ACTION_MAP (application),
-Index: b/src/eog-window.c
+Index: eog-3.18.0/src/eog-window.c
 ===================================================================
---- a/src/eog-window.c
-+++ b/src/eog-window.c
-@@ -4266,18 +4266,30 @@
+--- eog-3.18.0.orig/src/eog-window.c
++++ eog-3.18.0/src/eog-window.c
+@@ -4330,18 +4330,30 @@ eog_window_construct_ui (EogWindow *wind
  			   priv->zoom_scale);
  	gtk_widget_show (priv->zoom_scale);
  
@@ -316,7 +316,7 @@ Index: b/src/eog-window.c
  
  	fullscreen_button = gtk_button_new_from_icon_name ("view-fullscreen-symbolic",
  							   GTK_ICON_SIZE_BUTTON);
-@@ -4288,15 +4300,6 @@
+@@ -4352,15 +4364,6 @@ eog_window_construct_ui (EogWindow *wind
  	gtk_header_bar_pack_end (GTK_HEADER_BAR (headerbar), fullscreen_button);
  	gtk_widget_show (fullscreen_button);
  
@@ -332,7 +332,7 @@ Index: b/src/eog-window.c
  	priv->cbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, 0);
  	gtk_box_pack_start (GTK_BOX (priv->box), priv->cbox, TRUE, TRUE, 0);
  	gtk_widget_show (priv->cbox);
-@@ -5241,6 +5244,9 @@
+@@ -5300,6 +5303,9 @@ eog_window_get_gear_menu_section (EogWin
  	GObject *object;
  	g_return_val_if_fail (EOG_IS_WINDOW (window), NULL);
  
@@ -342,10 +342,10 @@ Index: b/src/eog-window.c
  	object = gtk_builder_get_object (window->priv->gear_menu_builder, id);
  	if (object == NULL || !G_IS_MENU (object))
  		return NULL;
-Index: b/src/eog.gresource.xml
+Index: eog-3.18.0/src/eog.gresource.xml
 ===================================================================
---- a/src/eog.gresource.xml
-+++ b/src/eog.gresource.xml
+--- eog-3.18.0.orig/src/eog.gresource.xml
++++ eog-3.18.0/src/eog.gresource.xml
 @@ -3,6 +3,7 @@
    <gresource prefix="/org/gnome/eog/ui">
      <file>eog.css</file>
@@ -354,10 +354,10 @@ Index: b/src/eog.gresource.xml
      <file compressed="true" preprocess="xml-stripblanks">eog-gear-menu.ui</file>
      <file compressed="true" preprocess="xml-stripblanks">eog-image-properties-dialog.ui</file>
      <file compressed="true" preprocess="xml-stripblanks">eog-multiple-save-as-dialog.ui</file>
-Index: b/po/POTFILES.in
+Index: eog-3.18.0/po/POTFILES.in
 ===================================================================
---- a/po/POTFILES.in
-+++ b/po/POTFILES.in
+--- eog-3.18.0.orig/po/POTFILES.in
++++ eog-3.18.0/po/POTFILES.in
 @@ -1,6 +1,7 @@
  # List of source files containing translatable strings.
  # Please keep this file sorted alphabetically.

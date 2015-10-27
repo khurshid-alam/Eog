@@ -1,3 +1,11 @@
+eog (3.18.0-0ubuntu1) xenial; urgency=medium
+
+  * New upstream release
+  * debian/control:
+    - Bump build-depends on libgdk-pixbuf2.0-dev
+
+ -- Robert Ancell <robert.ancell@canonical.com>  Tue, 27 Oct 2015 16:26:24 +1300
+
 eog (3.16.3-1ubuntu2) wily; urgency=medium
 
   [ Iain Lane ]

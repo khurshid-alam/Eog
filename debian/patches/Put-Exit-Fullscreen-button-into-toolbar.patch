@@ -11,10 +11,10 @@ https://bugzilla.gnome.org/show_bug.cgi?id=755799
  src/eog-window.c           | 31 +++++--------------------------
  2 files changed, 22 insertions(+), 27 deletions(-)
 
-diff --git a/data/fullscreen-toolbar.ui b/data/fullscreen-toolbar.ui
-index 1d851b7..1f21a4b 100644
---- a/data/fullscreen-toolbar.ui
-+++ b/data/fullscreen-toolbar.ui
+Index: eog-3.18.0/data/fullscreen-toolbar.ui
+===================================================================
+--- eog-3.18.0.orig/data/fullscreen-toolbar.ui
++++ eog-3.18.0/data/fullscreen-toolbar.ui
 @@ -5,7 +5,7 @@
    <object class="GtkToolbar" id="fullscreen_toolbar">
      <property name="visible">True</property>
@@ -46,11 +46,11 @@ index 1d851b7..1f21a4b 100644
 +    </child>
    </object>
  </interface>
-diff --git a/src/eog-window.c b/src/eog-window.c
-index 4e3c716..8c25852 100644
---- a/src/eog-window.c
-+++ b/src/eog-window.c
-@@ -1845,28 +1845,6 @@ exit_fullscreen_button_clicked_cb (GtkWidget *button, EogWindow *window)
+Index: eog-3.18.0/src/eog-window.c
+===================================================================
+--- eog-3.18.0.orig/src/eog-window.c
++++ eog-3.18.0/src/eog-window.c
+@@ -1895,28 +1895,6 @@ exit_fullscreen_button_clicked_cb (GtkWi
  }
  
  static GtkWidget *
@@ -60,7 +60,7 @@ index 4e3c716..8c25852 100644
 -	GtkWidget *image;
 -
 -	button = gtk_button_new_with_mnemonic (_("_Leave Fullscreen"));
--	image = gtk_image_new_from_icon_name ("view-restore",
+-	image = gtk_image_new_from_icon_name ("view-restore-symbolic",
 -					      GTK_ICON_SIZE_BUTTON);
 -	gtk_button_set_image (GTK_BUTTON (button), image);
 -	gtk_button_set_always_show_image (GTK_BUTTON (button), TRUE);
@@ -79,7 +79,7 @@ index 4e3c716..8c25852 100644
  eog_window_create_fullscreen_popup (EogWindow *window)
  {
  	GtkWidget *revealer;
-@@ -1891,10 +1869,10 @@ eog_window_create_fullscreen_popup (EogWindow *window)
+@@ -1941,10 +1919,10 @@ eog_window_create_fullscreen_popup (EogW
  
  	gtk_box_pack_start (GTK_BOX (hbox), toolbar, TRUE, TRUE, 0);
  
@@ -94,7 +94,7 @@ index 4e3c716..8c25852 100644
  
  	/* Disable timer when the pointer enters the toolbar window. */
  	g_signal_connect (revealer,
-@@ -1902,6 +1880,7 @@ eog_window_create_fullscreen_popup (EogWindow *window)
+@@ -1952,6 +1930,7 @@ eog_window_create_fullscreen_popup (EogW
  			  G_CALLBACK (fullscreen_leave_notify_cb),
  			  window);
  
@@ -102,6 +102,3 @@ index 4e3c716..8c25852 100644
  	return revealer;
  }
  
--- 
-2.5.0
-

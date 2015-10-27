@@ -8,10 +8,10 @@ Based on a patch by Iain Lane <iain@orangesquash.org.uk>
  src/eog-window.c | 66 ++++++++++++++++++++++++++++++++++++++++++++++----------
  1 file changed, 55 insertions(+), 11 deletions(-)
 
-diff --git a/src/eog-window.c b/src/eog-window.c
-index ff5762c..4e3c716 100644
---- a/src/eog-window.c
-+++ b/src/eog-window.c
+Index: eog-3.18.0/src/eog-window.c
+===================================================================
+--- eog-3.18.0.orig/src/eog-window.c
++++ eog-3.18.0/src/eog-window.c
 @@ -134,6 +134,7 @@ struct _EogWindowPrivate {
  	GtkWidget           *zoom_revealer;
  	GtkWidget           *zoom_scale;
@@ -20,7 +20,7 @@ index ff5762c..4e3c716 100644
  
  	GMenu               *open_with_menu;
  	GPtrArray           *appinfo;
-@@ -4196,6 +4197,43 @@ eog_window_zoom_button_toggled_cb (GtkToggleButton *button, gpointer user_data)
+@@ -4257,6 +4258,43 @@ eog_window_zoom_button_toggled_cb (GtkTo
  	gtk_button_set_image (GTK_BUTTON (button), zoom_image);
  }
  
@@ -64,7 +64,7 @@ index ff5762c..4e3c716 100644
  static void
  eog_window_construct_ui (EogWindow *window)
  {
-@@ -4207,7 +4245,6 @@ eog_window_construct_ui (EogWindow *window)
+@@ -4268,7 +4306,6 @@ eog_window_construct_ui (EogWindow *wind
  
  	GtkWidget *popup_menu;
  	GtkWidget *hpaned;
@@ -72,7 +72,7 @@ index ff5762c..4e3c716 100644
  	GtkWidget *zoom_button;
  	GtkWidget *zoom_image;
  	GtkWidget *menu_button;
-@@ -4222,12 +4259,19 @@ eog_window_construct_ui (EogWindow *window)
+@@ -4283,12 +4320,19 @@ eog_window_construct_ui (EogWindow *wind
  	gtk_container_add (GTK_CONTAINER (window), priv->box);
  	gtk_widget_show (priv->box);
  
@@ -98,7 +98,7 @@ index ff5762c..4e3c716 100644
  
  	zoom_button = gtk_toggle_button_new ();
  	zoom_image = gtk_image_new_from_icon_name ("zoom-in-symbolic",
-@@ -4238,7 +4282,7 @@ eog_window_construct_ui (EogWindow *window)
+@@ -4299,7 +4343,7 @@ eog_window_construct_ui (EogWindow *wind
  	g_signal_connect (zoom_button, "toggled",
  			  G_CALLBACK (eog_window_zoom_button_toggled_cb),
  			  window);
@@ -107,7 +107,7 @@ index ff5762c..4e3c716 100644
  	/* disable zoom button if no image is loaded */
  	g_object_bind_property (g_action_map_lookup_action (G_ACTION_MAP(window),
  							    "zoom-normal"),
-@@ -4249,7 +4293,7 @@ eog_window_construct_ui (EogWindow *window)
+@@ -4310,7 +4354,7 @@ eog_window_construct_ui (EogWindow *wind
  	priv->zoom_revealer = gtk_revealer_new ();
  	gtk_revealer_set_transition_type (GTK_REVEALER (priv->zoom_revealer),
  					  GTK_REVEALER_TRANSITION_TYPE_SLIDE_RIGHT);
@@ -116,7 +116,7 @@ index ff5762c..4e3c716 100644
  				   priv->zoom_revealer);
  	gtk_widget_show (priv->zoom_revealer);
  
-@@ -4280,7 +4324,7 @@ eog_window_construct_ui (EogWindow *window)
+@@ -4344,7 +4388,7 @@ eog_window_construct_ui (EogWindow *wind
  		gtk_menu_button_set_menu_model (GTK_MENU_BUTTON (menu_button),
  						G_MENU_MODEL (builder_object));
  
@@ -125,7 +125,7 @@ index ff5762c..4e3c716 100644
  		gtk_widget_show (menu_button);
  
  		builder_object = gtk_builder_get_object (builder, "open-with-menu");
-@@ -4297,7 +4341,7 @@ eog_window_construct_ui (EogWindow *window)
+@@ -4361,7 +4405,7 @@ eog_window_construct_ui (EogWindow *wind
  					"win.view-fullscreen");
  	gtk_widget_set_tooltip_text(fullscreen_button,
  				    _("Show the current image in fullscreen mode"));
@@ -134,6 +134,3 @@ index ff5762c..4e3c716 100644
  	gtk_widget_show (fullscreen_button);
  
  	priv->cbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, 0);
--- 
-2.5.0
-
