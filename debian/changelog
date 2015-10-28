@@ -1,3 +1,27 @@
+eog (3.18.0-1ubuntu1) xenial; urgency=medium
+
+  * Merge with Debian, remaining Ubuntu changes:
+  * debian/patches/0001-Add-a-traditional-menu-bar.patch:
+    - Add a traditional menu bar
+  * debian/patches/0002-Show-traditional-title-bar-in-unity.patch:
+    - Show traditional title bar in Unity
+  * debian/patches/Put-Exit-Fullscreen-button-into-toolbar.patch:
+    - Fix the background of the exit fullscreen button
+
+ -- Robert Ancell <robert.ancell@canonical.com>  Thu, 29 Oct 2015 09:54:56 +1300
+
+eog (3.18.0-1) unstable; urgency=medium
+
+  [ Michael Biebl ]
+  * Remove Debian menu entry.
+
+  [ Andreas Henriksson ]
+  * New upstream release.
+  * Update build-dependencies according to configure.ac changes:
+    - bump libgdk-pixbuf2.0-dev to >= 2.30.0
+
+ -- Andreas Henriksson <andreas@fatal.se>  Fri, 02 Oct 2015 23:15:53 +0200
+
 eog (3.18.0-0ubuntu1) xenial; urgency=medium
 
   * New upstream release

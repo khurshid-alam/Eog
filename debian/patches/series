@@ -1,3 +1,4 @@
+disable-appmenu-when-not-needed.patch
 0001-Add-a-traditional-menu-bar.patch
 0002-Show-traditional-title-bar-in-unity.patch
 Put-Exit-Fullscreen-button-into-toolbar.patch
