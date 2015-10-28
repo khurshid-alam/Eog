@@ -1,6 +1,8 @@
 eog (3.18.0-1ubuntu1) xenial; urgency=medium
 
   * Merge with Debian, remaining Ubuntu changes:
+  * debian/patches/disable-appmenu-when-not-needed.patch:
+    - Disabled
   * debian/patches/0001-Add-a-traditional-menu-bar.patch:
     - Add a traditional menu bar
   * debian/patches/0002-Show-traditional-title-bar-in-unity.patch:
