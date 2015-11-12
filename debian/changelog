@@ -1,3 +1,24 @@
+eog (3.18.1-1ubuntu1) xenial; urgency=medium
+
+  * Merge with Debian, remaining Ubuntu changes:
+  * debian/patches/disable-appmenu-when-not-needed.patch:
+    - Disabled
+  * debian/patches/0001-Add-a-traditional-menu-bar.patch:
+    - Add a traditional menu bar
+  * debian/patches/0002-Show-traditional-title-bar-in-unity.patch:
+    - Show traditional title bar in Unity
+  * debian/patches/Put-Exit-Fullscreen-button-into-toolbar.patch:
+    - Fix the background of the exit fullscreen button
+
+ -- Robert Ancell <robert.ancell@canonical.com>  Thu, 12 Nov 2015 17:16:13 +1300
+
+eog (3.18.1-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Remove Breaks from pre-oldstable.
+
+ -- Michael Biebl <biebl@debian.org>  Tue, 10 Nov 2015 23:40:49 +0100
+
 eog (3.18.0-1ubuntu2) xenial; urgency=medium
 
   * No-change rebuild against new gnome libraries
